@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<summary fileFormatVersion="101">
+	<methods>
+		<method id="void setTimeZone(java.util.TimeZone)">
+			<flows>
+				<flow isAlias="false" typeChecking="false">
+					<from sourceSinkType="Parameter" ParameterIndex="0" />
+					<to sourceSinkType="Field" />
+				</flow>
+			</flows>
+		</method>
+  </methods>
+</summary>
