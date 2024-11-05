@@ -1,0 +1,696 @@
+Slicing result for "ApplicationModeling1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 30 nodes in the SDG.
+Slicing percentage: 23.62%(30/127)
+Slicing result for "ArrayToString1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 23.16%(22/95)
+Slicing result for "ListAccess1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 25.0%(27/108)
+Slicing result for "MultidimensionalArray1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 21.57%(22/102)
+Slicing result for "ArrayCopy1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 27.0%(27/100)
+Slicing result for "HashMapAccess1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 29 nodes in the SDG.
+Slicing percentage: 27.1%(29/107)
+Slicing result for "ArrayAccess1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 23.76%(24/101)
+Slicing result for "ArrayAccess2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 24.04%(25/104)
+Slicing result for "Obfuscation1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 36 nodes in the SDG.
+Slicing percentage: 33.03%(36/109)
+Slicing result for "AsyncTask1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 39 nodes in the SDG.
+Slicing percentage: 27.86%(39/140)
+Slicing result for "Executor1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 37 nodes in the SDG.
+Slicing percentage: 29.37%(37/126)
+Slicing result for "JavaThread1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 36 nodes in the SDG.
+Slicing percentage: 29.27%(36/123)
+Slicing result for "JavaThread2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 37 nodes in the SDG.
+Slicing percentage: 29.37%(37/126)
+Slicing result for "PrivateDataLeak1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 36 nodes in the SDG.
+Slicing percentage: 16.44%(36/219)
+Slicing result for "Looper1":
+FlowDroid in total(before slicing): 0:05
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 207 nodes in the SDG.
+Slicing percentage: 55.05%(207/376)
+Slicing result for "InactiveActivity":
+FlowDroid in total(before slicing): 0:01
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 15 nodes in the SDG.
+Slicing percentage: 26.32%(15/57)
+Slicing result for "PublicAPIField1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 20.16%(25/124)
+Slicing result for "LogNoLeak":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 21 nodes in the SDG.
+Slicing percentage: 24.14%(21/87)
+Slicing result for "PublicAPIField2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 23 nodes in the SDG.
+Slicing percentage: 23.96%(23/96)
+Slicing result for "Library2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 37 nodes in the SDG.
+Slicing percentage: 30.33%(37/122)
+Slicing result for "Parcel1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 72 nodes in the SDG.
+Slicing percentage: 36.0%(72/200)
+Slicing result for "PrivateDataLeak2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 21 nodes in the SDG.
+Slicing percentage: 23.86%(21/88)
+Slicing result for "DirectLeak1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 26.37%(24/91)
+Slicing result for "ObjectSensitivity1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 33 nodes in the SDG.
+Slicing percentage: 32.04%(33/103)
+Slicing result for "FieldSensitivity1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 34 nodes in the SDG.
+Slicing percentage: 25.19%(34/135)
+Slicing result for "PrivateDataLeak3":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 41 nodes in the SDG.
+Slicing percentage: 28.28%(41/145)
+Slicing result for "ObjectSensitivity2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 36 nodes in the SDG.
+Slicing percentage: 33.96%(36/106)
+Slicing result for "InheritedObjects1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 26 nodes in the SDG.
+Slicing percentage: 22.41%(26/116)
+Slicing result for "FieldSensitivity2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 33 nodes in the SDG.
+Slicing percentage: 27.27%(33/121)
+Slicing result for "FieldSensitivity4":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 26.21%(27/103)
+Slicing result for "FieldSensitivity3":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 33 nodes in the SDG.
+Slicing percentage: 27.27%(33/121)
+Slicing result for "LocationLeak3":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 43 nodes in the SDG.
+Slicing percentage: 25.44%(43/169)
+Slicing result for "Button3":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 44 nodes in the SDG.
+Slicing percentage: 26.04%(44/169)
+Slicing result for "Button4":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 34 nodes in the SDG.
+Slicing percentage: 30.63%(34/111)
+Slicing result for "MethodOverride1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 26.04%(25/96)
+Slicing result for "Button1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 34 nodes in the SDG.
+Slicing percentage: 30.63%(34/111)
+Slicing result for "RegisterGlobal2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 46 nodes in the SDG.
+Slicing percentage: 27.06%(46/170)
+Slicing result for "LocationLeak1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 78 nodes in the SDG.
+Slicing percentage: 34.67%(78/225)
+Slicing result for "Button5":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 34 nodes in the SDG.
+Slicing percentage: 31.78%(34/107)
+Slicing result for "LocationLeak2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 73 nodes in the SDG.
+Slicing percentage: 39.46%(73/185)
+Slicing result for "Unregister1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 41 nodes in the SDG.
+Slicing percentage: 28.87%(41/142)
+Slicing result for "Ordering1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 56 nodes in the SDG.
+Slicing percentage: 30.94%(56/181)
+Slicing result for "Button2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 47 nodes in the SDG.
+Slicing percentage: 21.76%(47/216)
+Slicing result for "MultiHandlers1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 80 nodes in the SDG.
+Slicing percentage: 28.57%(80/280)
+Slicing result for "RegisterGlobal1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 84 nodes in the SDG.
+Slicing percentage: 31.7%(84/265)
+Slicing result for "AnonymousClass1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 55 nodes in the SDG.
+Slicing percentage: 31.61%(55/174)
+Slicing result for "BroadcastReceiverLifecycle1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 20 nodes in the SDG.
+Slicing percentage: 27.4%(20/73)
+Slicing result for "EventOrdering1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 20.95%(22/105)
+Slicing result for "SharedPreferenceChanged1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 26 nodes in the SDG.
+Slicing percentage: 22.61%(26/115)
+Slicing result for "ServiceLifecycle1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 22.45%(22/98)
+Slicing result for "ApplicationLifecycle3":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 108 nodes in the SDG.
+Slicing percentage: 47.37%(108/228)
+Slicing result for "ServiceLifecycle2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 37 nodes in the SDG.
+Slicing percentage: 25.0%(37/148)
+Slicing result for "ApplicationLifecycle1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 23.68%(27/114)
+Slicing result for "ActivityLifecycle3":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 26 nodes in the SDG.
+Slicing percentage: 24.76%(26/105)
+Slicing result for "ActivityLifecycle4":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 22.64%(24/106)
+Slicing result for "ApplicationLifecycle2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 23.08%(27/117)
+Slicing result for "ActivitySavedState1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 23.81%(25/105)
+Slicing result for "BroadcastReceiverLifecycle2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 50 nodes in the SDG.
+Slicing percentage: 30.86%(50/162)
+Slicing result for "ActivityLifecycle1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 23 nodes in the SDG.
+Slicing percentage: 20.18%(23/114)
+Slicing result for "FragmentLifecycle1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 42 nodes in the SDG.
+Slicing percentage: 24.28%(42/173)
+Slicing result for "AsynchronousEventOrdering1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 20.37%(22/108)
+Slicing result for "ActivityLifecycle2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 22.86%(24/105)
+Slicing result for "FragmentLifecycle2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 88 nodes in the SDG.
+Slicing percentage: 24.38%(88/361)
+Slicing result for "EventOrdering1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 44 nodes in the SDG.
+Slicing percentage: 22.56%(44/195)
+Slicing result for "ActivityCommunication5":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 45 nodes in the SDG.
+Slicing percentage: 24.19%(45/186)
+Slicing result for "ContentProvider1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:03
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 274 nodes in the SDG.
+Slicing percentage: 61.16%(274/448)
+Slicing result for "IMEI1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:03
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 163 nodes in the SDG.
+Slicing percentage: 57.19%(163/285)
+Slicing result for "PlayStore1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:03
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 208 nodes in the SDG.
+Slicing percentage: 56.99%(208/365)
+Slicing result for "IntentSource1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 30 nodes in the SDG.
+Slicing percentage: 23.26%(30/129)
+Slicing result for "ActivityCommunication7":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 44 nodes in the SDG.
+Slicing percentage: 23.66%(44/186)
+Slicing result for "ActivityCommunication1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 32 nodes in the SDG.
+Slicing percentage: 24.81%(32/129)
+Slicing result for "ActivityCommunication3":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 44 nodes in the SDG.
+Slicing percentage: 22.92%(44/192)
+Slicing result for "ActivityCommunication6":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 45 nodes in the SDG.
+Slicing percentage: 23.68%(45/190)
+Slicing result for "ServiceCommunication1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 90 nodes in the SDG.
+Slicing percentage: 38.96%(90/231)
+Slicing result for "ComponentNotInManifest1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 46 nodes in the SDG.
+Slicing percentage: 25.7%(46/179)
+Slicing result for "ActivityCommunication4":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 43 nodes in the SDG.
+Slicing percentage: 23.76%(43/181)
+Slicing result for "BroadcastTaintAndLeak1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 35 nodes in the SDG.
+Slicing percentage: 24.65%(35/142)
+Slicing result for "Singletons1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 31 nodes in the SDG.
+Slicing percentage: 20.53%(31/151)
+Slicing result for "SharedPreferences1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 33 nodes in the SDG.
+Slicing percentage: 22.92%(33/144)
+Slicing result for "IntentSink2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 26 nodes in the SDG.
+Slicing percentage: 23.85%(26/109)
+Slicing result for "IntentSink1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 26.09%(24/92)
+Slicing result for "ActivityCommunication2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 43 nodes in the SDG.
+Slicing percentage: 23.24%(43/185)
+Slicing result for "ActivityCommunication8":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 44 nodes in the SDG.
+Slicing percentage: 23.28%(44/189)
+Slicing result for "UnresolvableIntent1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 45 nodes in the SDG.
+Slicing percentage: 22.61%(45/199)
+Slicing result for "ImplicitFlow4":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 36 nodes in the SDG.
+Slicing percentage: 24.66%(36/146)
+Slicing result for "ImplicitFlow3":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 46 nodes in the SDG.
+Slicing percentage: 27.88%(46/165)
+Slicing result for "ImplicitFlow2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 26 nodes in the SDG.
+Slicing percentage: 24.07%(26/108)
+Slicing result for "Reflection3":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 66 nodes in the SDG.
+Slicing percentage: 38.15%(66/173)
+Slicing result for "Merge1":
+FlowDroid in total(before slicing): 0:05
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 213 nodes in the SDG.
+Slicing percentage: 57.1%(213/373)
+Slicing result for "Reflection1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 49 nodes in the SDG.
+Slicing percentage: 35.0%(49/140)
+Slicing result for "ImplicitFlow1":
+FlowDroid in total(before slicing): 0:05
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 44 nodes in the SDG.
+Slicing percentage: 8.76%(44/502)
+Slicing result for "Reflection4":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 47 nodes in the SDG.
+Slicing percentage: 31.97%(47/147)
+Slicing result for "Reflection2":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 45 nodes in the SDG.
+Slicing percentage: 31.91%(45/141)
+Slicing result for "Clone1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 23 nodes in the SDG.
+Slicing percentage: 22.77%(23/101)
+Slicing result for "SourceCodeSpecific1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 32 nodes in the SDG.
+Slicing percentage: 25.81%(32/124)
+Slicing result for "Exceptions4":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:02
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 32 nodes in the SDG.
+Slicing percentage: 31.37%(32/102)
+Slicing result for "VirtualDispatch3":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:03
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 213 nodes in the SDG.
+Slicing percentage: 57.26%(213/372)
+Slicing result for "Loop2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 21.01%(25/119)
+Slicing result for "StaticInitialization2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 23.3%(24/103)
+Slicing result for "StringFormatter1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 35 nodes in the SDG.
+Slicing percentage: 33.98%(35/103)
+Slicing result for "VirtualDispatch2":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 36 nodes in the SDG.
+Slicing percentage: 24.83%(36/145)
+Slicing result for "UnreachableCode":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 24.18%(22/91)
+Slicing result for "VirtualDispatch4":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:03
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 213 nodes in the SDG.
+Slicing percentage: 57.26%(213/372)
+Slicing result for "StartProcessWithSecret1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 23 nodes in the SDG.
+Slicing percentage: 23.23%(23/99)
+Slicing result for "Loop1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 21.93%(25/114)
+Slicing result for "FactoryMethods1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 22.13%(27/122)
+Slicing result for "StringToOutputStream1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 25 nodes in the SDG.
+Slicing percentage: 24.75%(25/101)
+Slicing result for "VirtualDispatch1":
+FlowDroid in total(before slicing): 0:04
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 26 nodes in the SDG.
+Slicing percentage: 18.44%(26/141)
+Slicing result for "StringToCharArray1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 27 nodes in the SDG.
+Slicing percentage: 22.88%(27/118)
+Slicing result for "StaticInitialization3":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 32 nodes in the SDG.
+Slicing percentage: 30.77%(32/104)
+Slicing result for "StaticInitialization1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 24 nodes in the SDG.
+Slicing percentage: 23.76%(24/101)
+Slicing result for "Serialization1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 28 nodes in the SDG.
+Slicing percentage: 22.05%(28/127)
+Slicing result for "StringPatternMatching1":
+FlowDroid in total(before slicing): 0:02
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 22 nodes in the SDG.
+Slicing percentage: 21.57%(22/102)
+Slicing result for "Echoer":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 49 nodes in the SDG.
+Slicing percentage: 26.34%(49/186)
+Slicing result for "SendSMS":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 65 nodes in the SDG.
+Slicing percentage: 29.02%(65/224)
+Slicing result for "StartActivityForResult1":
+FlowDroid in total(before slicing): 0:03
+FlowSlicer in total: 0:01
+FlowDroid in total(after slicing): 0:00
+After slicing, our tool slices 56 nodes in the SDG.
+Slicing percentage: 23.73%(56/236)

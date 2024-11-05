@@ -1,0 +1,461 @@
+--- Contents of ApplicationData_FlowSliceMode_EventOrdering1.txt ---
+EventOrdering1, 105, 83, 0:02, 0:01, 0:01, 1, 1
+EventOrdering1, 195, 151, 0:03, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Obfuscation1.txt ---
+Obfuscation1, 109, 73, 0:04, 0:01, 0:00, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_AsynchronousEventOrdering1.txt ---
+AsynchronousEventOrdering1, 108, 86, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication1.txt ---
+ActivityCommunication1, 129, 97, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_FragmentLifecycle2.txt ---
+FragmentLifecycle2, 361, 273, 0:03, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_PublicAPIField1.txt ---
+PublicAPIField1, 124, 99, 0:02, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ImplicitFlow1.txt ---
+ImplicitFlow1, 502, 458, 0:05, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_StartActivityForResult1.txt ---
+StartActivityForResult1, 236, 180, 0:03, 0:01, 0:00, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_LocationLeak3.txt ---
+LocationLeak3, 169, 126, 0:03, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_IntentSink1.txt ---
+IntentSink1, 92, 68, 0:03, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_BroadcastReceiverLifecycle1.txt ---
+BroadcastReceiverLifecycle1, 73, 53, 0:02, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Reflection2.txt ---
+Reflection2, 141, 96, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_SharedPreferences1.txt ---
+SharedPreferences1, 144, 111, 0:02, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication4.txt ---
+ActivityCommunication4, 181, 138, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ImplicitFlow2.txt ---
+ImplicitFlow2, 108, 82, 0:03, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Clone1.txt ---
+Clone1, 101, 78, 0:02, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ComponentNotInManifest1.txt ---
+ComponentNotInManifest1, 179, 133, 0:04, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ImplicitFlow4.txt ---
+ImplicitFlow4, 146, 110, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_InactiveActivity.txt ---
+InactiveActivity, 57, 42, 0:01, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_JavaThread1.txt ---
+JavaThread1, 123, 87, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_StringPatternMatching1.txt ---
+StringPatternMatching1, 102, 80, 0:02, 0:01, 0:00, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_UnreachableCode.txt ---
+UnreachableCode, 91, 69, 0:03, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Reflection4.txt ---
+Reflection4, 147, 100, 0:04, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ArrayAccess1.txt ---
+ArrayAccess1, 101, 77, 0:04, 0:02, 0:00, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ApplicationModeling1.txt ---
+ApplicationModeling1, 127, 97, 0:03, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_StringToOutputStream1.txt ---
+StringToOutputStream1, 101, 76, 0:03, 0:01, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_InheritedObjects1.txt ---
+InheritedObjects1, 116, 90, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_MultiHandlers1.txt ---
+MultiHandlers1, 280, 200, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_PrivateDataLeak2.txt ---
+PrivateDataLeak2, 88, 67, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Button5.txt ---
+Button5, 107, 73, 0:04, 0:01, 0:00, 1, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication5.txt ---
+ActivityCommunication5, 186, 141, 0:03, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_VirtualDispatch4.txt ---
+VirtualDispatch4, 372, 159, 0:04, 0:03, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_FragmentLifecycle1.txt ---
+FragmentLifecycle1, 173, 131, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_SendSMS.txt ---
+SendSMS, 224, 159, 0:03, 0:01, 0:00, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_RegisterGlobal2.txt ---
+RegisterGlobal2, 170, 124, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_AnonymousClass1.txt ---
+AnonymousClass1, 174, 119, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityLifecycle3.txt ---
+ActivityLifecycle3, 105, 79, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_VirtualDispatch3.txt ---
+VirtualDispatch3, 372, 159, 0:03, 0:03, 0:01, 1, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_PublicAPIField2.txt ---
+PublicAPIField2, 96, 73, 0:03, 0:01, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_IMEI1.txt ---
+IMEI1, 285, 122, 0:04, 0:03, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Button1.txt ---
+Button1, 111, 77, 0:03, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Parcel1.txt ---
+Parcel1, 200, 128, 0:03, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_FieldSensitivity4.txt ---
+FieldSensitivity4, 103, 76, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_PlayStore1.txt ---
+PlayStore1, 365, 157, 0:04, 0:03, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_StringFormatter1.txt ---
+StringFormatter1, 103, 68, 0:03, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Button4.txt ---
+Button4, 111, 77, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Unregister1.txt ---
+Unregister1, 142, 101, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_StaticInitialization3.txt ---
+StaticInitialization3, 104, 72, 0:02, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_UnresolvableIntent1.txt ---
+UnresolvableIntent1, 199, 154, 0:04, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_SourceCodeSpecific1.txt ---
+SourceCodeSpecific1, 124, 92, 0:02, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_LocationLeak1.txt ---
+LocationLeak1, 225, 147, 0:04, 0:02, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_Reflection3.txt ---
+Reflection3, 173, 107, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Button2.txt ---
+Button2, 216, 169, 0:04, 0:01, 0:01, 4, 4
+
+
+--- Contents of ApplicationData_FlowSliceMode_Reflection1.txt ---
+Reflection1, 140, 91, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication8.txt ---
+ActivityCommunication8, 189, 145, 0:03, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_MultidimensionalArray1.txt ---
+MultidimensionalArray1, 102, 80, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_StaticInitialization2.txt ---
+StaticInitialization2, 103, 79, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Ordering1.txt ---
+Ordering1, 181, 125, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_VirtualDispatch1.txt ---
+VirtualDispatch1, 141, 115, 0:04, 0:01, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_StringToCharArray1.txt ---
+StringToCharArray1, 118, 91, 0:02, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_IntentSource1.txt ---
+IntentSource1, 129, 99, 0:03, 0:02, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ServiceCommunication1.txt ---
+ServiceCommunication1, 231, 141, 0:04, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_IntentSink2.txt ---
+IntentSink2, 109, 83, 0:03, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_PrivateDataLeak3.txt ---
+PrivateDataLeak3, 145, 104, 0:04, 0:01, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_LocationLeak2.txt ---
+LocationLeak2, 185, 112, 0:04, 0:01, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_Button3.txt ---
+Button3, 169, 125, 0:03, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_LogNoLeak.txt ---
+LogNoLeak, 87, 66, 0:02, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ContentProvider1.txt ---
+ContentProvider1, 448, 174, 0:04, 0:03, 0:01, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityLifecycle4.txt ---
+ActivityLifecycle4, 106, 82, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication3.txt ---
+ActivityCommunication3, 192, 148, 0:04, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_VirtualDispatch2.txt ---
+VirtualDispatch2, 145, 109, 0:03, 0:01, 0:01, 2, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Echoer.txt ---
+Echoer, 186, 137, 0:03, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_RegisterGlobal1.txt ---
+RegisterGlobal1, 265, 181, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication7.txt ---
+ActivityCommunication7, 186, 142, 0:04, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Executor1.txt ---
+Executor1, 126, 89, 0:04, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ServiceLifecycle1.txt ---
+ServiceLifecycle1, 98, 76, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ArrayToString1.txt ---
+ArrayToString1, 95, 73, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_MethodOverride1.txt ---
+MethodOverride1, 96, 71, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityLifecycle2.txt ---
+ActivityLifecycle2, 105, 81, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Singletons1.txt ---
+Singletons1, 151, 120, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_SharedPreferenceChanged1.txt ---
+SharedPreferenceChanged1, 115, 89, 0:02, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ApplicationLifecycle2.txt ---
+ApplicationLifecycle2, 117, 90, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_JavaThread2.txt ---
+JavaThread2, 126, 89, 0:04, 0:02, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_BroadcastTaintAndLeak1.txt ---
+BroadcastTaintAndLeak1, 142, 107, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_AsyncTask1.txt ---
+AsyncTask1, 140, 101, 0:04, 0:02, 0:00, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_FieldSensitivity1.txt ---
+FieldSensitivity1, 135, 101, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ServiceLifecycle2.txt ---
+ServiceLifecycle2, 148, 111, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_FieldSensitivity2.txt ---
+FieldSensitivity2, 121, 88, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityLifecycle1.txt ---
+ActivityLifecycle1, 114, 91, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ObjectSensitivity1.txt ---
+ObjectSensitivity1, 103, 70, 0:04, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Exceptions4.txt ---
+Exceptions4, 102, 70, 0:03, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_ObjectSensitivity2.txt ---
+ObjectSensitivity2, 106, 70, 0:04, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Merge1.txt ---
+Merge1, 373, 160, 0:05, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_BroadcastReceiverLifecycle2.txt ---
+BroadcastReceiverLifecycle2, 162, 112, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ApplicationLifecycle1.txt ---
+ApplicationLifecycle1, 114, 87, 0:03, 0:01, 0:00, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Loop2.txt ---
+Loop2, 119, 94, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ArrayAccess2.txt ---
+ArrayAccess2, 104, 79, 0:04, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_FieldSensitivity3.txt ---
+FieldSensitivity3, 121, 88, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Looper1.txt ---
+Looper1, 376, 169, 0:05, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ImplicitFlow3.txt ---
+ImplicitFlow3, 165, 119, 0:04, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_StaticInitialization1.txt ---
+StaticInitialization1, 101, 77, 0:02, 0:01, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_Loop1.txt ---
+Loop1, 114, 89, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_StartProcessWithSecret1.txt ---
+StartProcessWithSecret1, 99, 76, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_FactoryMethods1.txt ---
+FactoryMethods1, 122, 95, 0:04, 0:01, 0:00, 2, 2
+
+
+--- Contents of ApplicationData_FlowSliceMode_ListAccess1.txt ---
+ListAccess1, 108, 81, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivitySavedState1.txt ---
+ActivitySavedState1, 105, 80, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication6.txt ---
+ActivityCommunication6, 190, 145, 0:04, 0:02, 0:01, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_HashMapAccess1.txt ---
+HashMapAccess1, 107, 78, 0:04, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Library2.txt ---
+Library2, 122, 85, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ArrayCopy1.txt ---
+ArrayCopy1, 100, 73, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_DirectLeak1.txt ---
+DirectLeak1, 91, 67, 0:03, 0:01, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_Serialization1.txt ---
+Serialization1, 127, 99, 0:03, 0:01, 0:00, 0, 0
+
+
+--- Contents of ApplicationData_FlowSliceMode_PrivateDataLeak1.txt ---
+PrivateDataLeak1, 219, 183, 0:04, 0:02, 0:01, 3, 3
+
+
+--- Contents of ApplicationData_FlowSliceMode_ApplicationLifecycle3.txt ---
+ApplicationLifecycle3, 228, 120, 0:03, 0:02, 0:01, 1, 1
+
+
+--- Contents of ApplicationData_FlowSliceMode_ActivityCommunication2.txt ---
+ActivityCommunication2, 185, 142, 0:03, 0:02, 0:01, 0, 0
+
+

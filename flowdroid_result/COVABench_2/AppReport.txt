@@ -1,0 +1,600 @@
+Slicing result for "au.com.tain.tierra-0002E15B0D587538A5C2D8D5E2EA2030BF70644DF2A7A1996DD03E0EE2A6947F":
+Finding Slicing Criteria: 0:00
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:00
+Constructing Local Graph: 0:00
+SDG Slicing: 0:05
+Building Dummymain: 0:00
+SDG construction: 0:00
+CFG Slicing: 0:00
+Locating Source and Sink: 0:02
+SDG Slicing Backward and Forward: 0:04
+PDG construction: 0:05
+Handling Exceptions: 0:00
+SDG Extra: 0:01
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 0:24
+FlowDroid in total(after slicing): 0:02
+After slicing, our tool slices 3811 nodes in the SDG.
+Slicing percentage: 27.65%(3811/13785)
+Slicing result for "appinventor.ai_emily2541.Pen-0032DD9A1A0A9BA909797FAB0BDC58C24F846FF4EDBB08A13584CD3EF015DD91":
+Finding Slicing Criteria: 0:08
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:00
+Constructing Local Graph: 0:00
+SDG Slicing: 30:12
+Building Dummymain: 0:31
+SDG construction: 0:10
+CFG Slicing: 0:00
+Locating Source and Sink: 0:06
+SDG Slicing Backward and Forward: 30:06
+PDG construction: 0:42
+Handling Exceptions: 0:01
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 32:45
+FlowDroid in total(after slicing): 0:02
+After slicing, our tool slices 11399 nodes in the SDG.
+Slicing percentage: 5.37%(11399/212399)
+Slicing result for "com.app_dceorocky.layout-009D1A3239BA9FAD54E898E820D860EE70FC4B9C98D50893AE726EB334F94318":
+Finding Slicing Criteria: 0:49
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:21
+Constructing Local Graph: 0:01
+SDG Slicing: 30:24
+Building Dummymain: 1:09
+SDG construction: 0:31
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:07
+PDG construction: 2:00
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 38:56
+FlowDroid in total(after slicing): 15:34
+After slicing, our tool slices 9937 nodes in the SDG.
+Slicing percentage: 3.85%(9937/257781)
+Slicing result for "com.app_catclinic.layout-0016469528D9ECFB1B52DF0D564E2A007EAE55A0A7C94F70C7E83A1D5C07C23B":
+Finding Slicing Criteria: 0:55
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:35
+Constructing Local Graph: 0:01
+SDG Slicing: 30:20
+Building Dummymain: 1:09
+SDG construction: 0:31
+CFG Slicing: 0:00
+Locating Source and Sink: 0:11
+SDG Slicing Backward and Forward: 30:07
+PDG construction: 1:54
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 39:24
+FlowDroid in total(after slicing): 15:19
+After slicing, our tool slices 10351 nodes in the SDG.
+Slicing percentage: 3.95%(10351/262091)
+Slicing result for "biz.mtoy.blockpuzzle.revolution-000F43281434C6C7FF401F7F82C00E4A34D7D8A0507C4562C200D7F9D13FE6C1":
+Finding Slicing Criteria: 0:03
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:01
+Constructing Local Graph: 0:00
+SDG Slicing: 37:18
+Building Dummymain: 0:10
+SDG construction: 0:05
+CFG Slicing: 0:02
+Locating Source and Sink: 0:04
+SDG Slicing Backward and Forward: 24:15
+PDG construction: 0:18
+Handling Exceptions: 0:00
+SDG Extra: 12:59
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 38:39
+FlowDroid in total(after slicing): 20:59
+After slicing, our tool slices 31028 nodes in the SDG.
+Slicing percentage: 18.28%(31028/169747)
+Slicing result for "appinventor.ai_ed99zzzz.FilterBackwashSpreader-00681E0C147C496D86D2D627D01227A220BAC8D50932196756AAA894A6C42F50":
+Finding Slicing Criteria: 0:22
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:00
+Constructing Local Graph: 0:00
+SDG Slicing: 30:16
+Building Dummymain: 0:17
+SDG construction: 0:17
+CFG Slicing: 0:00
+Locating Source and Sink: 0:10
+SDG Slicing Backward and Forward: 30:06
+PDG construction: 1:08
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 33:40
+FlowDroid in total(after slicing): 0:04
+After slicing, our tool slices 11366 nodes in the SDG.
+Slicing percentage: 4.72%(11366/241049)
+Slicing result for "com.app_bedbreakfastimin.layout-00AA186AD8FDDD6AC2F62372CA99AF68961A0A1B0B653BCA8942929A04F929F5":
+Finding Slicing Criteria: 0:45
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:31
+Constructing Local Graph: 0:01
+SDG Slicing: 30:22
+Building Dummymain: 1:08
+SDG construction: 0:30
+CFG Slicing: 0:00
+Locating Source and Sink: 0:14
+SDG Slicing Backward and Forward: 30:06
+PDG construction: 1:54
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 39:13
+FlowDroid in total(after slicing): 80:47
+After slicing, our tool slices 10351 nodes in the SDG.
+Slicing percentage: 3.96%(10351/261371)
+Slicing result for "com.app_louwinc.layout-007A22B51AF9E483548804112B92AC3AB004296504EB76BA57D0BABC1818E7FC":
+Finding Slicing Criteria: 0:59
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:42
+Constructing Local Graph: 0:02
+SDG Slicing: 30:25
+Building Dummymain: 1:11
+SDG construction: 0:31
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:08
+PDG construction: 1:46
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 39:40
+FlowDroid in total(after slicing): 80:22
+After slicing, our tool slices 11095 nodes in the SDG.
+Slicing percentage: 3.98%(11095/278876)
+Slicing result for "com.app_lombardisyell.layout-009C93DABFEDD6F28BEDB451E7CF33AED1412CDCF512AA63272162F2348B9E55":
+Finding Slicing Criteria: 1:03
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:25
+Constructing Local Graph: 0:01
+SDG Slicing: 30:23
+Building Dummymain: 1:04
+SDG construction: 0:32
+CFG Slicing: 0:00
+Locating Source and Sink: 0:12
+SDG Slicing Backward and Forward: 30:08
+PDG construction: 1:57
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 38:55
+FlowDroid in total(after slicing): 81:11
+After slicing, our tool slices 9937 nodes in the SDG.
+Slicing percentage: 3.85%(9937/257801)
+Slicing result for "com.app_bailarkizomba.layout-004D32297F08D9BAA0635B553FE4B87E883413B47E5C61A204F3A9C47C454C65":
+Finding Slicing Criteria: 0:50
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:19
+Constructing Local Graph: 0:01
+SDG Slicing: 30:26
+Building Dummymain: 1:11
+SDG construction: 0:30
+CFG Slicing: 0:00
+Locating Source and Sink: 0:15
+SDG Slicing Backward and Forward: 30:08
+PDG construction: 1:57
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 38:54
+FlowDroid in total(after slicing): 81:19
+After slicing, our tool slices 9937 nodes in the SDG.
+Slicing percentage: 3.85%(9937/257797)
+Slicing result for "cloud.quest.map-002927AA89DE4A2CE58E8FACB880B6984ECFB45BE45E8FA04B4735D0C0CD7B06":
+Finding Slicing Criteria: 3:12
+SDG Slicing CSR: 0:00
+Adding Callbacks: 3:18
+Constructing Local Graph: 0:04
+SDG Slicing: 31:36
+Building Dummymain: 1:29
+SDG construction: 0:36
+CFG Slicing: 0:00
+Locating Source and Sink: 0:17
+SDG Slicing Backward and Forward: 30:17
+PDG construction: 0:58
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 54:44
+FlowDroid in total(after slicing): 65:31
+After slicing, our tool slices 30624 nodes in the SDG.
+Slicing percentage: 5.41%(30624/565898)
+Slicing result for "com.aitype.android.theme.pt_eccentric_lady-0067834F13F60442B6933D3C09C39F33C3CD1475AE4124CB8A1670BFDDA97D12":
+Finding Slicing Criteria: 0:04
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:00
+Constructing Local Graph: 0:00
+SDG Slicing: 10:54
+Building Dummymain: 0:07
+SDG construction: 0:03
+CFG Slicing: 0:00
+Locating Source and Sink: 0:03
+SDG Slicing Backward and Forward: 7:45
+PDG construction: 0:09
+Handling Exceptions: 0:00
+SDG Extra: 3:06
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 11:47
+FlowDroid in total(after slicing): 108:36
+After slicing, our tool slices 19491 nodes in the SDG.
+Slicing percentage: 17.3%(19491/112675)
+Slicing result for "com.app_bridgew.layout-0028365AA823F0C0737ADF07A87D6429C48FC6AFA23FCB84E1E59BD0E9BA307F":
+Finding Slicing Criteria: 0:39
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:24
+Constructing Local Graph: 0:01
+SDG Slicing: 30:22
+Building Dummymain: 1:08
+SDG construction: 0:29
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:08
+PDG construction: 1:50
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 38:32
+FlowDroid in total(after slicing): 81:48
+After slicing, our tool slices 9937 nodes in the SDG.
+Slicing percentage: 3.85%(9937/257801)
+Slicing result for "br.com.gvdasa.gvmobile.santadoroteia-0083B5430AD21F71DA9BD05C356D9BC38CF942A065EAB558E573D22C5E84612D":
+Finding Slicing Criteria: 0:00
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:00
+Constructing Local Graph: 0:00
+SDG Slicing: 0:07
+Building Dummymain: 0:01
+SDG construction: 0:00
+CFG Slicing: 0:00
+Locating Source and Sink: 0:01
+SDG Slicing Backward and Forward: 0:04
+PDG construction: 0:03
+Handling Exceptions: 0:00
+SDG Extra: 0:02
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 0:23
+FlowDroid in total(after slicing): 0:06
+After slicing, our tool slices 2994 nodes in the SDG.
+Slicing percentage: 23.19%(2994/12908)
+Slicing result for "appinventor.ai_renzo097.CMCFM2-00AA0271E2D7EDDFC6C3510F307E45864EC9A234C973B2B3B641171301CDD68B":
+Finding Slicing Criteria: 0:31
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:01
+Constructing Local Graph: 0:01
+SDG Slicing: 30:31
+Building Dummymain: 0:31
+SDG construction: 0:41
+CFG Slicing: 0:00
+Locating Source and Sink: 0:16
+SDG Slicing Backward and Forward: 30:17
+PDG construction: 2:33
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 37:13
+FlowDroid in total(after slicing): 0:01
+After slicing, our tool slices 11199 nodes in the SDG.
+Slicing percentage: 5.07%(11199/220853)
+Slicing result for "appinventor.ai_akelkar.SherlockTrivia-0080976A62D00E58A85E6E47E20CF197160DB8FB998466991E0139634B73FBB6":
+Finding Slicing Criteria: 0:19
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:00
+Constructing Local Graph: 0:01
+SDG Slicing: 30:14
+Building Dummymain: 0:19
+SDG construction: 0:18
+CFG Slicing: 0:00
+Locating Source and Sink: 0:12
+SDG Slicing Backward and Forward: 30:07
+PDG construction: 1:14
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 33:45
+FlowDroid in total(after slicing): 0:03
+After slicing, our tool slices 11187 nodes in the SDG.
+Slicing percentage: 5.33%(11187/210039)
+Slicing result for "cn.zhui.client3674144-005A158B00B128BBE4A928546E70FA1531B0D05F4C6137EA52F47391552F96B3":
+Finding Slicing Criteria: 0:30
+SDG Slicing CSR: 0:01
+Adding Callbacks: 4:07
+Constructing Local Graph: 0:00
+SDG Slicing: 0:00
+Building Dummymain: 0:09
+SDG construction: 0:34
+CFG Slicing: 0:03
+Locating Source and Sink: 0:08
+SDG Slicing Backward and Forward: 30:05
+PDG construction: 0:36
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 60:18
+FlowDroid in total(after slicing): 0:18
+After slicing, our tool slices 69377 nodes in the SDG.
+Slicing percentage: 30.13%(69377/230286)
+Slicing result for "com.app_emilierawlings.layout-005F4521784EF7F94DFB3AF571E67B3FD39BD024B2B7899F5D09EB4AF30640C9":
+Finding Slicing Criteria: 1:14
+SDG Slicing CSR: 0:00
+Adding Callbacks: 2:32
+Constructing Local Graph: 0:02
+SDG Slicing: 30:52
+Building Dummymain: 1:50
+SDG construction: 0:47
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:19
+PDG construction: 3:19
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 44:17
+FlowDroid in total(after slicing): 11:54
+After slicing, our tool slices 11095 nodes in the SDG.
+Slicing percentage: 3.98%(11095/278876)
+Slicing result for "com.app_provence.layout-00AC5DEBBA02B3082B86621570384D4C1D662983E646CC1FF9828248F50E49F3":
+Finding Slicing Criteria: 2:41
+SDG Slicing CSR: 0:00
+Adding Callbacks: 3:58
+Constructing Local Graph: 0:03
+SDG Slicing: 31:16
+Building Dummymain: 3:31
+SDG construction: 1:27
+CFG Slicing: 0:00
+Locating Source and Sink: 0:19
+SDG Slicing Backward and Forward: 30:18
+PDG construction: 7:59
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 58:32
+FlowDroid in total(after slicing): 61:38
+After slicing, our tool slices 9939 nodes in the SDG.
+Slicing percentage: 3.86%(9939/257801)
+Slicing result for "com.app.downloadmanager-00051125DBC41DC99BBF6785861CFC193EDF548C54149C5FC5808AB00D791657":
+Finding Slicing Criteria: 2:21
+Constructing Local Graph: 0:02
+CFG Slicing: 0:00
+Locating Source and Sink: 0:15
+PDG construction: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 7:49
+FlowDroid in total(after slicing): 24:10
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: NaN%(0/0)
+Slicing result for "com.app_tranquiltouringparks932.layout-0069F15D82D0CAEB19342E1EE5CB9726E58A59AFE41B3C3110B890309B738E10":
+Finding Slicing Criteria: 2:36
+SDG Slicing CSR: 0:00
+Adding Callbacks: 4:26
+Constructing Local Graph: 0:03
+SDG Slicing: 31:27
+Building Dummymain: 3:38
+SDG construction: 1:24
+CFG Slicing: 0:00
+Locating Source and Sink: 0:18
+SDG Slicing Backward and Forward: 30:23
+PDG construction: 6:32
+Handling Exceptions: 0:01
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 57:44
+FlowDroid in total(after slicing): 62:26
+After slicing, our tool slices 11095 nodes in the SDG.
+Slicing percentage: 3.98%(11095/278876)
+Slicing result for "com.app_fitjdm.layout-0017EB197F99C82C2AABFA61C40D460333C6B488EDA69B5C3D0FDD945C611C9E":
+Finding Slicing Criteria: 1:10
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:56
+Constructing Local Graph: 0:01
+SDG Slicing: 30:34
+Building Dummymain: 1:35
+SDG construction: 0:33
+CFG Slicing: 0:00
+Locating Source and Sink: 0:15
+SDG Slicing Backward and Forward: 30:09
+PDG construction: 2:25
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 41:42
+FlowDroid in total(after slicing): 78:30
+After slicing, our tool slices 9937 nodes in the SDG.
+Slicing percentage: 3.85%(9937/257801)
+Slicing result for "com.app_massagersimin.layout-00A6AED5269A1A5980240D6BD07B82004680314056A0493A8CD35354496D8971":
+Finding Slicing Criteria: 1:04
+SDG Slicing CSR: 0:00
+Adding Callbacks: 2:13
+Constructing Local Graph: 0:01
+SDG Slicing: 30:38
+Building Dummymain: 1:37
+SDG construction: 0:41
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:11
+PDG construction: 2:47
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 42:57
+FlowDroid in total(after slicing): 77:11
+After slicing, our tool slices 10351 nodes in the SDG.
+Slicing percentage: 3.95%(10351/261793)
+Slicing result for "com.app_neweff.layout-0015FF071C6F09377B44D06B0D878AE0191FC4DB06F949057FDB8019D6EE3EFA":
+Finding Slicing Criteria: 0:59
+SDG Slicing CSR: 0:00
+Adding Callbacks: 2:13
+Constructing Local Graph: 0:01
+SDG Slicing: 30:42
+Building Dummymain: 1:38
+SDG construction: 0:46
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:12
+PDG construction: 3:09
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 43:10
+FlowDroid in total(after slicing): 77:01
+After slicing, our tool slices 10328 nodes in the SDG.
+Slicing percentage: 3.98%(10328/259819)
+Slicing result for "br.gov.ines.tv-000CE8291BF868DFFC1FA7ACC62386E1828A074D99CB371096AD8F6C36581BB9":
+Finding Slicing Criteria: 0:17
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:02
+Constructing Local Graph: 0:00
+SDG Slicing: 48:42
+Building Dummymain: 0:33
+SDG construction: 0:06
+CFG Slicing: 0:03
+Locating Source and Sink: 0:06
+SDG Slicing Backward and Forward: 30:02
+PDG construction: 0:33
+Handling Exceptions: 0:00
+SDG Extra: 18:31
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 51:42
+FlowDroid in total(after slicing): 68:19
+After slicing, our tool slices 26356 nodes in the SDG.
+Slicing percentage: 13.74%(26356/191883)
+Slicing result for "com.app_mscharity.layout-0032E4CCF0B2A9CC1BAE9E6F6FB7542E784ED16DB358E411E887FDD019952013":
+Finding Slicing Criteria: 1:14
+SDG Slicing CSR: 0:00
+Adding Callbacks: 2:02
+Constructing Local Graph: 0:01
+SDG Slicing: 30:37
+Building Dummymain: 1:27
+SDG construction: 0:37
+CFG Slicing: 0:00
+Locating Source and Sink: 0:12
+SDG Slicing Backward and Forward: 30:09
+PDG construction: 2:30
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 42:12
+FlowDroid in total(after slicing): 78:05
+After slicing, our tool slices 10351 nodes in the SDG.
+Slicing percentage: 3.95%(10351/262077)
+Slicing result for "bob.bobwatches-000199E21C24BCBDFD64E8CA8F4E5E728C6569F0C4A0C831B980621DA4386FCC":
+Finding Slicing Criteria: 0:56
+SDG Slicing CSR: 0:01
+Adding Callbacks: 0:35
+Constructing Local Graph: 0:01
+SDG Slicing: 0:00
+Building Dummymain: 0:33
+SDG construction: 0:12
+CFG Slicing: 0:12
+Locating Source and Sink: 0:10
+SDG Slicing Backward and Forward: 30:03
+PDG construction: 0:34
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 60:30
+FlowDroid in total(after slicing): 59:35
+After slicing, our tool slices 83460 nodes in the SDG.
+Slicing percentage: 27.72%(83460/301068)
+Slicing result for "abbbilgiislem.abbakllkentuygulamas-00433AAF30E1403CF600537041A22F09C980ACCCA7D75924C54CB90634CD6CDB":
+Finding Slicing Criteria: 0:43
+SDG Slicing CSR: 0:01
+Adding Callbacks: 0:09
+Constructing Local Graph: 0:00
+SDG Slicing: 0:00
+Building Dummymain: 0:35
+SDG construction: 0:17
+CFG Slicing: 0:10
+Locating Source and Sink: 0:09
+SDG Slicing Backward and Forward: 30:12
+PDG construction: 1:11
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 60:29
+FlowDroid in total(after slicing): 0:16
+After slicing, our tool slices 62326 nodes in the SDG.
+Slicing percentage: 23.9%(62326/260763)
+Slicing result for "com.aitype.android.theme.pt_husky-0059F19D98D27298B2C95C63BADD9B181E6774883E00639CD9E92E4A5C63A49A":
+Finding Slicing Criteria: 0:08
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:01
+Constructing Local Graph: 0:00
+SDG Slicing: 14:53
+Building Dummymain: 0:10
+SDG construction: 0:05
+CFG Slicing: 0:01
+Locating Source and Sink: 0:05
+SDG Slicing Backward and Forward: 10:06
+PDG construction: 0:16
+Handling Exceptions: 0:00
+SDG Extra: 4:44
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 16:03
+FlowDroid in total(after slicing): 104:05
+After slicing, our tool slices 19463 nodes in the SDG.
+Slicing percentage: 17.27%(19463/112675)
+Slicing result for "com.app_gooch.layout-0046E4CBE0C348C646167F62C587AB1558A26BDEE1EB56C8E434ECCFB627EBA2":
+Finding Slicing Criteria: 1:07
+SDG Slicing CSR: 0:00
+Adding Callbacks: 1:52
+Constructing Local Graph: 0:01
+SDG Slicing: 30:41
+Building Dummymain: 1:57
+SDG construction: 0:53
+CFG Slicing: 0:00
+Locating Source and Sink: 0:14
+SDG Slicing Backward and Forward: 30:11
+PDG construction: 3:08
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 43:21
+FlowDroid in total(after slicing): 76:41
+After slicing, our tool slices 9937 nodes in the SDG.
+Slicing percentage: 3.85%(9937/257801)
+Slicing result for "be.rbfa-001D9589C94C2A01F60C48ADC086756CF7E0C03677A05D14AC80FE586521CB6D":
+Finding Slicing Criteria: 1:59
+SDG Slicing CSR: 0:00
+Adding Callbacks: 0:32
+Constructing Local Graph: 0:03
+SDG Slicing: 31:03
+Building Dummymain: 0:50
+SDG construction: 0:21
+CFG Slicing: 0:00
+Locating Source and Sink: 0:13
+SDG Slicing Backward and Forward: 30:08
+PDG construction: 2:17
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 42:41
+FlowDroid in total(after slicing): 77:43
+After slicing, our tool slices 15767 nodes in the SDG.
+Slicing percentage: 5.03%(15767/313572)
+Slicing result for "com.app_healvet.layout-001C0940ADD4E54C93C2A78A71C0F883EA19484F0A0521EFAA9B22837D37A4DD":
+Finding Slicing Criteria: 1:19
+SDG Slicing CSR: 0:00
+Adding Callbacks: 2:29
+Constructing Local Graph: 0:01
+SDG Slicing: 30:41
+Building Dummymain: 2:06
+SDG construction: 1:01
+CFG Slicing: 0:00
+Locating Source and Sink: 0:15
+SDG Slicing Backward and Forward: 30:11
+PDG construction: 3:23
+Handling Exceptions: 0:00
+SDG Extra: 0:00
+FlowDroid in total(before slicing): 0:00
+FlowSlicer in total: 44:37
+FlowDroid in total(after slicing): 75:24
+After slicing, our tool slices 10328 nodes in the SDG.
+Slicing percentage: 3.98%(10328/259819)
