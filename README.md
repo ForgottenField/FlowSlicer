@@ -1,6 +1,6 @@
 # FlowSlicer
 
-**FlowSlicer** is a tool designed to streamline the debloating and slicing of Android applications, enabling the identification and analysis of multi-level dependencies and generating debloated apps based on the built MDG. This repository includes all necessary code, configuration files, and raw data to reproduce our experiments.
+**FlowSlicer** is a tool designed to streamline the debloating and slicing of Android applications, enabling the identification and analysis of multi-level dependence and generating debloated apps based on the built MDG. This repository includes all necessary code, configuration files, and raw data to reproduce our experiments.
 
 ## Table of Contents
 
