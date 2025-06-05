@@ -1,0 +1,374 @@
+Results from file: result.xml
+Source Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+Source Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+Sink Statement: virtualinvoke $r6.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept", "application/json;text/html;text/plain")
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: $r6 = (java.net.HttpURLConnection) $r5
+  Step 3: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: virtualinvoke $r6.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept", "application/json;text/html;text/plain")
+
+==================================================
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(10, $b0, 0)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+Sink Statement: virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(10, $b0, 0)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+    Statement: virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+Source Statement: $i0 = virtualinvoke $r4.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+Sink Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+Sink Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: $i0 = virtualinvoke $r4.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: $r5 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i0)
+  Step 3: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: void setLac(java.lang.String)>($r5)
+  Step 4: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setLac(java.lang.String)>
+    Statement: r0.<com.startapp.android.publish.model.BaseRequest: java.lang.String lac> = $r1
+  Step 5: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setLac(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: return
+  Step 7: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillApplicationDetails(android.content.Context,com.startapp.android.publish.model.AdPreferences)>
+    Statement: return
+  Step 8: 
+    Method: <com.startapp.android.publish.g$1: void run()>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>($r4, $r1, $r2, null)
+  Step 9: 
+    Method: <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>($r0, $r1, $r2, null, $r4, 3, 0L)
+  Step 10: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: if $r1 == null goto $r9 = new java.lang.StringBuilder
+  Step 11: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r4 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 12: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: staticinvoke <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>($r0, $r4, $r2, $r3)
+  Step 13: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: $r5 = staticinvoke <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>($r0, $r1, null, $r2)
+  Step 14: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: specialinvoke $r4.<java.net.URL: void <init>(java.lang.String)>($r1)
+  Step 15: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+Source Statement: $r7 = virtualinvoke $r6.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+Sink Method: <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+Sink Statement: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>($r0, $r1, $r2)
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: $r7 = virtualinvoke $r6.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: if $r7 == null goto (branch)
+  Step 3: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: $r7 = staticinvoke <com.startapp.android.publish.j.w: java.lang.String d(java.lang.String)>($r7)
+  Step 4: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: void setSsid(java.lang.String)>($r7)
+  Step 5: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setSsid(java.lang.String)>
+    Statement: r0.<com.startapp.android.publish.model.BaseRequest: java.lang.String ssid> = $r1
+  Step 6: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setSsid(java.lang.String)>
+    Statement: return
+  Step 7: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: return
+  Step 8: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillApplicationDetails(android.content.Context,com.startapp.android.publish.model.AdPreferences)>
+    Statement: return
+  Step 9: 
+    Method: <com.startapp.android.publish.g$1: void run()>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>($r4, $r1, $r2, null)
+  Step 10: 
+    Method: <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>($r0, $r1, $r2, null, $r4, 3, 0L)
+  Step 11: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: if $r1 == null goto $r9 = new java.lang.StringBuilder
+  Step 12: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r4 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r5 = virtualinvoke $r9.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4)
+  Step 14: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r6 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 15: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String)>("Transport", 3, $r6)
+  Step 16: 
+    Method: <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String,java.lang.Throwable)>($r0, $i0, $r1, null)
+  Step 17: 
+    Method: <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>($r0, $i0, $r1, $r2)
+  Step 18: 
+    Method: <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>($r0, $r1, $r2)
+
+==================================================
+Source Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+Source Statement: $i0 = virtualinvoke $r4.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+Sink Method: <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+Sink Statement: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>($r0, $r1, $r2)
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: $i0 = virtualinvoke $r4.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: $r5 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i0)
+  Step 3: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: void setLac(java.lang.String)>($r5)
+  Step 4: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setLac(java.lang.String)>
+    Statement: r0.<com.startapp.android.publish.model.BaseRequest: java.lang.String lac> = $r1
+  Step 5: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setLac(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: return
+  Step 7: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillApplicationDetails(android.content.Context,com.startapp.android.publish.model.AdPreferences)>
+    Statement: return
+  Step 8: 
+    Method: <com.startapp.android.publish.g$1: void run()>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>($r4, $r1, $r2, null)
+  Step 9: 
+    Method: <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>($r0, $r1, $r2, null, $r4, 3, 0L)
+  Step 10: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: if $r1 == null goto $r9 = new java.lang.StringBuilder
+  Step 11: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r4 = virtualinvoke $r1.<com.startapp.android.publish.model.BaseRequest: java.lang.String getRequestString()>()
+  Step 12: 
+    Method: <com.startapp.android.publish.model.BaseRequest: java.lang.String getRequestString()>
+    Statement: $r2 = virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: java.util.List getNameValueMap()>()
+  Step 13: 
+    Method: <com.startapp.android.publish.model.SdkDownloadRequest: java.util.List getNameValueMap()>
+    Statement: $r1 = specialinvoke r0.<com.startapp.android.publish.model.BaseRequest: java.util.List getNameValueMap()>()
+  Step 14: 
+    Method: <com.startapp.android.publish.model.BaseRequest: java.util.List getNameValueMap()>
+    Statement: $r2 = virtualinvoke $r9.<com.startapp.android.publish.j.a$c: java.lang.String a()>()
+  Step 15: 
+    Method: <com.startapp.android.publish.j.a$c: java.lang.String a()>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void a(int,java.lang.String)>(3, $r2)
+  Step 16: 
+    Method: <com.startapp.android.publish.j.m: void a(int,java.lang.String)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String,java.lang.Throwable)>(null, $i0, $r0, null)
+  Step 17: 
+    Method: <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>($r1, $i0, $r6, null)
+  Step 18: 
+    Method: <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>($r0, $r1, $r2)
+
+==================================================
+Source Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+Source Statement: $r7 = virtualinvoke $r6.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+Sink Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+Sink Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: $r7 = virtualinvoke $r6.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: if $r7 == null goto (branch)
+  Step 3: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: void setSsid(java.lang.String)>($r7)
+  Step 4: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setSsid(java.lang.String)>
+    Statement: r0.<com.startapp.android.publish.model.BaseRequest: java.lang.String ssid> = $r1
+  Step 5: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setSsid(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillWifiDetails(android.content.Context)>
+    Statement: return
+  Step 7: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillApplicationDetails(android.content.Context,com.startapp.android.publish.model.AdPreferences)>
+    Statement: return
+  Step 8: 
+    Method: <com.startapp.android.publish.g$1: void run()>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>($r4, $r1, $r2, null)
+  Step 9: 
+    Method: <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>($r0, $r1, $r2, null, $r4, 3, 0L)
+  Step 10: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: if $r1 == null goto $r9 = new java.lang.StringBuilder
+  Step 11: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r4 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 12: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: staticinvoke <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>($r0, $r4, $r2, $r3)
+  Step 13: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: $r5 = staticinvoke <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>($r0, $r1, null, $r2)
+  Step 14: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: specialinvoke $r4.<java.net.URL: void <init>(java.lang.String)>($r1)
+  Step 15: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+Source Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(9, $r1)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+Sink Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+    Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(9, $r1)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+    Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+Source Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+Sink Statement: virtualinvoke $r9.<java.io.Writer: void write(char[],int,int)>($r10, 0, $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: $r5 = virtualinvoke $r4.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: $r6 = (java.net.HttpURLConnection) $r5
+  Step 3: 
+    Method: <com.startapp.android.publish.j.o: java.net.HttpURLConnection a(android.content.Context,java.lang.String,byte[],java.util.Map)>
+    Statement: return $r6
+  Step 4: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: $r8 = virtualinvoke $r5.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+  Step 5: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: specialinvoke $r19.<java.io.InputStreamReader: void <init>(java.io.InputStream,java.lang.String)>($r8, "UTF-8")
+  Step 6: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: $r12 = $r19
+  Step 7: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: specialinvoke $r20.<java.io.BufferedReader: void <init>(java.io.Reader)>($r12)
+  Step 8: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: $r11 = $r20
+  Step 9: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: $i0 = virtualinvoke $r11.<java.io.Reader: int read(char[])>($r10)
+  Step 10: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: virtualinvoke $r9.<java.io.Writer: void write(char[],int,int)>($r10, 0, $i0)
+  Step 11: 
+    Method: <com.startapp.android.publish.j.o: boolean a(android.content.Context,java.lang.String,java.util.Map,java.lang.StringBuilder)>
+    Statement: virtualinvoke $r9.<java.io.Writer: void write(char[],int,int)>($r10, 0, $i0)
+
+==================================================
+Source Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+Source Statement: $i0 = virtualinvoke $r4.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+Sink Method: <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+Sink Statement: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>($r0, $r1, $r2)
+Taint Path:
+  Step 1: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: $i0 = virtualinvoke $r4.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+  Step 2: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: $r5 = staticinvoke <java.lang.String: java.lang.String valueOf(int)>($i0)
+  Step 3: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: void setCid(java.lang.String)>($r5)
+  Step 4: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setCid(java.lang.String)>
+    Statement: r0.<com.startapp.android.publish.model.BaseRequest: java.lang.String cid> = $r1
+  Step 5: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void setCid(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillCellLocationDetails(android.content.Context,android.telephony.TelephonyManager)>
+    Statement: return
+  Step 7: 
+    Method: <com.startapp.android.publish.model.BaseRequest: void fillApplicationDetails(android.content.Context,com.startapp.android.publish.model.AdPreferences)>
+    Statement: return
+  Step 8: 
+    Method: <com.startapp.android.publish.g$1: void run()>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>($r4, $r1, $r2, null)
+  Step 9: 
+    Method: <com.startapp.android.publish.i.c: java.lang.String a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map)>
+    Statement: staticinvoke <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>($r0, $r1, $r2, null, $r4, 3, 0L)
+  Step 10: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: if $r1 == null goto $r9 = new java.lang.StringBuilder
+  Step 11: 
+    Method: <com.startapp.android.publish.i.c: void a(android.content.Context,java.lang.String,com.startapp.android.publish.model.BaseRequest,java.util.Map,java.lang.StringBuilder,int,long)>
+    Statement: $r4 = virtualinvoke $r1.<com.startapp.android.publish.model.BaseRequest: java.lang.String getRequestString()>()
+  Step 12: 
+    Method: <com.startapp.android.publish.model.BaseRequest: java.lang.String getRequestString()>
+    Statement: $r2 = virtualinvoke r0.<com.startapp.android.publish.model.BaseRequest: java.util.List getNameValueMap()>()
+  Step 13: 
+    Method: <com.startapp.android.publish.model.SdkDownloadRequest: java.util.List getNameValueMap()>
+    Statement: $r1 = specialinvoke r0.<com.startapp.android.publish.model.BaseRequest: java.util.List getNameValueMap()>()
+  Step 14: 
+    Method: <com.startapp.android.publish.model.BaseRequest: java.util.List getNameValueMap()>
+    Statement: $r2 = virtualinvoke $r9.<com.startapp.android.publish.j.a$c: java.lang.String a()>()
+  Step 15: 
+    Method: <com.startapp.android.publish.j.a$c: java.lang.String a()>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void a(int,java.lang.String)>(3, $r2)
+  Step 16: 
+    Method: <com.startapp.android.publish.j.m: void a(int,java.lang.String)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String,java.lang.Throwable)>(null, $i0, $r0, null)
+  Step 17: 
+    Method: <com.startapp.android.publish.j.m: void a(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>($r1, $i0, $r6, null)
+  Step 18: 
+    Method: <com.startapp.android.publish.j.m: void b(java.lang.String,int,java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String,java.lang.Throwable)>($r0, $r1, $r2)
+
+==================================================
+
+9 paths in total.
+
+==================================================

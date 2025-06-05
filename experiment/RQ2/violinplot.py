@@ -50,12 +50,12 @@ plt.axvline(min_value, color='red', linestyle=':', label=f'Min: {min_value:.2f}%
 plt.axvline(max_value, color='purple', linestyle=':', label=f'Max: {max_value:.2f}%')
 
 # 添加标签
-plt.xlabel('Distribution of Reduced Percentage After Debloating')
-plt.yticks([0], ["COVABench_1"])
-plt.title('Percentage Reduction in FlowDroid Time After Debloating')
+plt.xlabel('Distribution of Reduced Percentage After Debloating', fontsize=20)
+plt.yticks([])
+plt.title('Percentage Reduction in FlowDroid Time After Debloating', fontsize=20)
 
 # 显示图例
-plt.legend(loc='upper right')
+plt.legend(loc='upper right', fontsize=12)
 
 # 调整布局
 plt.tight_layout()

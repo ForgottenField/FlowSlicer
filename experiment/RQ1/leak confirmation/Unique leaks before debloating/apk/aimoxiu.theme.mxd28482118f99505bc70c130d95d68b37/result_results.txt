@@ -1,0 +1,372 @@
+Results from file: result.xml
+Source Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+Sink Method: <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+Taint Path:
+  Step 1: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+  Step 2: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r8 = interfaceinvoke $r7.<java.util.List: java.lang.Object get(int)>($i1)
+  Step 3: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: r9 = (android.content.pm.ResolveInfo) $r8
+  Step 4: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r11 = r9.<android.content.pm.ResolveInfo: android.content.pm.ActivityInfo activityInfo>
+  Step 5: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: if $r11 == null goto $r8 = interfaceinvoke $r3.<java.util.List: java.lang.Object get(int)>(i0)
+  Step 6: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: r10 = virtualinvoke r10.<java.lang.String: java.lang.String toLowerCase()>()
+  Step 7: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r4 = staticinvoke <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>($r0, r10, r12, r9)
+  Step 8: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: virtualinvoke r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("package_name", $r1)
+  Step 9: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: return r4
+  Step 10: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4)
+  Step 11: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: return r2
+  Step 12: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: java.util.ArrayList marketList> = $r2
+  Step 13: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: return
+  Step 14: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onResume()>
+    Statement: return
+  Step 15: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 16: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>(r0, "mx_install_launcher_then_finish")
+  Step 17: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke $r2.<com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>($r0, $r1, null, -1L, 1)
+  Step 18: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: if $r1 == null goto specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 19: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 20: 
+    Method: <com.umeng.analytics.b: void a(java.lang.String)>
+    Statement: staticinvoke <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>("MobclickAgent", "invalid params in onEvent")
+  Step 21: 
+    Method: <com.umeng.common.Log: void <clinit>()>
+    Statement: <com.umeng.common.Log: boolean LOG> = 0
+  Step 22: 
+    Method: <com.umeng.common.Log: void <clinit>()>
+    Statement: return
+  Step 23: 
+    Method: <com.umeng.analytics.b: void a(java.lang.String)>
+    Statement: return
+  Step 24: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: return
+  Step 25: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: return
+  Step 26: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 27: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: return $r0
+  Step 28: 
+    Method: <dummyMainClass: void dummyMainMethod(java.lang.String[])>
+    Statement: staticinvoke <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>(null)
+  Step 29: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onCreate(android.os.Bundle)>(null)
+  Step 30: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onCreate(android.os.Bundle)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void onError(android.content.Context)>(r0)
+  Step 31: 
+    Method: <com.umeng.analytics.MobclickAgent: void onError(android.content.Context)>
+    Statement: virtualinvoke $r1.<com.umeng.analytics.b: void b(android.content.Context)>($r0)
+  Step 32: 
+    Method: <com.umeng.analytics.b: void b(android.content.Context)>
+    Statement: virtualinvoke $r4.<com.umeng.analytics.a: void a(android.content.Context)>($r1)
+  Step 33: 
+    Method: <com.umeng.analytics.a: void a(android.content.Context)>
+    Statement: staticinvoke <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>("MobclickAgent", "can\'t call onError more than once!")
+  Step 34: 
+    Method: <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>
+    Statement: $z0 = <com.umeng.common.Log: boolean LOG>
+  Step 35: 
+    Method: <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>
+    Statement: if $z0 == 0 goto return
+  Step 36: 
+    Method: <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+
+==================================================
+Source Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+Sink Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+Taint Path:
+  Step 1: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+  Step 2: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r8 = interfaceinvoke $r7.<java.util.List: java.lang.Object get(int)>($i1)
+  Step 3: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: r9 = (android.content.pm.ResolveInfo) $r8
+  Step 4: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r4 = staticinvoke <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>($r0, r10, r12, r9)
+  Step 5: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: virtualinvoke r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("resolve_info", $r3)
+  Step 6: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: return r4
+  Step 7: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4)
+  Step 8: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: return r2
+  Step 9: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: java.util.ArrayList marketList> = $r2
+  Step 10: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: return
+  Step 11: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onResume()>
+    Statement: return
+  Step 12: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 13: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>(r0, "mx_install_launcher_then_finish")
+  Step 14: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke $r2.<com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>($r0, $r1, null, -1L, 1)
+  Step 15: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: if $r1 == null goto specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 16: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 17: 
+    Method: <com.umeng.analytics.b: void a(java.lang.String)>
+    Statement: staticinvoke <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>("MobclickAgent", "invalid params in onEvent")
+  Step 18: 
+    Method: <com.umeng.common.Log: void <clinit>()>
+    Statement: <com.umeng.common.Log: boolean LOG> = 0
+  Step 19: 
+    Method: <com.umeng.common.Log: void <clinit>()>
+    Statement: return
+  Step 20: 
+    Method: <com.umeng.analytics.b: void a(java.lang.String)>
+    Statement: return
+  Step 21: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: return
+  Step 22: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: return
+  Step 23: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 24: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onCreate(android.os.Bundle)>(null)
+  Step 25: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onCreate(android.os.Bundle)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void updateOnlineConfig(android.content.Context)>(r0)
+  Step 26: 
+    Method: <com.umeng.analytics.MobclickAgent: void updateOnlineConfig(android.content.Context)>
+    Statement: virtualinvoke $r1.<com.umeng.analytics.b: void e(android.content.Context)>($r0)
+  Step 27: 
+    Method: <com.umeng.analytics.b: void e(android.content.Context)>
+    Statement: staticinvoke <com.umeng.common.Log: void b(java.lang.String,java.lang.String)>("MobclickAgent", "unexpected null context in updateOnlineConfig")
+  Step 28: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String)>
+    Statement: $z0 = <com.umeng.common.Log: boolean LOG>
+  Step 29: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String)>
+    Statement: if $z0 == 0 goto return
+  Step 30: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+
+==================================================
+Source Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+Sink Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+Taint Path:
+  Step 1: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+  Step 2: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r8 = interfaceinvoke $r7.<java.util.List: java.lang.Object get(int)>($i1)
+  Step 3: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: r9 = (android.content.pm.ResolveInfo) $r8
+  Step 4: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r4 = staticinvoke <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>($r0, r10, r12, r9)
+  Step 5: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: virtualinvoke r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("resolve_info", $r3)
+  Step 6: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: return r4
+  Step 7: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4)
+  Step 8: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: return r2
+  Step 9: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: java.util.ArrayList marketList> = $r2
+  Step 10: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: return
+  Step 11: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onResume()>
+    Statement: return
+  Step 12: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 13: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>(r0, "mx_install_launcher_then_finish")
+  Step 14: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke $r2.<com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>($r0, $r1, null, -1L, 1)
+  Step 15: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: if $r1 == null goto specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 16: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 17: 
+    Method: <com.umeng.analytics.b: void a(java.lang.String)>
+    Statement: staticinvoke <com.umeng.common.Log: void a(java.lang.String,java.lang.String)>("MobclickAgent", "invalid params in onEvent")
+  Step 18: 
+    Method: <com.umeng.common.Log: void <clinit>()>
+    Statement: <com.umeng.common.Log: boolean LOG> = 0
+  Step 19: 
+    Method: <com.umeng.common.Log: void <clinit>()>
+    Statement: return
+  Step 20: 
+    Method: <com.umeng.analytics.b: void a(java.lang.String)>
+    Statement: return
+  Step 21: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: return
+  Step 22: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: return
+  Step 23: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 24: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 25: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>(r0, "mx_install_launcher_then_finish")
+  Step 26: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke $r2.<com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>($r0, $r1, null, -1L, 1)
+  Step 27: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: staticinvoke <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>("MobclickAgent", "Exception occurred in Mobclick.onEvent(). ", $r5)
+  Step 28: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>
+    Statement: $z0 = <com.umeng.common.Log: boolean LOG>
+  Step 29: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>
+    Statement: if $z0 == 0 goto return
+  Step 30: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+
+==================================================
+Source Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+Sink Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+Taint Path:
+  Step 1: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r7 = virtualinvoke $r6.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r1, 0)
+  Step 2: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r8 = interfaceinvoke $r7.<java.util.List: java.lang.Object get(int)>($i1)
+  Step 3: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: r9 = (android.content.pm.ResolveInfo) $r8
+  Step 4: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: $r4 = staticinvoke <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>($r0, r10, r12, r9)
+  Step 5: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: virtualinvoke r4.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("resolve_info", $r3)
+  Step 6: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.HashMap getMap2(android.content.Context,java.lang.String,java.lang.String,android.content.pm.ResolveInfo)>
+    Statement: return r4
+  Step 7: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>($r4)
+  Step 8: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)>
+    Statement: return r2
+  Step 9: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: java.util.ArrayList marketList> = $r2
+  Step 10: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startApplication()>
+    Statement: return
+  Step 11: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onResume()>
+    Statement: return
+  Step 12: 
+    Method: <dummyMainClass: aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37 dummyMainMethod_aimoxiu_theme_mxd28482118f99505bc70c130d95d68b37_mxd28482118f99505bc70c130d95d68b37(android.content.Intent)>
+    Statement: virtualinvoke $r0.<aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 13: 
+    Method: <aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void onActivityResult(int,int,android.content.Intent)>
+    Statement: staticinvoke <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>(r0, "mx_install_launcher_then_finish")
+  Step 14: 
+    Method: <com.umeng.analytics.MobclickAgent: void onEvent(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke $r2.<com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>($r0, $r1, null, -1L, 1)
+  Step 15: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: if $r1 == null goto specialinvoke r0.<com.umeng.analytics.b: void a(java.lang.String)>("invalid params in onEvent")
+  Step 16: 
+    Method: <com.umeng.analytics.b: void a(android.content.Context,java.lang.String,java.lang.String,long,int)>
+    Statement: staticinvoke <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>("MobclickAgent", "Exception occurred in Mobclick.onEvent(). ", $r5)
+  Step 17: 
+    Method: <com.umeng.common.Log: void b(java.lang.String,java.lang.String,java.lang.Exception)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", $r1)
+
+==================================================
+
+4 paths in total.
+
+==================================================

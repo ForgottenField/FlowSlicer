@@ -1,0 +1,1114 @@
+Results from file: result.xml
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+Sink Statement: staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("RSS Service", "started")
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: throw $r20
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 8: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 9: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 12: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 13: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: return 1
+  Step 14: 
+    Method: <dummyMainClass: com.example.backagent.RssService dummyMainMethod_com_example_backagent_RssService(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>(null, 0, 0)
+  Step 15: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 17: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 18: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 20: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: virtualinvoke $r4.<com.example.backagent.RssService$ProgressFactory: android.os.AsyncTask execute(java.lang.Object[])>($r5)
+  Step 21: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r0.<com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>($r3)
+  Step 22: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>($r4, $r13, $r12, "Tamil SMS - Update")
+  Step 24: 
+    Method: <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return
+  Step 25: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 26: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 27: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 28: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 29: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 30: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 31: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 32: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 33: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: return
+  Step 34: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 35: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 36: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 37: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 38: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 39: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 40: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r6 = staticinvoke <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>($r7)
+  Step 41: 
+    Method: <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 42: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 43: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 44: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 45: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 46: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 47: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 48: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 49: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>($r4, $r13, $r12, "Tamil SMS - Update")
+  Step 50: 
+    Method: <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return
+  Step 51: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 52: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 53: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 54: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 55: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 56: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 57: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 58: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 59: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("RSS Service", "started")
+
+==================================================
+Source Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+Source Statement: $r4 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+Sink Statement: $r4 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: $r4 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: r5 = (java.net.HttpURLConnection) $r4
+  Step 3: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: return r5
+  Step 4: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object)>
+    Statement: $r1 = virtualinvoke $r3.<java.net.HttpURLConnection: java.lang.String getHeaderField(java.lang.String)>("Location")
+  Step 5: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object)>
+    Statement: $r3 = virtualinvoke r0.<com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>($r1, $r2)
+  Step 6: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: $r1 = staticinvoke <android.net.Uri: java.lang.String encode(java.lang.String,java.lang.String)>($r1, "@#&=*+-_.,:!?()/~\'%")
+  Step 7: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: specialinvoke $r3.<java.net.URL: void <init>(java.lang.String)>($r1)
+  Step 8: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: $r4 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+Source Statement: $r4 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.nostra13.universalimageloader.utils.IoUtils: boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener,int)>
+Sink Statement: virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>(r3, 0, $i3)
+Taint Path:
+  Step 1: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: $r4 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: r5 = (java.net.HttpURLConnection) $r4
+  Step 3: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.net.HttpURLConnection createConnection(java.lang.String,java.lang.Object)>
+    Statement: return r5
+  Step 4: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object)>
+    Statement: $r4 = virtualinvoke $r3.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+  Step 5: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object)>
+    Statement: specialinvoke $r5.<java.io.BufferedInputStream: void <init>(java.io.InputStream,int)>($r4, 32768)
+  Step 6: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object)>
+    Statement: specialinvoke $r6.<com.nostra13.universalimageloader.core.assist.ContentLengthInputStream: void <init>(java.io.InputStream,long)>($r5, $l2)
+  Step 7: 
+    Method: <com.nostra13.universalimageloader.core.assist.ContentLengthInputStream: void <init>(java.io.InputStream,long)>
+    Statement: r0.<com.nostra13.universalimageloader.core.assist.ContentLengthInputStream: java.io.InputStream stream> = $r1
+  Step 8: 
+    Method: <com.nostra13.universalimageloader.core.assist.ContentLengthInputStream: void <init>(java.io.InputStream,long)>
+    Statement: return
+  Step 9: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStreamFromNetwork(java.lang.String,java.lang.Object)>
+    Statement: return $r6
+  Step 10: 
+    Method: <com.nostra13.universalimageloader.core.download.BaseImageDownloader: java.io.InputStream getStream(java.lang.String,java.lang.Object)>
+    Statement: return $r5
+  Step 11: 
+    Method: <com.nostra13.universalimageloader.core.LoadAndDisplayImageTask: boolean downloadImage(java.io.File)>
+    Statement: $z0 = staticinvoke <com.nostra13.universalimageloader.utils.IoUtils: boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener)>($r7, r2, r0)
+  Step 12: 
+    Method: <com.nostra13.universalimageloader.utils.IoUtils: boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener)>
+    Statement: $z0 = staticinvoke <com.nostra13.universalimageloader.utils.IoUtils: boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener,int)>($r0, $r1, $r2, 32768)
+  Step 13: 
+    Method: <com.nostra13.universalimageloader.utils.IoUtils: boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener,int)>
+    Statement: $i3 = virtualinvoke $r0.<java.io.InputStream: int read(byte[],int,int)>(r3, 0, 32768)
+  Step 14: 
+    Method: <com.nostra13.universalimageloader.utils.IoUtils: boolean copyStream(java.io.InputStream,java.io.OutputStream,com.nostra13.universalimageloader.utils.IoUtils$CopyListener,int)>
+    Statement: virtualinvoke $r1.<java.io.OutputStream: void write(byte[],int,int)>(r3, 0, $i3)
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Sink Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("notalerts", 0)
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 8: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 9: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 12: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 13: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: return
+  Step 14: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 15: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 17: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 18: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: specialinvoke $r26.<java.io.InputStreamReader: void <init>(java.io.InputStream)>($r9)
+  Step 20: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 21: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $i2 = $i0 - $i2
+  Step 22: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $i2 <= 50 goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("notalerts", 0)
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService: void onDestroy()>
+Sink Statement: staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("RSS Service", "stopped")
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: throw $r20
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: return "Executed"
+  Step 8: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 9: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 12: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 13: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: return 1
+  Step 14: 
+    Method: <dummyMainClass: com.example.backagent.RssService dummyMainMethod_com_example_backagent_RssService(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>(null, 0, 0)
+  Step 15: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 17: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 18: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 20: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: virtualinvoke $r4.<com.example.backagent.RssService$ProgressFactory: android.os.AsyncTask execute(java.lang.Object[])>($r5)
+  Step 21: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r0.<com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>($r3)
+  Step 22: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>($r4, $r13, $r12, "Tamil SMS - Update")
+  Step 24: 
+    Method: <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return
+  Step 25: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 26: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 27: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 28: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 29: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 30: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 31: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 32: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 33: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: return
+  Step 34: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 35: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 36: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 37: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 38: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 39: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: specialinvoke $r26.<java.io.InputStreamReader: void <init>(java.io.InputStream)>($r9)
+  Step 40: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 41: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 42: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 43: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 44: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 45: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: return "Executed"
+  Step 46: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: return "Executed"
+  Step 47: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 48: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 49: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 50: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 51: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 52: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: return 1
+  Step 53: 
+    Method: <dummyMainClass: com.example.backagent.RssService dummyMainMethod_com_example_backagent_RssService(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.example.backagent.RssService: void onDestroy()>()
+  Step 54: 
+    Method: <com.example.backagent.RssService: void onDestroy()>
+    Statement: staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("RSS Service", "stopped")
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Sink Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: return
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 8: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 9: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 12: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 13: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 14: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 15: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 17: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 18: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 20: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 21: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>($r4, $r13, $r12, "Tamil SMS - Update")
+  Step 22: 
+    Method: <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 24: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 25: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 26: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 27: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 28: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 29: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 30: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 31: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 32: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 33: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 34: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 35: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 36: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: virtualinvoke $r4.<com.example.backagent.RssService$ProgressFactory: android.os.AsyncTask execute(java.lang.Object[])>($r5)
+  Step 37: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r0.<com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>($r3)
+  Step 38: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 39: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r6 = staticinvoke <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>($r7)
+  Step 40: 
+    Method: <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URL feedUrl>
+  Step 41: 
+    Method: <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 42: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Sink Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("notalerts", 0)
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 8: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 9: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 12: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 13: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: return
+  Step 14: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 15: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 17: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 18: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 20: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r6 = staticinvoke <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>($r7)
+  Step 21: 
+    Method: <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 22: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 24: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 25: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 26: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 27: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 28: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: r2 = $r27
+  Step 29: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r12 = virtualinvoke r2.<java.io.BufferedReader: java.lang.String readLine()>()
+  Step 30: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r12 != null goto virtualinvoke r3.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r12)
+  Step 31: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("notalerts", 0)
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Sink Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("lastalerts", $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: throw $r20
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 8: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 9: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 12: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 13: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 14: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 15: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 17: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 18: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: virtualinvoke $r4.<com.example.backagent.RssService$ProgressFactory: android.os.AsyncTask execute(java.lang.Object[])>($r5)
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r0.<com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>($r3)
+  Step 20: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 21: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>($r4, $r13, $r12, "Tamil SMS - Update")
+  Step 22: 
+    Method: <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 24: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 25: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 26: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 27: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 28: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 29: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 30: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 31: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: return
+  Step 32: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 33: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 34: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 35: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 36: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 37: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 38: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r6 = staticinvoke <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>($r7)
+  Step 39: 
+    Method: <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 40: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 41: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 42: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 43: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 44: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 45: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 46: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $i0 = $i3 - $i0
+  Step 47: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("lastalerts", $i0)
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Sink Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("lastalerts", $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 8: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 9: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 12: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 13: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: return
+  Step 14: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 15: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 17: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 18: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 20: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r6 = staticinvoke <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>($r7)
+  Step 21: 
+    Method: <com.example.backagent.RssService: java.net.URL access$1(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 22: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 24: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 25: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 26: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 27: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 28: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $i0 = $i3 - $i0
+  Step 29: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $i0 <= 25 goto $i2 = $i0 - $i2
+  Step 30: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: interfaceinvoke $r16.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putInt(java.lang.String,int)>("lastalerts", $i0)
+
+==================================================
+Source Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+Source Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("LocalService", $r3)
+Taint Path:
+  Step 1: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = virtualinvoke $r6.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>($r4, $r8)
+  Step 3: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection> = $r1
+  Step 4: 
+    Method: <com.example.backagent.RssService: void access$2(com.example.backagent.RssService,java.net.URLConnection)>
+    Statement: return
+  Step 5: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 6: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r7 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 7: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r8 = staticinvoke <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>($r7)
+  Step 8: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.net.URLConnection feedURLConnection>
+  Step 9: 
+    Method: <com.example.backagent.RssService: java.net.URLConnection access$3(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 10: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = virtualinvoke $r8.<java.net.URLConnection: java.io.InputStream getInputStream()>()
+  Step 11: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>($r4, $r9)
+  Step 12: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0.<com.example.backagent.RssService: java.io.InputStream inputStream> = $r1
+  Step 13: 
+    Method: <com.example.backagent.RssService: void access$4(com.example.backagent.RssService,java.io.InputStream)>
+    Statement: $r0 := @parameter0: com.example.backagent.RssService
+  Step 14: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 15: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 16: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r9 = staticinvoke <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>($r4)
+  Step 17: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: r1 = $r0.<com.example.backagent.RssService: java.io.InputStream inputStream>
+  Step 18: 
+    Method: <com.example.backagent.RssService: java.io.InputStream access$5(com.example.backagent.RssService)>
+    Statement: return r1
+  Step 19: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: if $r9 == null goto $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 20: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 21: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>($r4, $r13, $r12, "Tamil SMS - Update")
+  Step 22: 
+    Method: <com.example.backagent.RssService: void access$6(com.example.backagent.RssService,java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return
+  Step 23: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: $r4 = r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0>
+  Step 24: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.String doInBackground(java.lang.String[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 25: 
+    Method: <com.example.backagent.RssService$ProgressFactory: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.example.backagent.RssService$ProgressFactory
+  Step 26: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: specialinvoke $r4.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>(r0, null)
+  Step 27: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: specialinvoke r0.<com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>($r1)
+  Step 28: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: r0.<com.example.backagent.RssService$ProgressFactory: com.example.backagent.RssService this$0> = $r1
+  Step 29: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService)>
+    Statement: return
+  Step 30: 
+    Method: <com.example.backagent.RssService$ProgressFactory: void <init>(com.example.backagent.RssService,com.example.backagent.RssService$ProgressFactory)>
+    Statement: return
+  Step 31: 
+    Method: <com.example.backagent.RssService: int onStartCommand(android.content.Intent,int,int)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("LocalService", $r3)
+
+==================================================
+Source Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+Source Statement: $r6 = virtualinvoke r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+Sink Statement: virtualinvoke r1.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+Taint Path:
+  Step 1: 
+    Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+    Statement: $r6 = virtualinvoke r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+    Statement: $r7 = (java.net.HttpURLConnection) $r6
+  Step 3: 
+    Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+    Statement: $r8 = virtualinvoke $r7.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+  Step 4: 
+    Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+    Statement: $i0 = virtualinvoke $r8.<java.io.InputStream: int read()>()
+  Step 5: 
+    Method: <com.example.util.JsonUtils: java.lang.String getJSONString(java.lang.String)>
+    Statement: virtualinvoke r1.<java.io.ByteArrayOutputStream: void write(int)>($i0)
+
+==================================================
+
+11 paths in total.
+
+==================================================

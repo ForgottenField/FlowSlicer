@@ -1,0 +1,537 @@
+Results from file: result.xml
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>
+Sink Statement: virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Charset", "UTF-8")
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: specialinvoke $r12.<com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>($r6, null)
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: $r5 = virtualinvoke $r1.<java.net.HttpURLConnection: java.util.Map getHeaderFields()>()
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: r0.<com.facebook.ads.internal.h.a.n: java.util.Map c> = $r5
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: return
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: return $r12
+  Step 10: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: return $r6
+  Step 11: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: return $r3
+  Step 12: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: r0.<com.facebook.ads.internal.util.y: com.facebook.ads.internal.h.a.n e> = $r4
+  Step 13: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: return 0
+  Step 14: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: if $z0 == 0 goto $i0 = $i0 + 1
+  Step 15: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: $z0 = specialinvoke r0.<com.facebook.ads.internal.util.y: boolean a(java.lang.String)>($r4)
+  Step 16: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r2.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>($r1, null)
+  Step 17: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: $r3 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>($r4)
+  Step 18: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: $r6 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>($r2, $r3, $r4, $r5)
+  Step 19: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: virtualinvoke r0.<com.facebook.ads.internal.h.a.a: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>($r6, $r2, $r3)
+  Step 20: 
+    Method: <com.facebook.ads.internal.h.a.a: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>
+    Statement: interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>($r1, $r2, $r3)
+  Step 21: 
+    Method: <com.facebook.ads.internal.h.a.f: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>
+    Statement: virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Charset", "UTF-8")
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r7, $r1, $r6)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: specialinvoke $r12.<com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>($r6, null)
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: $r5 = virtualinvoke $r1.<java.net.HttpURLConnection: java.util.Map getHeaderFields()>()
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: r0.<com.facebook.ads.internal.h.a.n: java.util.Map c> = $r5
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: return
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: return $r12
+  Step 10: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: return $r6
+  Step 11: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: return $r3
+  Step 12: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: r0.<com.facebook.ads.internal.util.y: com.facebook.ads.internal.h.a.n e> = $r4
+  Step 13: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: return 0
+  Step 14: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: if $z0 == 0 goto $i0 = $i0 + 1
+  Step 15: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: $z0 = specialinvoke r0.<com.facebook.ads.internal.util.y: boolean a(java.lang.String)>($r4)
+  Step 16: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r7, $r1, $r6)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>
+Sink Statement: virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r3)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: virtualinvoke r0.<com.facebook.ads.internal.h.a.a: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>($r6, $r2, $r3)
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.a: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>
+    Statement: interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>($r1, $r2, $r3)
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.f: void a(java.net.HttpURLConnection,com.facebook.ads.internal.h.a.j,java.lang.String)>
+    Statement: virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r3)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+Source Statement: $r2 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: byte[] a(java.io.InputStream)>
+Sink Statement: virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+    Statement: $r2 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: if $r5 == null goto $i0 = virtualinvoke $r1.<java.net.HttpURLConnection: int getResponseCode()>()
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: $r4 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.q a>
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: void a(java.io.OutputStream,byte[])>($r5, $r2)
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.f: void a(java.io.OutputStream,byte[])>
+    Statement: return
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: $r4 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.q a>
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: throw $r6
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r12 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.net.HttpURLConnection)>($r6)
+  Step 10: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.net.HttpURLConnection)>
+    Statement: $r3 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.q a>
+  Step 11: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.net.HttpURLConnection)>
+    Statement: $r2 = interfaceinvoke $r3.<com.facebook.ads.internal.h.a.q: byte[] a(java.io.InputStream)>($r4)
+  Step 12: 
+    Method: <com.facebook.ads.internal.h.a.f: byte[] a(java.io.InputStream)>
+    Statement: virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: void a(java.io.OutputStream,byte[])>
+Sink Statement: virtualinvoke $r1.<java.io.OutputStream: void write(byte[])>($r2)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $z2 = $r6 instanceof javax.net.ssl.HttpsURLConnection
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: if $z2 == 0 goto $z0 = virtualinvoke $r6.<java.net.HttpURLConnection: boolean getDoOutput()>()
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r8 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.r c>
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $z0 = interfaceinvoke $r8.<com.facebook.ads.internal.h.a.r: boolean a()>()
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.g: boolean a()>
+    Statement: return 0
+  Step 10: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r8 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.r c>
+  Step 11: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: r0 := @this: com.facebook.ads.internal.h.a.a
+  Step 12: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: r0 := @this: com.facebook.ads.internal.h.a.a
+  Step 13: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: r0 := @this: com.facebook.ads.internal.h.a.a
+  Step 14: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r2.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>($r1, null)
+  Step 15: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: $r3 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>($r4)
+  Step 16: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: $r6 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>($r2, $r3, $r4, $r5)
+  Step 17: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r12 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(java.net.HttpURLConnection)>($r7)
+  Step 18: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(java.net.HttpURLConnection)>
+    Statement: throw $r8
+  Step 19: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: virtualinvoke r0.<com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>($r6, $r4)
+  Step 20: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: $r4 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.q a>
+  Step 21: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: $r5 = interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: java.io.OutputStream a(java.net.HttpURLConnection)>($r1)
+  Step 22: 
+    Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+    Statement: return $r2
+  Step 23: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: $r4 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.q a>
+  Step 24: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: r0 := @this: com.facebook.ads.internal.h.a.a
+  Step 25: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: specialinvoke r0.<com.facebook.ads.internal.h.a.a: void c(java.net.HttpURLConnection)>($r6)
+  Step 26: 
+    Method: <com.facebook.ads.internal.h.a.a: void c(java.net.HttpURLConnection)>
+    Statement: return
+  Step 27: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r8 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.r c>
+  Step 28: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $z1 = interfaceinvoke $r8.<com.facebook.ads.internal.h.a.r: boolean a()>()
+  Step 29: 
+    Method: <com.facebook.ads.internal.h.a.g: boolean a()>
+    Statement: return 0
+  Step 30: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r8 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.r c>
+  Step 31: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r8 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.r c>
+  Step 32: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $z0 = interfaceinvoke $r8.<com.facebook.ads.internal.h.a.r: boolean a()>()
+  Step 33: 
+    Method: <com.facebook.ads.internal.h.a.g: boolean a()>
+    Statement: return 0
+  Step 34: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r8 = r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.r c>
+  Step 35: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r9 = r0.<com.facebook.ads.internal.h.a.a: java.util.Set l>
+  Step 36: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: virtualinvoke r0.<com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>($r6, $r4)
+  Step 37: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: void a(java.io.OutputStream,byte[])>($r5, $r2)
+  Step 38: 
+    Method: <com.facebook.ads.internal.h.a.f: void a(java.io.OutputStream,byte[])>
+    Statement: virtualinvoke $r1.<java.io.OutputStream: void write(byte[])>($r2)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r1, "Unable to validate SSL certificates.", $r13)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r10 = (javax.net.ssl.HttpsURLConnection) $r6
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r1, "Unable to validate SSL certificates.", $r13)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+Source Statement: $r2 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: void a(java.io.OutputStream,byte[])>
+Sink Statement: virtualinvoke $r1.<java.io.OutputStream: void write(byte[])>($r2)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+    Statement: $r2 = virtualinvoke $r1.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.io.OutputStream a(java.net.HttpURLConnection)>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.a: int a(java.net.HttpURLConnection,byte[])>
+    Statement: interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: void a(java.io.OutputStream,byte[])>($r5, $r2)
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.f: void a(java.io.OutputStream,byte[])>
+    Statement: virtualinvoke $r1.<java.io.OutputStream: void write(byte[])>($r2)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Sink Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: specialinvoke $r12.<com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>($r6, null)
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: $r5 = virtualinvoke $r1.<java.net.HttpURLConnection: java.util.Map getHeaderFields()>()
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: r0.<com.facebook.ads.internal.h.a.n: java.util.Map c> = $r5
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: return
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: return $r12
+  Step 10: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: return $r6
+  Step 11: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: return $r3
+  Step 12: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: r0.<com.facebook.ads.internal.util.y: com.facebook.ads.internal.h.a.n e> = $r4
+  Step 13: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: return 0
+  Step 14: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: if $z0 == 0 goto $i0 = $i0 + 1
+  Step 15: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: $z0 = specialinvoke r0.<com.facebook.ads.internal.util.y: boolean a(java.lang.String)>($r4)
+  Step 16: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r2.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>($r1, null)
+  Step 17: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: $r3 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>($r4)
+  Step 18: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: $r6 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>($r2, $r3, $r4, $r5)
+  Step 19: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r6 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>($r1)
+  Step 20: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r5 = interfaceinvoke $r4.<com.facebook.ads.internal.h.a.q: java.net.HttpURLConnection a(java.lang.String)>($r1)
+  Step 21: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.a: void c(java.net.HttpURLConnection)>
+Sink Statement: virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>($r6, $r7)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: specialinvoke $r12.<com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>($r6, null)
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: $r5 = virtualinvoke $r1.<java.net.HttpURLConnection: java.util.Map getHeaderFields()>()
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: r0.<com.facebook.ads.internal.h.a.n: java.util.Map c> = $r5
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.n: void <init>(java.net.HttpURLConnection,byte[])>
+    Statement: return
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: return $r12
+  Step 10: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: return $r6
+  Step 11: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: return $r3
+  Step 12: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: r0.<com.facebook.ads.internal.util.y: com.facebook.ads.internal.h.a.n e> = $r4
+  Step 13: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: return 0
+  Step 14: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: if $z0 == 0 goto $i0 = $i0 + 1
+  Step 15: 
+    Method: <com.facebook.ads.internal.util.y: com.facebook.ads.internal.util.z a(java.lang.String[])>
+    Statement: $z0 = specialinvoke r0.<com.facebook.ads.internal.util.y: boolean a(java.lang.String)>($r4)
+  Step 16: 
+    Method: <com.facebook.ads.internal.util.y: boolean a(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r2.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>($r1, null)
+  Step 17: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.p)>
+    Statement: $r3 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>($r4)
+  Step 18: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n b(com.facebook.ads.internal.h.a.l)>
+    Statement: $r6 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>($r2, $r3, $r4, $r5)
+  Step 19: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: specialinvoke r0.<com.facebook.ads.internal.h.a.a: void c(java.net.HttpURLConnection)>($r6)
+  Step 20: 
+    Method: <com.facebook.ads.internal.h.a.a: void c(java.net.HttpURLConnection)>
+    Statement: virtualinvoke $r1.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>($r6, $r7)
+
+==================================================
+Source Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+Source Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.facebook.ads.internal.h.a.f: byte[] a(java.io.InputStream)>
+Sink Statement: virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r2 = virtualinvoke $r3.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: $r4 = (java.net.HttpURLConnection) $r2
+  Step 3: 
+    Method: <com.facebook.ads.internal.h.a.f: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r4
+  Step 4: 
+    Method: <com.facebook.ads.internal.h.a.a: java.net.HttpURLConnection a(java.lang.String)>
+    Statement: return $r5
+  Step 5: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $z2 = $r6 instanceof javax.net.ssl.HttpsURLConnection
+  Step 6: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: if $z2 == 0 goto $z0 = virtualinvoke $r6.<java.net.HttpURLConnection: boolean getDoOutput()>()
+  Step 7: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.lang.String,com.facebook.ads.internal.h.a.j,java.lang.String,byte[])>
+    Statement: $r12 = virtualinvoke r0.<com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.net.HttpURLConnection)>($r6)
+  Step 8: 
+    Method: <com.facebook.ads.internal.h.a.a: com.facebook.ads.internal.h.a.n a(java.net.HttpURLConnection)>
+    Statement: $r2 = interfaceinvoke $r3.<com.facebook.ads.internal.h.a.q: byte[] a(java.io.InputStream)>($r4)
+  Step 9: 
+    Method: <com.facebook.ads.internal.h.a.f: byte[] a(java.io.InputStream)>
+    Statement: virtualinvoke $r2.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r3, 0, $i0)
+
+==================================================
+
+10 paths in total.
+
+==================================================

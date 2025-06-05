@@ -1,12 +1,11 @@
 package FlowSlicer.Mode;
 
-import FlowSlicer.AppModel;
-import FlowSlicer.Config;
-import FlowSlicer.Global;
+import FlowSlicer.*;
+import FlowSlicer.DataStructure.parser.ADQLParser;
+import FlowSlicer.DataStructure.parser.ParseException;
 import FlowSlicer.GraphStructure.*;
 import FlowSlicer.GraphStructure.Edge;
 import FlowSlicer.RefactorTool.SplitAPK;
-import FlowSlicer.Statistics;
 import FlowSlicer.XMLObject.Reference;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
@@ -81,9 +80,6 @@ public class SplitApkInExclusionMode extends SplitAPK {
         String ICCFilePath = Config.getInstance().getICCFilePath();
         ICCEdgesHandler.parseICCFile(ICCFilePath);
 
-        // Construct Class Graph and my CallGraph(CHA)
-        DirectedClassGraph cdg = CDGHelper.constructCDG();
-
         // locate sources and sinks through unit matching
         Statistics.getTimer(Statistics.TIMER_Locating_Source_Sink).start();
         int threadNum = Options.v().num_threads();
@@ -134,35 +130,30 @@ public class SplitApkInExclusionMode extends SplitAPK {
         }
         Statistics.getTimer(Statistics.TIMER_Locating_Source_Sink).stop();
 
+        // Construct Class Graph and my CallGraph(CHA)
+        DirectedClassGraph cdg = CDGHelper.constructCDG();
+        // Construct Class Graph and my CallGraph(CHA)
+        Statistics.getTimer(Statistics.TIMER_Constructing_Local_Graph).start();
+        DirectedSCCGraph dag = CDGHelper.constructDSCCG(cdg);
+        HashSet<String> closureSet = CDGHelper.constructClosure(cdg, dag, appModel.getInputClassSet());
+        appModel.setLocalSootClassSet(closureSet);
+        Statistics.getTimer(Statistics.TIMER_Constructing_Local_Graph).stop();
+
+        // Setup PDG generation and Build PDGs (Run Soot)
+        Statistics.getTimer(Statistics.TIMER_BUILDING_PDGS).start();
+        PackManager.v().getPack("jtp").add(new Transform("jtp.PDGTransformer", new PDGTransformer(appModel.getGlobalSootClassSet())));
+        PackManager.v().runPacks();
+        Statistics.getTimer(Statistics.TIMER_BUILDING_PDGS).stop();
+
+//        String sourceFile = "source_apis.json";
+//        String sinkFile = "sink_apis.json";
+//        Utility.exportSourceSinkInfo(appModel.getMethodToSourceAPIsMap(), appModel.getMethodToSinkAPIsMap(), sourceFile, sinkFile);
+
         // Set TargetTo, TargetFrom, and SinkToSourceUnitMultiMap
         Statistics.getTimer(Statistics.TIMER_Finding_SlicingCriteria).start();
         Set<Unit> targetListFrom = new HashSet<>();
         Set<Unit> targetListTo = new HashSet<>();
-        if (!Config.getInstance().isRandomCriteria()) {
-            for (String sourceMethod : appModel.getMethodToSourceAPIsMap().keySet()) {
-                for (String sinkMethod : appModel.getMethodToSinkAPIsMap().keySet()) {
-                    SootMethod sourceSootMethod = Scene.v().getMethod(sourceMethod);
-                    if (sourceSootMethod != null) {
-                        appModel.getInputClassSet().add(sourceSootMethod.getDeclaringClass().getName());
-                    }
-                    SootMethod sinkSootMethod = Scene.v().getMethod(sinkMethod);
-                    if (sinkSootMethod != null) {
-                        appModel.getInputClassSet().add(sinkSootMethod.getDeclaringClass().getName());
-                    }
-
-                    List<Unit> sourceUnit = appModel.getMethodToSourceAPIsMap().get(sourceMethod);
-                    List<Unit> sinkUnit = appModel.getMethodToSinkAPIsMap().get(sinkMethod);
-                    targetListFrom.addAll(sourceUnit);
-                    targetListTo.addAll(sinkUnit);
-                    for (Unit sink : sinkUnit) {
-                        for (Unit source : sourceUnit) {
-                            appModel.getSinkToSourceUnitMultimap().put(sink, source);
-                            appModel.getSourceToSinkUnitMultimap().put(source, sink);
-                        }
-                    }
-                }
-            }
-        } else {
+        if (Config.getInstance().isRandomCriteria()) {
             // Randomly select a source and a sink as the slicing criteria
             Random random = new Random();
             List<String> sourceMethods = new ArrayList<>(appModel.getMethodToSourceAPIsMap().keySet());
@@ -200,39 +191,102 @@ public class SplitApkInExclusionMode extends SplitAPK {
                     appModel.getSourceToSinkUnitMultimap().put(randomSourceUnit, randomSinkUnit);
                 }
             }
+        } else if (Config.getInstance().isSourceSinkInSameMethod()) {
+            List<String> sourceMethods = new ArrayList<>(appModel.getMethodToSourceAPIsMap().keySet());
+            List<String> sinkMethods = new ArrayList<>(appModel.getMethodToSinkAPIsMap().keySet());
+            List<String> sameMethodList = new ArrayList<>();
+            if (!sourceMethods.isEmpty() && !sinkMethods.isEmpty()) {
+                for (String sourceMethodName : sourceMethods) {
+                    for (String sinkMethodName : sinkMethods) {
+                        if (sourceMethodName.equals(sinkMethodName)) {
+                            sameMethodList.add(sourceMethodName);
+                        }
+                    }
+                }
+            }
+            System.out.println(sameMethodList);
+            System.out.println("\n");
+
+            String methodName = "<com.plh.gofastlauncher.MainActivity: void onResume()>";
+            List<Unit> sourceUnit = appModel.getMethodToSourceAPIsMap().get(methodName);
+            List<Unit> sinkUnit = appModel.getMethodToSinkAPIsMap().get(methodName);
+            System.out.println("\n");
+            SootMethod sourceSootMethod = Scene.v().getMethod(methodName);
+            if (sourceSootMethod != null) {
+                appModel.getInputClassSet().add(sourceSootMethod.getDeclaringClass().getName());
+            }
+            targetListFrom.addAll(sourceUnit);
+            targetListTo.addAll(sinkUnit);
+//            for (Unit sink : sinkUnit) {
+//                for (Unit source : sourceUnit) {
+//                    appModel.getSinkToSourceUnitMultimap().put(sink, source);
+//                    appModel.getSourceToSinkUnitMultimap().put(source, sink);
+//                }
+//            }
+        } else if (Config.getInstance().isAllSourceAndSinkConsidered()) {
+            for (String sourceMethod : appModel.getMethodToSourceAPIsMap().keySet()) {
+                for (String sinkMethod : appModel.getMethodToSinkAPIsMap().keySet()) {
+                    SootMethod sourceSootMethod = Scene.v().getMethod(sourceMethod);
+                    if (sourceSootMethod != null) {
+                        appModel.getInputClassSet().add(sourceSootMethod.getDeclaringClass().getName());
+                    }
+                    SootMethod sinkSootMethod = Scene.v().getMethod(sinkMethod);
+                    if (sinkSootMethod != null) {
+                        appModel.getInputClassSet().add(sinkSootMethod.getDeclaringClass().getName());
+                    }
+
+                    List<Unit> sourceUnit = appModel.getMethodToSourceAPIsMap().get(sourceMethod);
+                    List<Unit> sinkUnit = appModel.getMethodToSinkAPIsMap().get(sinkMethod);
+                    targetListFrom.addAll(sourceUnit);
+                    targetListTo.addAll(sinkUnit);
+//                    for (Unit sink : sinkUnit) {
+//                        for (Unit source : sourceUnit) {
+//                            appModel.getSinkToSourceUnitMultimap().put(sink, source);
+//                            appModel.getSourceToSinkUnitMultimap().put(source, sink);
+//                        }
+//                    }
+                }
+            }
+        } else {
+            // set slicing criteria according to DSL scripts
+            try {
+                ADQLParser.parse();
+            } catch (FileNotFoundException | ParseException e) {
+                throw new RuntimeException(e);
+            }
+
+            if (appModel.getFlowQuerySinkStmt() != null && appModel.getFlowQuerySourceStmt() != null) {
+                // to be added
+                ;
+            } else if (appModel.getFlowQuerySinkMethod() != null && appModel.getFlowQuerySourceMethod() != null){
+                for (SootMethod sm : SootHelper.findMethods(appModel.getFlowQuerySinkMethod())) {
+                    if (sm.isConcrete()) {
+                        Unit sourceUnit = SootHelper.getFirstUnitOfMethod(sm);
+                        if (sourceUnit != null) {
+                            targetListFrom.add(sourceUnit);
+                        }
+                    }
+                }
+                for (SootMethod sm : SootHelper.findMethods(appModel.getFlowQuerySourceMethod())) {
+                    if (sm.isConcrete()) {
+                        Unit sinkUnit = SootHelper.getFirstUnitOfMethod(sm);
+                        if (sinkUnit != null) {
+                            targetListTo.add(sinkUnit);
+                        }
+                    }
+                }
+            }
         }
         appModel.setFromCriteriaSet(targetListFrom);
         appModel.setToCriteriaSet(targetListTo);
         Statistics.getTimer(Statistics.TIMER_Finding_SlicingCriteria).stop();
 
-        if (!appModel.getFromCriteriaSet().isEmpty() && !appModel.getToCriteriaSet().isEmpty() &&
-                !appModel.getSinkToSourceUnitMultimap().isEmpty() && !appModel.getSourceToSinkUnitMultimap().isEmpty()) {
+        if (!appModel.getFromCriteriaSet().isEmpty() && !appModel.getToCriteriaSet().isEmpty()) {
             log.info("Successfully find Slicing Targets\n");
             Config.getInstance().setSlicingCriteriaFound(true);
         } else {
             log.error("Cannot read any slicing criteria!\n");
         }
-
-        // Construct Class Graph and my CallGraph(CHA)
-        Statistics.getTimer(Statistics.TIMER_Constructing_Local_Graph).start();
-        DirectedSCCGraph dag = CDGHelper.constructDSCCG(cdg);
-        HashSet<String> closureSet = CDGHelper.constructClosure(cdg, dag, appModel.getInputClassSet());
-        appModel.setLocalSootClassSet(closureSet);
-        Statistics.getTimer(Statistics.TIMER_Constructing_Local_Graph).stop();
-
-        // Setup PDG generation and Build PDGs (Run Soot)
-        Statistics.getTimer(Statistics.TIMER_BUILDING_PDGS).start();
-        if (Config.getInstance().isSlicingCriteriaFound()){
-            if (Config.getInstance().isPartialSDGConstruction()) {
-                PackManager.v().getPack("jtp").add(new Transform("jtp.PDGTransformer", new PDGTransformer(appModel.getLocalSootClassSet())));
-            } else {
-                PackManager.v().getPack("jtp").add(new Transform("jtp.PDGTransformer", new PDGTransformer(appModel.getGlobalSootClassSet())));
-            }
-        } else {
-            PackManager.v().getPack("jtp").add(new Transform("jtp.PDGTransformer", new PDGTransformer()));
-        }
-        PackManager.v().runPacks();
-        Statistics.getTimer(Statistics.TIMER_BUILDING_PDGS).stop();
 
         if (Config.getInstance().isSlicingCriteriaFound()) {
             // Handle Exceptions

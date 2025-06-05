@@ -1,0 +1,60 @@
+Slicing result for "VirtualDispatch4":
+Finding Slicing Criteria: 0.000
+SDG Slicing CSR: 0.000
+Adding Callbacks: 0.000
+Constructing Local Graph: 0.002
+SDG Slicing: 0.006
+SDG Slicing Extra: 0.001
+Building Dummymain: 0.195
+SDG construction: 0.004
+CFG Slicing: 0.001
+Locating Source and Sink: 0.013
+SDG Slicing Backward and Forward: 0.005
+PDG construction: 0.076
+Handling Exceptions: 0.000
+Reachability Query: 0.005
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 2.520
+FlowDroid in total(after slicing): 0.726
+After slicing, our tool slices 108 nodes in the SDG.
+Slicing percentage: 60.67%(108/178)
+Slicing result for "com.jb.gosms.pctheme.glorious.zt-00355F2D01EE6C08801A153407715F639163AE9D3892C4F5FE63686C4348EDD9":
+Finding Slicing Criteria: 0.218
+SDG Slicing CSR: 0.171
+Adding Callbacks: 1.661
+Constructing Local Graph: 0.107
+SDG Slicing: 07:14.341
+SDG Slicing Extra: 02:17.988
+Building Dummymain: 1.498
+SDG construction: 2.766
+CFG Slicing: 1.440
+Locating Source and Sink: 0.523
+SDG Slicing Backward and Forward: 04:55.260
+PDG construction: 16.940
+Handling Exceptions: 0.039
+Reachability Query: 03:00.276
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 10:56.942
+FlowDroid in total(after slicing): 0.039
+After slicing, our tool slices 55508 nodes in the SDG.
+Slicing percentage: 28.18%(55508/196987)
+Slicing result for "com.jb.gosms.pctheme.glorious.zt-00355F2D01EE6C08801A153407715F639163AE9D3892C4F5FE63686C4348EDD9":
+Finding Slicing Criteria: 0.206
+SDG Slicing CSR: 0.159
+Adding Callbacks: 1.669
+Constructing Local Graph: 0.102
+SDG Slicing: 06:55.852
+SDG Slicing Extra: 02:14.627
+Building Dummymain: 2.632
+SDG construction: 1.800
+CFG Slicing: 0.771
+Locating Source and Sink: 0.425
+SDG Slicing Backward and Forward: 04:40.106
+PDG construction: 8.559
+Handling Exceptions: 0.041
+Reachability Query: 03:00.043
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 10:30.147
+FlowDroid in total(after slicing): 3.541
+After slicing, our tool slices 55461 nodes in the SDG.
+Slicing percentage: 28.15%(55461/196987)

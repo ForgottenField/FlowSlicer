@@ -93,7 +93,7 @@ public class Main {
         /** analysis config **/
         options.addOption("pc", "permissionConsidered", false, "-pc: Set that permissions are not considered when pre-matching source-sink invocations.");
         options.addOption("r", "random", false, "-r: Set that the slicing criteria are selected randomly from one source and one sink invocation.");
-        options.addOption("t", "time", true, "-t [default: 90]: Set the max running time (min).");
+        options.addOption("t", "time", true, "-t [default: 60]: Set the max running time (min).");
         options.addOption("cg", "callGraphAlgorithm", true, "-cg [default: CHA]: Set algorithm for CG, CHA or SPARK.");
         options.addOption("ICC", true, "-ICC [default: ICCResult/]: Set the file path of ICC analysis results(this tool supports ICCBot only).");
         options.addOption("cm", "dependencyGraphConstructionMode", true, "-cm [default: GlobalConstructionMode] "
@@ -128,8 +128,8 @@ public class Main {
         Config config = Config.getInstance();
 
         config.setJimple(true);
-//        String appName = cmd.getOptionValue("n", "ImplicitFlow1_sliced");
-        String appName = cmd.getOptionValue("n", "br.com.gvdasa.gvmobile.santadoroteia-0083B5430AD21F71DA9BD05C356D9BC38CF942A065EAB558E573D22C5E84612D");
+        String appName = cmd.getOptionValue("n", "Merge1");
+//        String appName = cmd.getOptionValue("n", "com.bagtuahaga.armennsbb-0090110FF907D05FBA448A4769CBB4BDC8F9DE881F786DB69CE3EE324C267D9D");
         if (appName.endsWith(".apk")) {
             appName = appName.substring(0, appName.length() - 4);
         }
@@ -464,7 +464,7 @@ public class Main {
 
                 Statistics.getInstance().getFlowDroidTimer2().start();
                 FlowdroidHelper.runInfoflow(Config.getInstance().getResultFolder() + Config.getInstance().getAppName() + File.separator + "apk" + File.separator + Config.getInstance().getAppName() + ".apk", Config.getInstance().getFlowDroidProductPath());
-            } catch (IOException | XmlPullParserException | URISyntaxException e) {
+            } catch (IOException | URISyntaxException | XmlPullParserException e) {
                 throw new RuntimeException(e);
             }
         });
@@ -653,6 +653,6 @@ public class Main {
         formatter.setWidth(120);
 
         formatter.printHelp("java -jar [jarFile] [options] [-n] [-m]\n" +
-                "E.g., -n Loop1 -m ExclusionSliceMode", options);
+                "E.g., -n Loop1 -m MatchSliceMode", options);
     }
 }

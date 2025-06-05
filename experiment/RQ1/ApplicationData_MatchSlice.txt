@@ -1,0 +1,453 @@
+--- Contents of ApplicationData_MatchSliceMode_ListAccess1.txt ---
+ListAccess1, apk/DroidBench/ArraysAndLists/ListAccess1.apk, 105, 42, 5.766, 0, 3.678, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_UnreachableCode.txt ---
+UnreachableCode, apk/DroidBench/GeneralJava/UnreachableCode.apk, 88, 11, 5.524, 0, 2.697, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ApplicationLifecycle1.txt ---
+ApplicationLifecycle1, apk/DroidBench/Lifecycle/ApplicationLifecycle1.apk, 111, 41, 5.448, 0, 3.349, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ComponentNotInManifest1.txt ---
+ComponentNotInManifest1, apk/DroidBench/InterComponentCommunication/ComponentNotInManifest1.apk, 173, 70, 7.024, 0, 3.123, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_IntentSink2.txt ---
+IntentSink2, apk/DroidBench/InterComponentCommunication/IntentSink2.apk, 106, 44, 5.135, 0, 3.510, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_BroadcastReceiverLifecycle2.txt ---
+BroadcastReceiverLifecycle2, apk/DroidBench/Lifecycle/BroadcastReceiverLifecycle2.apk, 156, 63, 6.223, 0, 3.190, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_IntentSource1.txt ---
+IntentSource1, apk/DroidBench/InterComponentCommunication/IntentSource1.apk, 126, 61, 6.185, 0, 2.976, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication8.txt ---
+ActivityCommunication8, apk/DroidBench/InterComponentCommunication/ActivityCommunication8.apk, 180, 80, 5.840, 0, 3.394, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication1.txt ---
+ActivityCommunication1, apk/DroidBench/InterComponentCommunication/ActivityCommunication1.apk, 123, 45, 5.440, 0, 3.932, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Clone1.txt ---
+Clone1, apk/DroidBench/GeneralJava/Clone1.apk, 98, 36, 4.574, 0, 3.165, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_Ordering1.txt ---
+Ordering1, apk/DroidBench/Callbacks/Ordering1.apk, 178, 84, 5.633, 0, 3.958, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_PublicAPIField2.txt ---
+PublicAPIField2, apk/DroidBench/AndroidSpecific/PublicAPIField2.apk, 93, 31, 4.970, 0, 3.167, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivitySavedState1.txt ---
+ActivitySavedState1, apk/DroidBench/Lifecycle/ActivitySavedState1.apk, 102, 40, 5.050, 0, 3.070, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_Serialization1.txt ---
+Serialization1, apk/DroidBench/GeneralJava/Serialization1.apk, 124, 58, 5.099, 0, 3.463, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_MultiHandlers1.txt ---
+MultiHandlers1, apk/DroidBench/Callbacks/MultiHandlers1.apk, 274, 156, 6.560, 0, 3.520, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_PrivateDataLeak3.txt ---
+PrivateDataLeak3, apk/DroidBench/AndroidSpecific/PrivateDataLeak3.apk, 142, 40, 6.439, 0, 2.857, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_LogNoLeak.txt ---
+LogNoLeak, apk/DroidBench/AndroidSpecific/LogNoLeak.apk, 84, 31, 4.896, 0, 2.981, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_JavaThread2.txt ---
+JavaThread2, apk/DroidBench/Threading/JavaThread2.apk, 123, 40, 6.340, 0, 3.008, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_BroadcastReceiverLifecycle1.txt ---
+BroadcastReceiverLifecycle1, apk/DroidBench/Lifecycle/BroadcastReceiverLifecycle1.apk, 70, 30, 5.191, 0, 2.257, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Looper1.txt ---
+Looper1, apk/DroidBench/Threading/Looper1.apk, 370, 48, 8.200, 0, 2.892, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication4.txt ---
+ActivityCommunication4, apk/DroidBench/InterComponentCommunication/ActivityCommunication4.apk, 172, 73, 6.527, 0, 3.443, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_BroadcastTaintAndLeak1.txt ---
+BroadcastTaintAndLeak1, apk/DroidBench/InterComponentCommunication/BroadcastTaintAndLeak1.apk, 136, 68, 4.738, 0, 3.177, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication5.txt ---
+ActivityCommunication5, apk/DroidBench/InterComponentCommunication/ActivityCommunication5.apk, 177, 76, 6.313, 0, 3.851, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_RegisterGlobal1.txt ---
+RegisterGlobal1, apk/DroidBench/Callbacks/RegisterGlobal1.apk, 240, 54, 6.098, 0, 3.822, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ArrayToString1.txt ---
+ArrayToString1, apk/DroidBench/ArraysAndLists/ArrayToString1.apk, 92, 31, 4.601, 0, 3.065, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityLifecycle1.txt ---
+ActivityLifecycle1, apk/DroidBench/Lifecycle/ActivityLifecycle1.apk, 111, 52, 6.025, 0, 3.627, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityLifecycle3.txt ---
+ActivityLifecycle3, apk/DroidBench/Lifecycle/ActivityLifecycle3.apk, 102, 38, 5.668, 0, 3.098, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Reflection4.txt ---
+Reflection4, apk/DroidBench/Reflection/Reflection4.apk, 144, 55, 6.107, 0, 2.620, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ObjectSensitivity2.txt ---
+ObjectSensitivity2, apk/DroidBench/FieldAndObjectSensitivity/ObjectSensitivity2.apk, 103, 27, 5.429, 0, 2.952, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_VirtualDispatch4.txt ---
+VirtualDispatch4, apk/DroidBench/GeneralJava/VirtualDispatch4.apk, 366, 70, 7.713, 0, 2.875, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_MethodOverride1.txt ---
+MethodOverride1, apk/DroidBench/Callbacks/MethodOverride1.apk, 93, 32, 5.848, 0, 2.535, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_StaticInitialization1.txt ---
+StaticInitialization1, apk/DroidBench/GeneralJava/StaticInitialization1.apk, 98, 36, 5.647, 0, 3.241, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_IMEI1.txt ---
+IMEI1, apk/DroidBench/EmulatorDetection/IMEI1.apk, 282, 65, 7.910, 0, 3.483, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityLifecycle4.txt ---
+ActivityLifecycle4, apk/DroidBench/Lifecycle/ActivityLifecycle4.apk, 103, 38, 5.062, 0, 3.363, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ApplicationLifecycle3.txt ---
+ApplicationLifecycle3, apk/DroidBench/Lifecycle/ApplicationLifecycle3.apk, 222, 53, 5.470, 0, 3.329, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Echoer.txt ---
+Echoer, apk/DroidBench/InterAppCommunication/Echoer.apk, 183, 97, 6.412, 0, 2.874, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_StringToOutputStream1.txt ---
+StringToOutputStream1, apk/DroidBench/GeneralJava/StringToOutputStream1.apk, 98, 34, 4.715, 0, 3.385, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_LocationLeak2.txt ---
+LocationLeak2, apk/DroidBench/Callbacks/LocationLeak2.apk, 182, 74, 5.785, 0, 3.176, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_Reflection3.txt ---
+Reflection3, apk/DroidBench/Reflection/Reflection3.apk, 170, 66, 6.355, 0, 3.561, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_SendSMS.txt ---
+SendSMS, apk/DroidBench/InterAppCommunication/SendSMS.apk, 221, 120, 6.330, 0, 3.645, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityLifecycle2.txt ---
+ActivityLifecycle2, apk/DroidBench/Lifecycle/ActivityLifecycle2.apk, 102, 42, 6.294, 0, 3.513, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Library2.txt ---
+Library2, apk/DroidBench/AndroidSpecific/Library2.apk, 119, 44, 5.462, 0, 3.272, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_StringPatternMatching1.txt ---
+StringPatternMatching1, apk/DroidBench/GeneralJava/StringPatternMatching1.apk, 99, 38, 5.066, 0, 3.022, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Reflection2.txt ---
+Reflection2, apk/DroidBench/Reflection/Reflection2.apk, 138, 51, 5.989, 0, 3.152, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ObjectSensitivity1.txt ---
+ObjectSensitivity1, apk/DroidBench/FieldAndObjectSensitivity/ObjectSensitivity1.apk, 100, 28, 5.506, 0, 2.936, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_HashMapAccess1.txt ---
+HashMapAccess1, apk/DroidBench/ArraysAndLists/HashMapAccess1.apk, 104, 36, 5.367, 0, 3.171, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Unregister1.txt ---
+Unregister1, apk/DroidBench/Callbacks/Unregister1.apk, 139, 61, 6.154, 0, 2.998, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ServiceCommunication1.txt ---
+ServiceCommunication1, apk/DroidBench/InterComponentCommunication/ServiceCommunication1.apk, 225, 71, 5.276, 0, 2.545, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ArrayAccess2.txt ---
+ArrayAccess2, apk/DroidBench/ArraysAndLists/ArrayAccess2.apk, 101, 40, 5.151, 0, 3.520, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_StaticInitialization2.txt ---
+StaticInitialization2, apk/DroidBench/GeneralJava/StaticInitialization2.apk, 100, 38, 5.305, 0, 3.640, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_AsynchronousEventOrdering1.txt ---
+AsynchronousEventOrdering1, apk/DroidBench/Lifecycle/AsynchronousEventOrdering1.apk, 105, 46, 4.660, 0, 3.445, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Button2.txt ---
+Button2, apk/DroidBench/Callbacks/Button2.apk, 213, 138, 5.844, 0, 2.850, 0, 4
+
+
+--- Contents of ApplicationData_MatchSliceMode_Loop2.txt ---
+Loop2, apk/DroidBench/GeneralJava/Loop2.apk, 116, 55, 5.325, 0, 3.069, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_AsyncTask1.txt ---
+AsyncTask1, apk/DroidBench/Threading/AsyncTask1.apk, 137, 54, 6.147, 0, 3.249, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ImplicitFlow2.txt ---
+ImplicitFlow2, apk/DroidBench/ImplicitFlows/ImplicitFlow2.apk, 105, 38, 5.533, 0, 3.245, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ServiceLifecycle2.txt ---
+ServiceLifecycle2, apk/DroidBench/Lifecycle/ServiceLifecycle2.apk, 142, 66, 4.881, 0, 3.095, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ApplicationLifecycle2.txt ---
+ApplicationLifecycle2, apk/DroidBench/Lifecycle/ApplicationLifecycle2.apk, 114, 34, 5.706, 0, 3.951, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Merge1.txt ---
+Merge1, apk/DroidBench/Aliasing/Merge1.apk, 367, 66, 8.131, 0, 3.074, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_IntentSink1.txt ---
+IntentSink1, apk/DroidBench/InterComponentCommunication/IntentSink1.apk, 89, 29, 5.563, 0, 3.488, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication2.txt ---
+ActivityCommunication2, apk/DroidBench/InterComponentCommunication/ActivityCommunication2.apk, 176, 77, 6.109, 0, 3.574, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_PrivateDataLeak1.txt ---
+PrivateDataLeak1, apk/DroidBench/AndroidSpecific/PrivateDataLeak1.apk, 216, 138, 5.877, 0, 4.027, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_VirtualDispatch2.txt ---
+VirtualDispatch2, apk/DroidBench/GeneralJava/VirtualDispatch2.apk, 142, 46, 4.809, 0, 2.575, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ArrayAccess1.txt ---
+ArrayAccess1, apk/DroidBench/ArraysAndLists/ArrayAccess1.apk, 98, 38, 5.397, 0, 3.173, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Obfuscation1.txt ---
+Obfuscation1, apk/DroidBench/AndroidSpecific/Obfuscation1.apk, 106, 34, 6.154, 0, 3.027, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Button1.txt ---
+Button1, apk/DroidBench/Callbacks/Button1.apk, 108, 42, 5.699, 0, 3.349, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_EventOrdering1.txt ---
+EventOrdering1, apk/DroidBench/InterComponentCommunication/EventOrdering1.apk, 186, 77, 6.415, 0, 2.999, 0, 1
+EventOrdering1, apk/DroidBench/Lifecycle/EventOrdering1.apk, 102, 43, 5.122, 0, 3.231, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Loop1.txt ---
+Loop1, apk/DroidBench/GeneralJava/Loop1.apk, 111, 50, 5.320, 0, 4.017, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Button5.txt ---
+Button5, apk/DroidBench/Callbacks/Button5.apk, 104, 0, 5.414, 0, 2.346, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_Executor1.txt ---
+Executor1, apk/DroidBench/Threading/Executor1.apk, 123, 50, 5.876, 0, 3.647, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ContentProvider1.txt ---
+ContentProvider1, apk/DroidBench/EmulatorDetection/ContentProvider1.apk, 439, 83, 8.389, 0, 3.305, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_FieldSensitivity3.txt ---
+FieldSensitivity3, apk/DroidBench/FieldAndObjectSensitivity/FieldSensitivity3.apk, 118, 48, 5.500, 0, 3.791, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ServiceLifecycle1.txt ---
+ServiceLifecycle1, apk/DroidBench/Lifecycle/ServiceLifecycle1.apk, 95, 56, 5.377, 0, 3.986, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication3.txt ---
+ActivityCommunication3, apk/DroidBench/InterComponentCommunication/ActivityCommunication3.apk, 183, 83, 6.027, 0, 3.192, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_StringToCharArray1.txt ---
+StringToCharArray1, apk/DroidBench/GeneralJava/StringToCharArray1.apk, 115, 49, 4.867, 0, 3.344, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_MultidimensionalArray1.txt ---
+MultidimensionalArray1, apk/DroidBench/ArraysAndLists/MultidimensionalArray1.apk, 99, 38, 4.631, 0, 3.266, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ImplicitFlow4.txt ---
+ImplicitFlow4, apk/DroidBench/ImplicitFlows/ImplicitFlow4.apk, 143, 71, 5.895, 0, 3.236, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_FieldSensitivity2.txt ---
+FieldSensitivity2, apk/DroidBench/FieldAndObjectSensitivity/FieldSensitivity2.apk, 118, 48, 5.441, 0, 2.946, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_FieldSensitivity1.txt ---
+FieldSensitivity1, apk/DroidBench/FieldAndObjectSensitivity/FieldSensitivity1.apk, 132, 61, 5.325, 0, 3.387, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_Reflection1.txt ---
+Reflection1, apk/DroidBench/Reflection/Reflection1.apk, 137, 46, 5.443, 0, 3.116, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_Button3.txt ---
+Button3, apk/DroidBench/Callbacks/Button3.apk, 166, 88, 6.264, 0, 3.790, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_StaticInitialization3.txt ---
+StaticInitialization3, apk/DroidBench/GeneralJava/StaticInitialization3.apk, 101, 0, 4.498, 0, 2.647, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_PlayStore1.txt ---
+PlayStore1, apk/DroidBench/EmulatorDetection/PlayStore1.apk, 359, 70, 8.757, 0, 3.741, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_SourceCodeSpecific1.txt ---
+SourceCodeSpecific1, apk/DroidBench/GeneralJava/SourceCodeSpecific1.apk, 121, 54, 5.499, 0, 2.809, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_DirectLeak1.txt ---
+DirectLeak1, apk/DroidBench/AndroidSpecific/DirectLeak1.apk, 88, 28, 5.109, 0, 3.642, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_VirtualDispatch1.txt ---
+VirtualDispatch1, apk/DroidBench/GeneralJava/VirtualDispatch1.apk, 138, 77, 5.772, 0, 3.728, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_UnresolvableIntent1.txt ---
+UnresolvableIntent1, apk/DroidBench/InterComponentCommunication/UnresolvableIntent1.apk, 190, 89, 5.977, 0, 3.329, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_RegisterGlobal2.txt ---
+RegisterGlobal2, apk/DroidBench/Callbacks/RegisterGlobal2.apk, 157, 50, 5.481, 0, 3.348, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ImplicitFlow3.txt ---
+ImplicitFlow3, apk/DroidBench/ImplicitFlows/ImplicitFlow3.apk, 162, 69, 5.748, 0, 3.542, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_Button4.txt ---
+Button4, apk/DroidBench/Callbacks/Button4.apk, 108, 42, 5.420, 0, 3.324, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ArrayCopy1.txt ---
+ArrayCopy1, apk/DroidBench/ArraysAndLists/ArrayCopy1.apk, 97, 31, 4.816, 0, 3.166, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_VirtualDispatch3.txt ---
+VirtualDispatch3, apk/DroidBench/GeneralJava/VirtualDispatch3.apk, 366, 70, 8.528, 0, 2.816, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_StringFormatter1.txt ---
+StringFormatter1, apk/DroidBench/GeneralJava/StringFormatter1.apk, 100, 23, 4.938, 0, 2.562, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ApplicationModeling1.txt ---
+ApplicationModeling1, apk/DroidBench/AndroidSpecific/ApplicationModeling1.apk, 124, 47, 4.372, 0, 3.176, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_JavaThread1.txt ---
+JavaThread1, apk/DroidBench/Threading/JavaThread1.apk, 120, 48, 6.217, 0, 3.535, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication6.txt ---
+ActivityCommunication6, apk/DroidBench/InterComponentCommunication/ActivityCommunication6.apk, 181, 80, 5.829, 0, 3.142, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_AnonymousClass1.txt ---
+AnonymousClass1, apk/DroidBench/Callbacks/AnonymousClass1.apk, 163, 73, 5.422, 0, 3.869, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ImplicitFlow1.txt ---
+ImplicitFlow1, apk/DroidBench/ImplicitFlows/ImplicitFlow1.apk, 499, 426, 6.287, 0, 3.578, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_LocationLeak1.txt ---
+LocationLeak1, apk/DroidBench/Callbacks/LocationLeak1.apk, 222, 108, 5.847, 0, 3.220, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_StartActivityForResult1.txt ---
+StartActivityForResult1, apk/DroidBench/InterAppCommunication/StartActivityForResult1.apk, 233, 141, 6.032, 0, 3.716, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_InactiveActivity.txt ---
+InactiveActivity, apk/DroidBench/AndroidSpecific/InactiveActivity.apk, 57, 9, 4.968, 0, 2.668, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_LocationLeak3.txt ---
+LocationLeak3, apk/DroidBench/Callbacks/LocationLeak3.apk, 166, 89, 5.900, 0, 3.828, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_FactoryMethods1.txt ---
+FactoryMethods1, apk/DroidBench/GeneralJava/FactoryMethods1.apk, 119, 53, 5.647, 0, 3.915, 0, 2
+
+
+--- Contents of ApplicationData_MatchSliceMode_FieldSensitivity4.txt ---
+FieldSensitivity4, apk/DroidBench/FieldAndObjectSensitivity/FieldSensitivity4.apk, 100, 37, 5.364, 0, 3.204, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_FragmentLifecycle1.txt ---
+FragmentLifecycle1, apk/DroidBench/Lifecycle/FragmentLifecycle1.apk, 167, 71, 6.511, 0, 2.890, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_Singletons1.txt ---
+Singletons1, apk/DroidBench/InterComponentCommunication/Singletons1.apk, 145, 64, 4.819, 0, 3.304, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_PublicAPIField1.txt ---
+PublicAPIField1, apk/DroidBench/AndroidSpecific/PublicAPIField1.apk, 121, 57, 4.837, 0, 3.586, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_ActivityCommunication7.txt ---
+ActivityCommunication7, apk/DroidBench/InterComponentCommunication/ActivityCommunication7.apk, 177, 77, 5.901, 0, 3.294, 0, 0
+
+
+--- Contents of ApplicationData_MatchSliceMode_StartProcessWithSecret1.txt ---
+StartProcessWithSecret1, apk/DroidBench/GeneralJava/StartProcessWithSecret1.apk, 96, 34, 5.181, 0, 3.278, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_InheritedObjects1.txt ---
+InheritedObjects1, apk/DroidBench/FieldAndObjectSensitivity/InheritedObjects1.apk, 113, 39, 5.707, 0, 3.281, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_PrivateDataLeak2.txt ---
+PrivateDataLeak2, apk/DroidBench/AndroidSpecific/PrivateDataLeak2.apk, 85, 28, 5.253, 0, 3.507, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_SharedPreferenceChanged1.txt ---
+SharedPreferenceChanged1, apk/DroidBench/Lifecycle/SharedPreferenceChanged1.apk, 112, 39, 4.557, 0, 2.821, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_SharedPreferences1.txt ---
+SharedPreferences1, apk/DroidBench/InterComponentCommunication/SharedPreferences1.apk, 138, 34, 4.764, 0, 3.339, 0, 1
+
+
+--- Contents of ApplicationData_MatchSliceMode_FragmentLifecycle2.txt ---
+FragmentLifecycle2, apk/DroidBench/Lifecycle/FragmentLifecycle2.apk, 352, 179, 5.875, 0, 3.137, 0, 0
+
+

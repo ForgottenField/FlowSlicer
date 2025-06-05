@@ -1,0 +1,451 @@
+Results from file: result.xml
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+Source Statement: $r7 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(2)
+Sink Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+Sink Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r7 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(2)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $i2 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r7)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: int is_favourist> = $i1
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: if r2 == null goto r1 = new java.util.Random
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r3)
+  Step 8: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: int id> = $i0
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 11: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: return r2
+  Step 12: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: i4 = virtualinvoke $r11.<funny.topic.free.jokes.db.entity.Quote: int getId()>()
+  Step 13: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: int getId()>
+    Statement: i0 = r0.<funny.topic.free.jokes.db.entity.Quote: int id>
+  Step 14: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: int getId()>
+    Statement: return i0
+  Step 15: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: if i4 < 0 goto $r14 = new java.lang.Thread
+  Step 16: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r3.<funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>("total", $r9)
+  Step 17: 
+    Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+    Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+Source Statement: $r1 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: $r1 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: $l1 = staticinvoke <java.lang.Long: long parseLong(java.lang.String)>($r1)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: $r5 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l1)
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: specialinvoke r4.<funny.topic.free.jokes.db.entity.QOD: void <init>(int,java.lang.Long,java.lang.String)>($i0, $r5, $r1)
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: void <init>(int,java.lang.Long,java.lang.String)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.QOD: java.lang.Long time> = $r1
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: void <init>(int,java.lang.Long,java.lang.String)>
+    Statement: return
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: return r4
+  Step 8: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r8 = virtualinvoke $r7.<funny.topic.free.jokes.db.entity.QOD: java.lang.Long getTime()>()
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: java.lang.Long getTime()>
+    Statement: r1 = r0.<funny.topic.free.jokes.db.entity.QOD: java.lang.Long time>
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: java.lang.Long getTime()>
+    Statement: return r1
+  Step 11: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $l1 = virtualinvoke $r8.<java.lang.Long: long longValue()>()
+  Step 12: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $l0 = $l0 - $l1
+  Step 13: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $b2 = $l0 cmp $l1
+  Step 14: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: i4 = (int) $b2
+  Step 15: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: if i4 < 0 goto $r14 = new java.lang.Thread
+  Step 16: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r11 = virtualinvoke $r6.<funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>(i4)
+  Step 17: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: staticinvoke <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>("ThangTB", $r3)
+  Step 18: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void <clinit>()>
+    Statement: <funny.topic.free.jokes.utils.WriteLog: boolean debug> = 1
+  Step 19: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void <clinit>()>
+    Statement: return
+  Step 20: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: return r2
+  Step 21: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: return null
+  Step 22: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity: void onCreate(android.os.Bundle)>
+    Statement: return
+  Step 23: 
+    Method: <dummyMainClass: com.apps.games.everyone.organisation.SplashActivity dummyMainMethod_com_apps_games_everyone_organisation_SplashActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.apps.games.everyone.organisation.SplashActivity: void onCreate(android.os.Bundle)>(null)
+  Step 24: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity: void onCreate(android.os.Bundle)>
+    Statement: virtualinvoke $r8.<com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: android.os.AsyncTask execute(java.lang.Object[])>($r9)
+  Step 25: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r11 = virtualinvoke $r6.<funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>(i4)
+  Step 26: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: staticinvoke <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>("ThangTB", $r3)
+  Step 27: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+    Statement: $z0 = <funny.topic.free.jokes.utils.WriteLog: boolean debug>
+  Step 28: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+    Statement: if $z0 != 0 goto staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+  Step 29: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+Source Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+Sink Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r3)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: int id> = $i0
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: return r2
+  Step 7: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: i4 = virtualinvoke $r11.<funny.topic.free.jokes.db.entity.Quote: int getId()>()
+  Step 8: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: int getId()>
+    Statement: i0 = r0.<funny.topic.free.jokes.db.entity.Quote: int id>
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: int getId()>
+    Statement: return i0
+  Step 10: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: if i4 < 0 goto $r14 = new java.lang.Thread
+  Step 11: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r3.<funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>("total", $r9)
+  Step 12: 
+    Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+    Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+Source Statement: $r1 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+Sink Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: $r1 = interfaceinvoke $r3.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: $l1 = staticinvoke <java.lang.Long: long parseLong(java.lang.String)>($r1)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: $r5 = staticinvoke <java.lang.Long: java.lang.Long valueOf(long)>($l1)
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: specialinvoke r4.<funny.topic.free.jokes.db.entity.QOD: void <init>(int,java.lang.Long,java.lang.String)>($i0, $r5, $r1)
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: void <init>(int,java.lang.Long,java.lang.String)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.QOD: java.lang.Long time> = $r1
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: void <init>(int,java.lang.Long,java.lang.String)>
+    Statement: return
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.QOD getQOD()>
+    Statement: return r4
+  Step 8: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r8 = virtualinvoke $r7.<funny.topic.free.jokes.db.entity.QOD: java.lang.Long getTime()>()
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: java.lang.Long getTime()>
+    Statement: r1 = r0.<funny.topic.free.jokes.db.entity.QOD: java.lang.Long time>
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.entity.QOD: java.lang.Long getTime()>
+    Statement: return r1
+  Step 11: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $l1 = virtualinvoke $r8.<java.lang.Long: long longValue()>()
+  Step 12: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $l0 = $l0 - $l1
+  Step 13: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $b2 = $l0 cmp $l1
+  Step 14: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: i4 = (int) $b2
+  Step 15: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: if i4 < 0 goto $r14 = new java.lang.Thread
+  Step 16: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r3.<funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>("total", $r9)
+  Step 17: 
+    Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+    Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+Source Statement: $r7 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(2)
+Sink Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r7 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(2)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $i2 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r7)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: int is_favourist> = $i1
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: if r2 == null goto r1 = new java.util.Random
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: r2 = null
+  Step 8: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = virtualinvoke r2.<funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>()
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>
+    Statement: r1 = r0.<funny.topic.free.jokes.db.entity.Quote: java.lang.String body>
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>
+    Statement: return r1
+  Step 11: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3)
+  Step 12: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: staticinvoke <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>("ThangTB", $r3)
+  Step 14: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+Source Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: java.lang.String body> = $r1
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = virtualinvoke r2.<funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>()
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>
+    Statement: r1 = r0.<funny.topic.free.jokes.db.entity.Quote: java.lang.String body>
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>
+    Statement: return r1
+  Step 8: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3)
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: staticinvoke <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>("ThangTB", $r3)
+  Step 11: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+Source Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r3)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: int id> = $i0
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: if r2 == null goto r1 = new java.util.Random
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: r2 = null
+  Step 8: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = virtualinvoke r2.<funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>()
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>
+    Statement: r1 = r0.<funny.topic.free.jokes.db.entity.Quote: java.lang.String body>
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: java.lang.String getBody()>
+    Statement: return r1
+  Step 11: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r5 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r3)
+  Step 12: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = virtualinvoke $r5.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: staticinvoke <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>("ThangTB", $r3)
+  Step 14: 
+    Method: <funny.topic.free.jokes.utils.WriteLog: void d(java.lang.String,java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r0, $r1)
+
+==================================================
+Source Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+Source Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+Sink Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+Taint Path:
+  Step 1: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $r3 = interfaceinvoke $r6.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 3: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: java.lang.String body> = $r1
+  Step 4: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 5: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: if r2 == null goto r1 = new java.util.Random
+  Step 6: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: $i1 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>($r3)
+  Step 7: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: specialinvoke r2.<funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>($i1, $r3, $i2)
+  Step 8: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: r0.<funny.topic.free.jokes.db.entity.Quote: int id> = $i0
+  Step 9: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: void <init>(int,java.lang.String,int)>
+    Statement: return
+  Step 10: 
+    Method: <funny.topic.free.jokes.db.DataHeper: funny.topic.free.jokes.db.entity.Quote getQuoteRandom(int)>
+    Statement: return r2
+  Step 11: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: i4 = virtualinvoke $r11.<funny.topic.free.jokes.db.entity.Quote: int getId()>()
+  Step 12: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: int getId()>
+    Statement: i0 = r0.<funny.topic.free.jokes.db.entity.Quote: int id>
+  Step 13: 
+    Method: <funny.topic.free.jokes.db.entity.Quote: int getId()>
+    Statement: return i0
+  Step 14: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: if i4 < 0 goto $r14 = new java.lang.Thread
+  Step 15: 
+    Method: <com.apps.games.everyone.organisation.SplashActivity$ChangeActivity: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: virtualinvoke r3.<funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>("total", $r9)
+  Step 16: 
+    Method: <funny.topic.free.jokes.utils.CustomSharePreferences: void setSharePreferencesString(java.lang.String,java.lang.String)>
+    Statement: interfaceinvoke $r3.<android.content.SharedPreferences$Editor: android.content.SharedPreferences$Editor putString(java.lang.String,java.lang.String)>("total", $r2)
+
+==================================================
+
+8 paths in total.
+
+==================================================

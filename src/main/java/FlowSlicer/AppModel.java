@@ -81,6 +81,12 @@ public class AppModel implements Serializable {
     private ConcurrentHashMap<Unit, Set<Unit>> sliceUnitToSinkUnitMap;
     private ConcurrentHashSet<Unit> sourceUnitForwardSlice;
 
+    // DSL Script related
+    private String flowQuerySourceMethod;
+    private String flowQuerySourceStmt;
+    private String flowQuerySinkMethod;
+    private String flowQuerySinkStmt;
+
     public AppModel() {
         appName = Config.getInstance().getAppName();
         appPath = Config.getInstance().getAppPath();
@@ -129,6 +135,10 @@ public class AppModel implements Serializable {
         sinkUnitBackwardSlice = new HashSet<>();
         sourceUnitForwardSlice = new ConcurrentHashSet<>();
         sliceUnitToSinkUnitMap = new ConcurrentHashMap<>();
+        flowQuerySinkStmt = null;
+        flowQuerySinkMethod = null;
+        flowQuerySourceMethod = null;
+        flowQuerySourceStmt = null;
     }
 
     public void setMainActivity (String mainActivity) {
@@ -232,5 +242,21 @@ public class AppModel implements Serializable {
 
     public void setSdgSliced (DependenceGraph sdgSliced) {
         this.sdgSliced = sdgSliced;
+    }
+
+    public void setFlowQuerySourceMethod (String flowQuerySourceMethod) {
+        this.flowQuerySourceMethod = flowQuerySourceMethod;
+    }
+
+    public void setFlowQuerySourceStmt (String flowQuerySourceStmt) {
+        this.flowQuerySourceStmt = flowQuerySourceStmt;
+    }
+
+    public void setFlowQuerySinkMethod (String flowQuerySinkMethod) {
+        this.flowQuerySinkMethod = flowQuerySinkMethod;
+    }
+
+    public void setFlowQuerySinkStmt (String flowQuerySinkStmt) {
+        this.flowQuerySinkStmt = flowQuerySinkStmt;
     }
 }

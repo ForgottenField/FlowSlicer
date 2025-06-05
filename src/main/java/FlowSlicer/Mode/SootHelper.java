@@ -184,6 +184,26 @@ public class SootHelper {
         }
     }
 
+    public static Unit getEntryUnitOfMethod(SootMethod sm) {
+        for (Unit entryUnit : Packs.getInstance().getEntryNodeMap().keySet()) {
+            SootMethod target = Packs.getInstance().getEntryNodeMap().get(entryUnit);
+            if (target.equals(sm)) {
+                return entryUnit;
+            }
+        }
+        return null;
+    }
+
+    public static Unit getFirstUnitOfMethod(SootMethod sootMethod) {
+        for (SootMethod sm : Packs.getInstance().getPdgMap().keySet()) {
+            if (sm.equals(sootMethod)) {
+                DependenceGraph pdg = Packs.getInstance().getPdgMap().get(sm);
+                return pdg.getEntryNode();
+            }
+        }
+        return null;
+    }
+
     public static Body getActiveBodyIfMethodExists(SootMethod sm) {
         try {
             return sm.retrieveActiveBody();
@@ -238,11 +258,11 @@ public class SootHelper {
         exceptionalIncludes = null;
     }
 
-    public static Set<SootMethod> findMethods(String name, int i) {
+    public static Set<SootMethod> findMethods(String name) {
         final Set<SootMethod> methods = new HashSet<>();
         for (final SootClass sc : Scene.v().getApplicationClasses()) {
             for (final SootMethod sm : sc.getMethods()) {
-                if (sm.getName().equals(name) && sm.getParameterCount() == i) {
+                if (sm.getName().equals(name)) {
                     methods.add(sm);
                 }
             }

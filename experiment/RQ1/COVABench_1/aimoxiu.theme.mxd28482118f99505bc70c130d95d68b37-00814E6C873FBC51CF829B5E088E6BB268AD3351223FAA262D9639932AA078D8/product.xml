@@ -1,1 +1,69 @@
-<?xml version="1.0" encoding="UTF-8"?><DataFlowResults FileFormatVersion="102" TerminationState="Success"><Results><Result><Sink Statement="virtualinvoke $r3.&lt;java.io.FileOutputStream: void write(byte[])&gt;($r7)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void writeFileSdcardFile(java.lang.String,java.lang.String)&gt;" MethodSourceSinkDefinition="&lt;java.io.OutputStream: void write(byte[])&gt;"><AccessPath TaintSubFields="true"></AccessPath></Sink><Sources><Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;"><AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true"></AccessPath></Source></Sources></Result><Result><Sink Statement="virtualinvoke $r3.&lt;java.io.FileOutputStream: void write(byte[])&gt;($r7)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void writeFileSdcardFile(java.lang.String,java.lang.String)&gt;" MethodSourceSinkDefinition="&lt;java.io.FileOutputStream: void write(byte[])&gt;"><AccessPath TaintSubFields="true"></AccessPath></Sink><Sources><Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;"><AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true"></AccessPath></Source></Sources></Result><Result><Sink Statement="virtualinvoke r0.&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startActivityForResult(android.content.Intent,int)&gt;($r1, 1)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void installMXLauncherAPK(android.content.Intent)&gt;" MethodSourceSinkDefinition="&lt;android.app.Activity: void startActivityForResult(android.content.Intent,int)&gt;"><AccessPath TaintSubFields="true"></AccessPath></Sink><Sources><Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;"><AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true"></AccessPath></Source></Sources></Result><Result><Sink Statement="staticinvoke &lt;android.util.Log: int i(java.lang.String,java.lang.String)&gt;(&quot;MobclickAgent&quot;, $r1)" Method="&lt;com.umeng.common.Log: void a(java.lang.String,java.lang.String)&gt;" MethodSourceSinkDefinition="&lt;android.util.Log: int i(java.lang.String,java.lang.String)&gt;"><AccessPath TaintSubFields="true"></AccessPath></Sink><Sources><Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;"><AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true"></AccessPath></Source></Sources></Result></Results><PerformanceData><PerformanceEntry Name="CallgraphConstructionSeconds" Value="1"></PerformanceEntry><PerformanceEntry Name="TaintPropagationSeconds" Value="31"></PerformanceEntry><PerformanceEntry Name="PathReconstructionSeconds" Value="107"></PerformanceEntry><PerformanceEntry Name="TotalRuntimeSeconds" Value="139"></PerformanceEntry><PerformanceEntry Name="MaxMemoryConsumption" Value="2387"></PerformanceEntry><PerformanceEntry Name="SourceCount" Value="1"></PerformanceEntry><PerformanceEntry Name="SinkCount" Value="19"></PerformanceEntry></PerformanceData></DataFlowResults>
+<?xml version="1.0" encoding="UTF-8"?>
+<DataFlowResults FileFormatVersion="102" TerminationState="Success">
+	<Results>
+		<Result>
+			<Sink Statement="virtualinvoke $r3.&lt;java.io.FileOutputStream: void write(byte[])&gt;($r7)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void writeFileSdcardFile(java.lang.String,java.lang.String)&gt;" MethodSourceSinkDefinition="&lt;java.io.OutputStream: void write(byte[])&gt;">
+				<AccessPath TaintSubFields="true">
+				</AccessPath>
+			</Sink>
+			<Sources>
+				<Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;">
+					<AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true">
+					</AccessPath>
+				</Source>
+			</Sources>
+		</Result>
+		<Result>
+			<Sink Statement="virtualinvoke $r3.&lt;java.io.FileOutputStream: void write(byte[])&gt;($r7)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void writeFileSdcardFile(java.lang.String,java.lang.String)&gt;" MethodSourceSinkDefinition="&lt;java.io.FileOutputStream: void write(byte[])&gt;">
+				<AccessPath TaintSubFields="true">
+				</AccessPath>
+			</Sink>
+			<Sources>
+				<Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;">
+					<AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true">
+					</AccessPath>
+				</Source>
+			</Sources>
+		</Result>
+		<Result>
+			<Sink Statement="virtualinvoke r0.&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void startActivityForResult(android.content.Intent,int)&gt;($r1, 1)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.mxd28482118f99505bc70c130d95d68b37: void installMXLauncherAPK(android.content.Intent)&gt;" MethodSourceSinkDefinition="&lt;android.app.Activity: void startActivityForResult(android.content.Intent,int)&gt;">
+				<AccessPath TaintSubFields="true">
+				</AccessPath>
+			</Sink>
+			<Sources>
+				<Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;">
+					<AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true">
+					</AccessPath>
+				</Source>
+			</Sources>
+		</Result>
+		<Result>
+			<Sink Statement="staticinvoke &lt;android.util.Log: int i(java.lang.String,java.lang.String)&gt;(&quot;MobclickAgent&quot;, $r1)" Method="&lt;com.umeng.common.Log: void a(java.lang.String,java.lang.String)&gt;" MethodSourceSinkDefinition="&lt;android.util.Log: int i(java.lang.String,java.lang.String)&gt;">
+				<AccessPath TaintSubFields="true">
+				</AccessPath>
+			</Sink>
+			<Sources>
+				<Source Statement="$r7 = virtualinvoke $r6.&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;(r2, 0)" Method="&lt;aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37.CommonUnits: java.util.ArrayList configMarketsList(android.content.Context)&gt;" MethodSourceSinkDefinition="&lt;android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)&gt;">
+					<AccessPath Value="$r7" Type="java.util.List" TaintSubFields="true">
+					</AccessPath>
+				</Source>
+			</Sources>
+		</Result>
+	</Results>
+	<PerformanceData>
+		<PerformanceEntry Name="CallgraphConstructionSeconds" Value="1">
+		</PerformanceEntry>
+		<PerformanceEntry Name="TaintPropagationSeconds" Value="31">
+		</PerformanceEntry>
+		<PerformanceEntry Name="PathReconstructionSeconds" Value="107">
+		</PerformanceEntry>
+		<PerformanceEntry Name="TotalRuntimeSeconds" Value="139">
+		</PerformanceEntry>
+		<PerformanceEntry Name="MaxMemoryConsumption" Value="2387">
+		</PerformanceEntry>
+		<PerformanceEntry Name="SourceCount" Value="1">
+		</PerformanceEntry>
+		<PerformanceEntry Name="SinkCount" Value="19">
+		</PerformanceEntry>
+	</PerformanceData>
+</DataFlowResults>

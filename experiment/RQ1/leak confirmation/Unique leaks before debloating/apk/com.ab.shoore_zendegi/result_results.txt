@@ -1,0 +1,1086 @@
+Results from file: result.xml
+Source Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+Source Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+Sink Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String)>
+Sink Statement: virtualinvoke $r5.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r6, 0, $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+  Step 2: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("locale_country", $r6)
+  Step 3: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: return $r1
+  Step 4: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: virtualinvoke $r3.<com.heyzap.http.RequestParams: void merge(java.util.Map)>($r2)
+  Step 5: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: if $r1 == null goto return
+  Step 6: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r7 = (java.lang.String) $r4
+  Step 7: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: virtualinvoke r0.<com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>($r6, $r7)
+  Step 8: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2)
+  Step 9: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: $r3 = r0.<com.heyzap.http.RequestParams: java.util.concurrent.ConcurrentHashMap urlParams>
+  Step 10: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: return
+  Step 11: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: return
+  Step 12: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: return $r3
+  Step 13: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 14: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 15: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: if $r1 == null goto return null
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r4 = virtualinvoke $r1.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>($r2)
+  Step 17: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r2 = specialinvoke r0.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>($r1)
+  Step 18: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: virtualinvoke $r2.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String)>($r9, $r10, $r3, $r14)
+  Step 19: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.io.InputStream,java.lang.String)>
+    Statement: virtualinvoke $r5.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>($r6, 0, $i0)
+
+==================================================
+Source Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+Source Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+Sink Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+Sink Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+  Step 2: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r16)
+  Step 3: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("locale_country", $r6)
+  Step 4: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: return $r1
+  Step 5: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: virtualinvoke $r3.<com.heyzap.http.RequestParams: void merge(java.util.Map)>($r2)
+  Step 6: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: if $r1 == null goto return
+  Step 7: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r4 = interfaceinvoke $r5.<java.util.Map$Entry: java.lang.Object getValue()>()
+  Step 8: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r7 = (java.lang.String) $r4
+  Step 9: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: virtualinvoke r0.<com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>($r6, $r7)
+  Step 10: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2)
+  Step 11: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: $r3 = r0.<com.heyzap.http.RequestParams: java.util.concurrent.ConcurrentHashMap urlParams>
+  Step 12: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: return
+  Step 13: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: return
+  Step 14: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: return $r3
+  Step 15: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 17: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: if $r1 == null goto return null
+  Step 18: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r4 = virtualinvoke $r1.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>($r2)
+  Step 19: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r2 = specialinvoke r0.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>($r1)
+  Step 20: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: virtualinvoke $r2.<com.heyzap.http.aa: void a(java.lang.String,java.io.File,java.lang.String)>($r9, $r16, $r10)
+  Step 21: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.io.File,java.lang.String)>
+    Statement: specialinvoke $r4.<com.heyzap.http.ab: void <init>(com.heyzap.http.aa,java.lang.String,java.io.File,java.lang.String)>(r0, $r1, $r2, $r5)
+  Step 22: 
+    Method: <com.heyzap.http.ab: void <init>(com.heyzap.http.aa,java.lang.String,java.io.File,java.lang.String)>
+    Statement: $r6 = specialinvoke r0.<com.heyzap.http.ab: byte[] a(java.lang.String,java.lang.String,java.lang.String)>($r2, $r5, $r4)
+  Step 23: 
+    Method: <com.heyzap.http.ab: byte[] a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: $r6 = staticinvoke <com.heyzap.http.aa: byte[] a(com.heyzap.http.aa)>($r5)
+  Step 24: 
+    Method: <com.heyzap.http.aa: void <clinit>()>
+    Statement: <com.heyzap.http.aa: byte[] a> = $r1
+  Step 25: 
+    Method: <com.heyzap.http.aa: void <clinit>()>
+    Statement: return
+  Step 26: 
+    Method: <com.heyzap.http.ab: byte[] a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return $r6
+  Step 27: 
+    Method: <com.heyzap.http.ab: void <init>(com.heyzap.http.aa,java.lang.String,java.io.File,java.lang.String)>
+    Statement: return
+  Step 28: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.io.File,java.lang.String)>
+    Statement: return
+  Step 29: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r2
+  Step 30: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r2
+  Step 31: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return null
+  Step 32: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r6
+  Step 33: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: return
+  Step 34: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: return
+  Step 35: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: return
+  Step 36: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void doSelfInstallOnce(android.content.Context)>
+    Statement: return
+  Step 37: 
+    Method: <com.heyzap.sdk.ads.HeyzapAds: void internalStart(java.lang.String,android.content.Context,int,com.heyzap.sdk.ads.HeyzapAds$OnStatusListener)>
+    Statement: throw $r13
+  Step 38: 
+    Method: <com.heyzap.sdk.ads.HeyzapAds: void start(java.lang.String,android.app.Activity,int,com.heyzap.sdk.ads.HeyzapAds$OnStatusListener)>
+    Statement: return
+  Step 39: 
+    Method: <com.heyzap.sdk.ads.HeyzapAds: void start(java.lang.String,android.app.Activity)>
+    Statement: return
+  Step 40: 
+    Method: <com.ab.shoore_zendegi.MainActivity: void onCreate(android.os.Bundle)>
+    Statement: return
+  Step 41: 
+    Method: <dummyMainClass: com.ab.shoore_zendegi.MainActivity dummyMainMethod_com_ab_shoore__zendegi_MainActivity(android.content.Intent)>
+    Statement: return $r0
+  Step 42: 
+    Method: <dummyMainClass: void dummyMainMethod(java.lang.String[])>
+    Statement: staticinvoke <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>(null)
+  Step 43: 
+    Method: <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null)
+  Step 44: 
+    Method: <com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>
+    Statement: virtualinvoke $r7.<com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>($r1, $r3)
+  Step 45: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke r0.<com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>($r1, $r5, $r6)
+  Step 46: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>
+    Statement: staticinvoke <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>($r1, $r6, $r4, $r8)
+  Step 47: 
+    Method: <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: virtualinvoke $r5.<java.util.concurrent.ScheduledThreadPoolExecutor: void execute(java.lang.Runnable)>($r4)
+  Step 48: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 49: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 50: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r4 = virtualinvoke $r1.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>($r2)
+  Step 51: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r2 = specialinvoke r0.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>($r1)
+  Step 52: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: virtualinvoke $r2.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String)>($r9, $r10)
+  Step 53: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke r0.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>($r1, $r2, "text/plain; charset=UTF-8")
+  Step 54: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: $r5 = <com.heyzap.http.aa: byte[] a>
+  Step 55: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+
+==================================================
+Source Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+Sink Method: <com.heyzap.internal.Logger: void error(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r1, $r0)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+  Step 2: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: return $r3
+  Step 3: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>($r6)
+  Step 4: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>($r1)
+  Step 5: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: $i0 = $r1.<android.os.Message: int what>
+  Step 6: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: lookupswitch($i0) {     case 0: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 1: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 2: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onStart()>();     case 3: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onFinish()>();     case 4: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 5: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 6: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onCancel()>();     default: goto return; }
+  Step 7: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: $r6 = (byte[]) $r2
+  Step 8: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>($i0, $r5, $r6, $r7)
+  Step 9: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: if $r2 == null goto staticinvoke <com.heyzap.internal.Logger: void debug(java.lang.String)>("response body is null, calling onFailure(Throwable, JSONObject)")
+  Step 10: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void debug(java.lang.String)>("response body is null, calling onFailure(Throwable, JSONObject)")
+  Step 11: 
+    Method: <com.heyzap.internal.Logger: void <clinit>()>
+    Statement: <com.heyzap.internal.Logger: boolean ENABLED> = 0
+  Step 12: 
+    Method: <com.heyzap.internal.Logger: void <clinit>()>
+    Statement: return
+  Step 13: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: return
+  Step 14: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: return
+  Step 15: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: return
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: return
+  Step 17: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return null
+  Step 18: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r6
+  Step 19: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: return
+  Step 20: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: return
+  Step 21: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: return
+  Step 22: 
+    Method: <com.heyzap.common.net.APIClient: void get(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: return
+  Step 23: 
+    Method: <com.heyzap.sdk.ads.ac: void onConfigLoaded(com.heyzap.mediation.config.MediationConfig)>
+    Statement: return
+  Step 24: 
+    Method: <com.heyzap.mediation.config.d: void run()>
+    Statement: return
+  Step 25: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: return
+  Step 26: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: return
+  Step 27: 
+    Method: <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: return
+  Step 28: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>
+    Statement: return
+  Step 29: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>
+    Statement: return
+  Step 30: 
+    Method: <com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>
+    Statement: return
+  Step 31: 
+    Method: <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>
+    Statement: return $r0
+  Step 32: 
+    Method: <dummyMainClass: void dummyMainMethod(java.lang.String[])>
+    Statement: staticinvoke <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>(null)
+  Step 33: 
+    Method: <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null)
+  Step 34: 
+    Method: <com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>
+    Statement: virtualinvoke $r7.<com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>($r1, $r3)
+  Step 35: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke r0.<com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>($r1, $r5, $r6)
+  Step 36: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>
+    Statement: staticinvoke <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>($r1, $r6, $r4, $r8)
+  Step 37: 
+    Method: <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: virtualinvoke $r5.<java.util.concurrent.ScheduledThreadPoolExecutor: void execute(java.lang.Runnable)>($r4)
+  Step 38: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: specialinvoke r0.<java.util.concurrent.ScheduledThreadPoolExecutor: void execute(java.lang.Runnable)>($r2)
+  Step 39: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: interfaceinvoke $r1.<java.lang.Runnable: void run()>()
+  Step 40: 
+    Method: <com.heyzap.common.cache.a: void run()>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void trace(java.lang.Throwable)>($r16)
+  Step 41: 
+    Method: <com.heyzap.internal.Logger: void trace(java.lang.Throwable)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void error(java.lang.String)>($r2)
+  Step 42: 
+    Method: <com.heyzap.internal.Logger: void error(java.lang.String)>
+    Statement: $z0 = <com.heyzap.internal.Logger: boolean ENABLED>
+  Step 43: 
+    Method: <com.heyzap.internal.Logger: void error(java.lang.String)>
+    Statement: if $z0 != 0 goto $r1 = <com.heyzap.internal.Logger: java.lang.String TAG>
+  Step 44: 
+    Method: <com.heyzap.internal.Logger: void error(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r1, $r0)
+
+==================================================
+Source Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+Source Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+Sink Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Please check the parameters")
+Taint Path:
+  Step 1: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+  Step 2: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 3: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 4: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: return $r0
+  Step 5: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 6: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 7: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $r0 == null goto staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Couldn\'t get any data from the url")
+  Step 8: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r3 = new org.json.JSONObject
+  Step 9: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $z0 = virtualinvoke $r3.<org.json.JSONObject: boolean getBoolean(java.lang.String)>("error")
+  Step 10: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $z0 == 0 goto return $r0
+  Step 11: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Please check the parameters")
+
+==================================================
+Source Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+Sink Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+Sink Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r1)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+  Step 2: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: return $r3
+  Step 3: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>($r6)
+  Step 4: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r1)
+
+==================================================
+Source Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+Source Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+Sink Method: <com.heyzap.internal.Logger: void error(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r1, $r0)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+  Step 2: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("locale_country", $r6)
+  Step 3: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: return $r1
+  Step 4: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: virtualinvoke $r3.<com.heyzap.http.RequestParams: void merge(java.util.Map)>($r2)
+  Step 5: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: if $r1 == null goto return
+  Step 6: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r3 = interfaceinvoke $r2.<java.util.Set: java.util.Iterator iterator()>()
+  Step 7: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r4 = interfaceinvoke $r3.<java.util.Iterator: java.lang.Object next()>()
+  Step 8: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r5 = (java.util.Map$Entry) $r4
+  Step 9: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r4 = interfaceinvoke $r5.<java.util.Map$Entry: java.lang.Object getValue()>()
+  Step 10: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r7 = (java.lang.String) $r4
+  Step 11: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: virtualinvoke r0.<com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>($r6, $r7)
+  Step 12: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2)
+  Step 13: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: $r3 = r0.<com.heyzap.http.RequestParams: java.util.concurrent.ConcurrentHashMap urlParams>
+  Step 14: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: return
+  Step 15: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: return
+  Step 16: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: return $r3
+  Step 17: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 18: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 19: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: if $r1 == null goto return null
+  Step 20: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: interfaceinvoke $r2.<com.heyzap.http.ResponseHandlerInterface: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>(0, null, null, $r3)
+  Step 21: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>($r6)
+  Step 22: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>($r1)
+  Step 23: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onSuccess(int,org.apache.http.Header[],byte[])>($i0, $r5, $r6)
+  Step 24: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onSuccess(int,org.apache.http.Header[],byte[])>
+    Statement: virtualinvoke r0.<com.heyzap.http.JsonHttpResponseHandler: void onSuccess(int,org.apache.http.Header[],org.json.JSONObject)>($i0, $r1, $r5)
+  Step 25: 
+    Method: <com.heyzap.house.handler.a: void onSuccess(int,org.apache.http.Header[],org.json.JSONObject)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void trace(java.lang.Throwable)>($r15)
+  Step 26: 
+    Method: <com.heyzap.internal.Logger: void trace(java.lang.Throwable)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void error(java.lang.String)>($r2)
+  Step 27: 
+    Method: <com.heyzap.internal.Logger: void error(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>($r1, $r0)
+
+==================================================
+Source Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+Source Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+Sink Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Try Again later")
+Taint Path:
+  Step 1: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+  Step 2: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 3: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 4: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: return $r0
+  Step 5: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 6: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 7: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $r0 == null goto staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Couldn\'t get any data from the url")
+  Step 8: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r3 = new org.json.JSONObject
+  Step 9: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $z0 = virtualinvoke $r3.<org.json.JSONObject: boolean getBoolean(java.lang.String)>("error")
+  Step 10: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $z0 == 0 goto return $r0
+  Step 11: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Try Again later")
+
+==================================================
+Source Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+Source Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+Sink Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Invalid Transaction")
+Taint Path:
+  Step 1: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+  Step 2: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 3: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 4: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: return $r0
+  Step 5: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 6: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 7: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $r0 == null goto staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Couldn\'t get any data from the url")
+  Step 8: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r3 = new org.json.JSONObject
+  Step 9: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $z0 = virtualinvoke $r3.<org.json.JSONObject: boolean getBoolean(java.lang.String)>("error")
+  Step 10: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $z0 == 0 goto return $r0
+  Step 11: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Invalid Transaction")
+
+==================================================
+Source Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+Source Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+Sink Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+Sink Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+  Step 2: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.String: java.lang.String toLowerCase(java.util.Locale)>($r16)
+  Step 3: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("locale_country", $r6)
+  Step 4: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: return $r1
+  Step 5: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: virtualinvoke $r3.<com.heyzap.http.RequestParams: void merge(java.util.Map)>($r2)
+  Step 6: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: if $r1 == null goto return
+  Step 7: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r4 = interfaceinvoke $r5.<java.util.Map$Entry: java.lang.Object getValue()>()
+  Step 8: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r7 = (java.lang.String) $r4
+  Step 9: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: virtualinvoke r0.<com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>($r6, $r7)
+  Step 10: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2)
+  Step 11: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: $r3 = r0.<com.heyzap.http.RequestParams: java.util.concurrent.ConcurrentHashMap urlParams>
+  Step 12: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: return
+  Step 13: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: return
+  Step 14: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: return $r3
+  Step 15: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 17: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: if $r1 == null goto return null
+  Step 18: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r4 = virtualinvoke $r1.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>($r2)
+  Step 19: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r2 = specialinvoke r0.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>($r1)
+  Step 20: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: virtualinvoke $r2.<com.heyzap.http.aa: void a(java.lang.String,java.io.File,java.lang.String)>($r9, $r16, $r10)
+  Step 21: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.io.File,java.lang.String)>
+    Statement: specialinvoke $r4.<com.heyzap.http.ab: void <init>(com.heyzap.http.aa,java.lang.String,java.io.File,java.lang.String)>(r0, $r1, $r2, $r5)
+  Step 22: 
+    Method: <com.heyzap.http.ab: void <init>(com.heyzap.http.aa,java.lang.String,java.io.File,java.lang.String)>
+    Statement: $r6 = specialinvoke r0.<com.heyzap.http.ab: byte[] a(java.lang.String,java.lang.String,java.lang.String)>($r2, $r5, $r4)
+  Step 23: 
+    Method: <com.heyzap.http.ab: byte[] a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: $r6 = staticinvoke <com.heyzap.http.aa: byte[] a(com.heyzap.http.aa)>($r5)
+  Step 24: 
+    Method: <com.heyzap.http.aa: void <clinit>()>
+    Statement: <com.heyzap.http.aa: byte[] a> = $r1
+  Step 25: 
+    Method: <com.heyzap.http.aa: void <clinit>()>
+    Statement: return
+  Step 26: 
+    Method: <com.heyzap.http.ab: byte[] a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: return $r6
+  Step 27: 
+    Method: <com.heyzap.http.ab: void <init>(com.heyzap.http.aa,java.lang.String,java.io.File,java.lang.String)>
+    Statement: return
+  Step 28: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.io.File,java.lang.String)>
+    Statement: return
+  Step 29: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r2
+  Step 30: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r2
+  Step 31: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return null
+  Step 32: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r6
+  Step 33: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: return
+  Step 34: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: return
+  Step 35: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: return
+  Step 36: 
+    Method: <com.heyzap.mediation.MediationManager: void start(android.content.Context)>
+    Statement: return
+  Step 37: 
+    Method: <com.heyzap.sdk.ads.HeyzapAds: void internalStart(java.lang.String,android.content.Context,int,com.heyzap.sdk.ads.HeyzapAds$OnStatusListener)>
+    Statement: virtualinvoke $r20.<java.util.concurrent.ScheduledThreadPoolExecutor: void execute(java.lang.Runnable)>($r21)
+  Step 38: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: specialinvoke r0.<java.util.concurrent.ScheduledThreadPoolExecutor: void execute(java.lang.Runnable)>($r2)
+  Step 39: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: interfaceinvoke $r1.<java.lang.Runnable: void run()>()
+  Step 40: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 41: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 42: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r4 = virtualinvoke $r1.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>($r2)
+  Step 43: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r2 = specialinvoke r0.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>($r1)
+  Step 44: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: virtualinvoke $r2.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String)>($r9, $r10)
+  Step 45: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke r0.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>($r1, $r2, "text/plain; charset=UTF-8")
+  Step 46: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: $r5 = <com.heyzap.http.aa: byte[] a>
+  Step 47: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+  Step 48: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: $r4 = r0.<com.heyzap.http.aa: java.io.ByteArrayOutputStream i>
+  Step 49: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: $r4 = r0.<com.heyzap.http.aa: java.io.ByteArrayOutputStream i>
+  Step 50: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+
+==================================================
+Source Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+Source Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+Sink Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Couldn\'t get any data from the url")
+Taint Path:
+  Step 1: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>($r6)
+  Step 2: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 3: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 4: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String,java.util.List)>
+    Statement: return $r0
+  Step 5: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: <com.ab.shoore_zendegi.az: java.lang.String a> = $r0
+  Step 6: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: $r0 = <com.ab.shoore_zendegi.az: java.lang.String a>
+  Step 7: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: if $r0 == null goto staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Couldn\'t get any data from the url")
+  Step 8: 
+    Method: <com.ab.shoore_zendegi.az: java.lang.String a(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("JSON", "Couldn\'t get any data from the url")
+
+==================================================
+Source Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+Sink Method: <com.heyzap.internal.Logger: void error(java.lang.String,java.lang.Throwable)>
+Sink Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r0, $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+  Step 2: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: return $r3
+  Step 3: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>($r6)
+  Step 4: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>($r1)
+  Step 5: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: $i0 = $r1.<android.os.Message: int what>
+  Step 6: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: lookupswitch($i0) {     case 0: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 1: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 2: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onStart()>();     case 3: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onFinish()>();     case 4: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 5: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 6: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onCancel()>();     default: goto return; }
+  Step 7: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>($i0, $r5, $r6, $r7)
+  Step 8: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void debug(java.lang.String)>("response body is null, calling onFailure(Throwable, JSONObject)")
+  Step 9: 
+    Method: <com.heyzap.internal.Logger: void <clinit>()>
+    Statement: <com.heyzap.internal.Logger: java.lang.String TAG> = "HeyzapSDK"
+  Step 10: 
+    Method: <com.heyzap.internal.Logger: void <clinit>()>
+    Statement: return
+  Step 11: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: return
+  Step 12: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: return
+  Step 13: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: return
+  Step 14: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: return
+  Step 15: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return null
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r6
+  Step 17: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: return
+  Step 18: 
+    Method: <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: return
+  Step 19: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>
+    Statement: return
+  Step 20: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>
+    Statement: return
+  Step 21: 
+    Method: <com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>
+    Statement: return
+  Step 22: 
+    Method: <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>
+    Statement: return $r0
+  Step 23: 
+    Method: <dummyMainClass: void dummyMainMethod(java.lang.String[])>
+    Statement: staticinvoke <dummyMainClass: com.heyzap.sdk.ads.VASTActivity dummyMainMethod_com_heyzap_sdk_ads_VASTActivity(android.content.Intent)>(null)
+  Step 24: 
+    Method: <dummyMainClass: com.heyzap.sdk.ads.VASTActivity dummyMainMethod_com_heyzap_sdk_ads_VASTActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.heyzap.sdk.ads.VASTActivity: void onBackPressed()>()
+  Step 25: 
+    Method: <com.heyzap.sdk.ads.VASTActivity: void onBackPressed()>
+    Statement: virtualinvoke r0.<com.heyzap.sdk.ads.VASTActivity: void hide()>()
+  Step 26: 
+    Method: <com.heyzap.sdk.ads.VASTActivity: void hide()>
+    Statement: specialinvoke r0.<com.heyzap.sdk.ads.VASTActivity: void processEvent(com.heyzap.common.vast.model.TrackingEvent)>($r1)
+  Step 27: 
+    Method: <com.heyzap.sdk.ads.VASTActivity: void processEvent(com.heyzap.common.vast.model.TrackingEvent)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void error(java.lang.String,java.lang.Throwable)>($r11, $r7)
+  Step 28: 
+    Method: <com.heyzap.internal.Logger: void error(java.lang.String,java.lang.Throwable)>
+    Statement: $r2 = <com.heyzap.internal.Logger: java.lang.String TAG>
+  Step 29: 
+    Method: <com.heyzap.internal.Logger: void error(java.lang.String,java.lang.Throwable)>
+    Statement: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>($r2, $r0, $r1)
+
+==================================================
+Source Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+Source Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+Sink Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+Sink Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: $r6 = virtualinvoke $r15.<java.util.Locale: java.lang.String getCountry()>()
+  Step 2: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: virtualinvoke $r1.<java.util.HashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>("locale_country", $r6)
+  Step 3: 
+    Method: <com.heyzap.internal.Utils: java.util.HashMap extraParams(android.content.Context)>
+    Statement: return $r1
+  Step 4: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: virtualinvoke $r3.<com.heyzap.http.RequestParams: void merge(java.util.Map)>($r2)
+  Step 5: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: if $r1 == null goto return
+  Step 6: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: $r7 = (java.lang.String) $r4
+  Step 7: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: virtualinvoke r0.<com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>($r6, $r7)
+  Step 8: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r3.<java.util.concurrent.ConcurrentHashMap: java.lang.Object put(java.lang.Object,java.lang.Object)>($r1, $r2)
+  Step 9: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: $r3 = r0.<com.heyzap.http.RequestParams: java.util.concurrent.ConcurrentHashMap urlParams>
+  Step 10: 
+    Method: <com.heyzap.http.RequestParams: void put(java.lang.String,java.lang.String)>
+    Statement: return
+  Step 11: 
+    Method: <com.heyzap.http.RequestParams: void merge(java.util.Map)>
+    Statement: return
+  Step 12: 
+    Method: <com.heyzap.common.net.APIClient: com.heyzap.http.RequestParams augmentParams(com.heyzap.http.RequestParams,android.content.Context)>
+    Statement: return $r3
+  Step 13: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: virtualinvoke $r6.<com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4, $r2, $r1)
+  Step 14: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r5 = specialinvoke r0.<com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>($r3, $r4)
+  Step 15: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: if $r1 == null goto return null
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r4 = virtualinvoke $r1.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>($r2)
+  Step 17: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity getEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: $r2 = specialinvoke r0.<com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>($r1)
+  Step 18: 
+    Method: <com.heyzap.http.RequestParams: org.apache.http.HttpEntity createMultipartEntity(com.heyzap.http.ResponseHandlerInterface)>
+    Statement: virtualinvoke $r2.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String)>($r9, $r10)
+  Step 19: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String)>
+    Statement: virtualinvoke r0.<com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>($r1, $r2, "text/plain; charset=UTF-8")
+  Step 20: 
+    Method: <com.heyzap.http.aa: void a(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: virtualinvoke $r4.<java.io.ByteArrayOutputStream: void write(byte[])>($r5)
+
+==================================================
+Source Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+Sink Method: <com.heyzap.internal.Logger: void debug(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r0)
+Taint Path:
+  Step 1: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+  Step 2: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: android.os.Message obtainMessage(int,java.lang.Object)>
+    Statement: return $r3
+  Step 3: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>($r6)
+  Step 4: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>($r1)
+  Step 5: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: $i0 = $r1.<android.os.Message: int what>
+  Step 6: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: lookupswitch($i0) {     case 0: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 1: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 2: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onStart()>();     case 3: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onFinish()>();     case 4: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 5: goto $r2 = $r1.<android.os.Message: java.lang.Object obj>;     case 6: goto virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onCancel()>();     default: goto return; }
+  Step 7: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: $r6 = (byte[]) $r2
+  Step 8: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: virtualinvoke r0.<com.heyzap.http.AsyncHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>($i0, $r5, $r6, $r7)
+  Step 9: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: if $r2 == null goto staticinvoke <com.heyzap.internal.Logger: void debug(java.lang.String)>("response body is null, calling onFailure(Throwable, JSONObject)")
+  Step 10: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void debug(java.lang.String)>("response body is null, calling onFailure(Throwable, JSONObject)")
+  Step 11: 
+    Method: <com.heyzap.internal.Logger: void <clinit>()>
+    Statement: <com.heyzap.internal.Logger: boolean ENABLED> = 0
+  Step 12: 
+    Method: <com.heyzap.internal.Logger: void <clinit>()>
+    Statement: return
+  Step 13: 
+    Method: <com.heyzap.http.JsonHttpResponseHandler: void onFailure(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: return
+  Step 14: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void handleMessage(android.os.Message)>
+    Statement: return
+  Step 15: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendMessage(android.os.Message)>
+    Statement: return
+  Step 16: 
+    Method: <com.heyzap.http.AsyncHttpResponseHandler: void sendFailureMessage(int,org.apache.http.Header[],byte[],java.lang.Throwable)>
+    Statement: return
+  Step 17: 
+    Method: <com.heyzap.http.AsyncHttpClient: org.apache.http.HttpEntity paramsToEntity(com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return null
+  Step 18: 
+    Method: <com.heyzap.http.AsyncHttpClient: com.heyzap.http.RequestHandle post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.ResponseHandlerInterface)>
+    Statement: return $r6
+  Step 19: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: return
+  Step 20: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: return
+  Step 21: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: return
+  Step 22: 
+    Method: <com.heyzap.common.net.APIClient: void get(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: return
+  Step 23: 
+    Method: <com.heyzap.sdk.ads.ac: void onConfigLoaded(com.heyzap.mediation.config.MediationConfig)>
+    Statement: return
+  Step 24: 
+    Method: <com.heyzap.mediation.config.d: void run()>
+    Statement: return
+  Step 25: 
+    Method: <com.heyzap.common.concurrency.WrappedRunnable: void run()>
+    Statement: return
+  Step 26: 
+    Method: <com.heyzap.common.concurrency.d: void execute(java.lang.Runnable)>
+    Statement: return
+  Step 27: 
+    Method: <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: return
+  Step 28: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>
+    Statement: return
+  Step 29: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>
+    Statement: return
+  Step 30: 
+    Method: <com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>
+    Statement: return
+  Step 31: 
+    Method: <dummyMainClass: com.heyzap.sdk.ads.PackageAddedReceiver dummyMainMethod_com_heyzap_sdk_ads_PackageAddedReceiver(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>(null, null)
+  Step 32: 
+    Method: <com.heyzap.sdk.ads.PackageAddedReceiver: void onReceive(android.content.Context,android.content.Intent)>
+    Statement: virtualinvoke $r7.<com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>($r1, $r3)
+  Step 33: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.lang.String)>
+    Statement: virtualinvoke r0.<com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>($r1, $r5, $r6)
+  Step 34: 
+    Method: <com.heyzap.house.handler.AttributionHandler: void didInstall(android.content.Context,java.util.ArrayList,java.lang.Boolean)>
+    Statement: staticinvoke <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>($r1, $r6, $r4, $r8)
+  Step 35: 
+    Method: <com.heyzap.common.net.APIClient: void post(android.content.Context,java.lang.String,com.heyzap.http.RequestParams,com.heyzap.http.AsyncHttpResponseHandler)>
+    Statement: virtualinvoke $r5.<java.util.concurrent.ScheduledThreadPoolExecutor: void execute(java.lang.Runnable)>($r4)
+  Step 36: 
+    Method: <com.heyzap.common.net.c: void run()>
+    Statement: staticinvoke <com.heyzap.common.net.APIClient: void access$200(java.lang.String,java.lang.String,java.lang.String)>("POST", $r4, $r5)
+  Step 37: 
+    Method: <com.heyzap.common.net.APIClient: void access$200(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: staticinvoke <com.heyzap.common.net.APIClient: void log(java.lang.String,java.lang.String,java.lang.String)>($r0, $r1, $r2)
+  Step 38: 
+    Method: <com.heyzap.common.net.APIClient: void log(java.lang.String,java.lang.String,java.lang.String)>
+    Statement: staticinvoke <com.heyzap.internal.Logger: void debug(java.lang.String)>($r0)
+  Step 39: 
+    Method: <com.heyzap.internal.Logger: void debug(java.lang.String)>
+    Statement: $z0 = <com.heyzap.internal.Logger: boolean ENABLED>
+  Step 40: 
+    Method: <com.heyzap.internal.Logger: void debug(java.lang.String)>
+    Statement: if $z0 != 0 goto (branch)
+  Step 41: 
+    Method: <com.heyzap.internal.Logger: void debug(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>($r1, $r0)
+
+==================================================
+
+13 paths in total.
+
+==================================================

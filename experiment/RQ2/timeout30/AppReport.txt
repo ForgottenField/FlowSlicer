@@ -1,0 +1,1158 @@
+Slicing result for "com.jb.gokeyboard.theme.twpastelthemekeyboard-007F8C5C6EEAF14D27B97B67CC52EBBF82FDD0051580CE7F7F0790CC361CE922":
+Finding Slicing Criteria: 0.233
+SDG Slicing CSR: 0.276
+Adding Callbacks: 1.804
+Constructing Local Graph: 0.268
+SDG Slicing: 09:07.024
+SDG Slicing Extra: 02:58.811
+Building Dummymain: 3.477
+SDG construction: 2.804
+CFG Slicing: 0.899
+Locating Source and Sink: 1.022
+SDG Slicing Backward and Forward: 06:06.824
+PDG construction: 17.483
+Handling Exceptions: 0.073
+Reachability Query: 01:33.863
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 11:39.327
+FlowDroid in total(after slicing): 05:05.367
+After slicing, our tool slices 39802 nodes in the SDG.
+Slicing percentage: 24.5%(39802/162438)
+
+Slicing result for "com.pcmehanik.measuretools-006DC751AE5BD325962445E9774657F6C2946AC393FF3F539EFCB2F452831993":
+Finding Slicing Criteria: 0.320
+SDG Slicing CSR: 0.645
+Adding Callbacks: 8.963
+Constructing Local Graph: 0.246
+SDG Slicing: 21:09.428
+SDG Slicing Extra: 06:44.259
+Building Dummymain: 3.518
+SDG construction: 6.154
+CFG Slicing: 1.354
+Locating Source and Sink: 1.826
+SDG Slicing Backward and Forward: 14:22.311
+PDG construction: 34.754
+Handling Exceptions: 0.160
+Reachability Query: 03:00.286
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 25:48.978
+FlowDroid in total(after slicing): 3.322
+After slicing, our tool slices 63090 nodes in the SDG.
+Slicing percentage: 25.84%(63090/244116)
+
+Slicing result for "com.sheridan.jnspgjns-00906CFFCAC59D700B20C34CC9CB76B3C8345EE9BA9E7E16C3A7FB561A39F40F":
+Finding Slicing Criteria: 0.431
+SDG Slicing CSR: 0.437
+Adding Callbacks: 2.924
+Constructing Local Graph: 0.387
+SDG Slicing: 24:00.321
+SDG Slicing Extra: 07:53.841
+Building Dummymain: 4.946
+SDG construction: 5.221
+CFG Slicing: 1.819
+Locating Source and Sink: 1.345
+SDG Slicing Backward and Forward: 16:03.937
+PDG construction: 23.581
+Handling Exceptions: 0.083
+Reachability Query: 03:01.024
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 28:51.556
+FlowDroid in total(after slicing): 05:15.457
+After slicing, our tool slices 60674 nodes in the SDG.
+Slicing percentage: 24.05%(60674/252236)
+
+// bad
+Slicing result for "com.app_marketero9fi.layout-004962B8DCBA6FCF54BAFDE7E44A5218825FC171120275D8EBB1746AAF6C6D88":
+Finding Slicing Criteria: 0.827
+Adding Callbacks: 45.880
+Constructing Local Graph: 0.620
+SDG construction: 18.216
+SDG Slicing: 0.000
+CFG Slicing: 0.023
+Locating Source and Sink: 1.773
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:42.596
+Building Dummymain: 10.579
+Handling Exceptions: 0.164
+Reachability Query: 03:01.806
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.815
+FlowDroid in total(after slicing): 05:40.967
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406309)
+
+Slicing result for "com.jb.gosms.pctheme.rainy.dante-00295C108D5BE85DD868DF9D41AC7A18D2E99C5044BEBE405EA9313F6AC39FE4":
+Finding Slicing Criteria: 0.464
+SDG Slicing CSR: 0.363
+Adding Callbacks: 4.467
+Constructing Local Graph: 0.366
+SDG Slicing: 12:35.474
+SDG Slicing Extra: 04:11.438
+Building Dummymain: 3.137
+SDG construction: 4.096
+CFG Slicing: 1.533
+Locating Source and Sink: 0.930
+SDG Slicing Backward and Forward: 08:21.888
+PDG construction: 17.647
+Handling Exceptions: 0.102
+Reachability Query: 03:00.488
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 16:45.946
+FlowDroid in total(after slicing): 05:29.493
+After slicing, our tool slices 55456 nodes in the SDG.
+Slicing percentage: 28.15%(55456/196987)
+
+// bad
+Slicing result for "cn.gamedog.terrariacomposbox-00A8C545216641259CB80A14E8353FD028446E63BFF7A6244F16E7F4FDA81018":
+Finding Slicing Criteria: 1.885
+Adding Callbacks: 29.327
+Constructing Local Graph: 0.671
+SDG construction: 14.540
+SDG Slicing: 0.000
+CFG Slicing: 0.027
+Locating Source and Sink: 1.929
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 56.225
+Building Dummymain: 6.723
+Handling Exceptions: 0.252
+Reachability Query: 03:01.972
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.565
+FlowDroid in total(after slicing): 10:14.021
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/484829)
+
+Slicing result for "com.jb.gosms.pctheme.glorious.zt-00355F2D01EE6C08801A153407715F639163AE9D3892C4F5FE63686C4348EDD9":
+Finding Slicing Criteria: 0.467
+SDG Slicing CSR: 0.329
+Adding Callbacks: 3.792
+Constructing Local Graph: 0.302
+SDG Slicing: 12:10.691
+SDG Slicing Extra: 03:56.131
+Building Dummymain: 3.064
+SDG construction: 3.616
+CFG Slicing: 1.382
+Locating Source and Sink: 1.685
+SDG Slicing Backward and Forward: 08:12.638
+PDG construction: 18.021
+Handling Exceptions: 0.113
+Reachability Query: 03:00.362
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 16:19.677
+FlowDroid in total(after slicing): 05:28.118
+After slicing, our tool slices 55461 nodes in the SDG.
+Slicing percentage: 28.15%(55461/196987)
+
+Slicing result for "com.imo.android.imoimbeta-00A494A8820079F52D0473CA72EFEB4D3E6A7967EB1AA708EE5633B8599AAE33":
+Finding Slicing Criteria: 0.378
+SDG Slicing CSR: 1.450
+Adding Callbacks: 16.281
+Constructing Local Graph: 0.594
+SDG Slicing: 15:23.185
+SDG Slicing Extra: 05:39.259
+Building Dummymain: 3.810
+SDG construction: 6.314
+CFG Slicing: 0.941
+Locating Source and Sink: 1.265
+SDG Slicing Backward and Forward: 09:40.317
+PDG construction: 28.046
+Handling Exceptions: 0.113
+Reachability Query: 03:00.156
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 19:52.880
+FlowDroid in total(after slicing): 3.453
+After slicing, our tool slices 48874 nodes in the SDG.
+Slicing percentage: 27.84%(48874/175533)
+
+// bad
+Slicing result for "com.cheatsgtacode.gtasa-006FF1557C418B589B60856492BF55610D9799781FEDC6BE70188AC18EEC3FA5":
+Finding Slicing Criteria: 1.273
+Adding Callbacks: 38.155
+Constructing Local Graph: 2.266
+SDG construction: 19.359
+SDG Slicing: 0.000
+CFG Slicing: 0.035
+Locating Source and Sink: 2.725
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 01:38.006
+Building Dummymain: 18.663
+Handling Exceptions: 0.404
+Reachability Query: 03:06.894
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:11.690
+FlowDroid in total(after slicing): 05:59.301
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/777579)
+
+// bad
+Slicing result for "com.paptap.tkelliherfca-0048738DFB5346701A5F92A5C6B3743BF872217E0AC446E6E3D8C8BEF487A57B":
+Finding Slicing Criteria: 0.643
+SDG Slicing CSR: 0.701
+Adding Callbacks: 5.128
+Constructing Local Graph: 0.472
+SDG Slicing: 0.000
+SDG Slicing Extra: 0.000
+Building Dummymain: 8.250
+SDG construction: 8.131
+CFG Slicing: 0.017
+Locating Source and Sink: 1.708
+SDG Slicing Backward and Forward: 18:39.021
+PDG construction: 37.072
+Handling Exceptions: 0.137
+Reachability Query: 03:00.241
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:07.311
+FlowDroid in total(after slicing): 05:17.290
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/274488)
+
+// bad
+Slicing result for "com.foresight.mobonews-00108D8F37A89A2EC3A256814369C75EFCD2565B955B7956D4C8B522DBC1FF73":
+Finding Slicing Criteria: 2.394
+Adding Callbacks: 01:28.516
+Constructing Local Graph: 1.117
+SDG construction: 14.116
+SDG Slicing: 0.000
+CFG Slicing: 0.026
+Locating Source and Sink: 1.713
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 01:02.388
+Building Dummymain: 8.481
+Handling Exceptions: 0.277
+Reachability Query: 03:00.297
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.961
+FlowDroid in total(after slicing): 10:19.582
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/554459)
+
+// bad
+Slicing result for "com.nineyi.shop.s000167-00A0507F0193B0D1060125F0B5DB08EABDA1E7F0EC13935C39D9521DAE5691FB":
+Finding Slicing Criteria: 0.404
+Adding Callbacks: 01:13.871
+Constructing Local Graph: 1.345
+SDG construction: 23.211
+SDG Slicing: 0.000
+CFG Slicing: 0.030
+Locating Source and Sink: 1.754
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 41.253
+Building Dummymain: 8.121
+Handling Exceptions: 0.249
+Reachability Query: 03:00.688
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.607
+FlowDroid in total(after slicing): 05:22.984
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/425646)
+
+// bad
+Slicing result for "com.talk82.chat-008BF6A090574020441D04121B840889166622278F40301051EAB16E0A76B263":
+Finding Slicing Criteria: 0.490
+Adding Callbacks: 02:06.861
+Constructing Local Graph: 0.441
+SDG construction: 20.508
+SDG Slicing: 0.000
+CFG Slicing: 0.018
+Locating Source and Sink: 1.647
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 28.083
+Building Dummymain: 3.801
+Handling Exceptions: 0.141
+Reachability Query: 03:00.526
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:07.264
+FlowDroid in total(after slicing): 05:16.465
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/234220)
+
+// bad
+Slicing result for "com.voteractivationnetwork.minivan-00775D7E23C666E79E8E68ABDCA4345D1170BFA9B836A22A4539BC4AB30D03FB":
+Finding Slicing Criteria: 0.206
+Adding Callbacks: 7.456
+Constructing Local Graph: 0.349
+SDG construction: 6.351
+SDG Slicing: 0.000
+CFG Slicing: 0.013
+Locating Source and Sink: 1.152
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 30.469
+Building Dummymain: 4.764
+Handling Exceptions: 0.085
+Reachability Query: 02:28.113
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.322
+FlowDroid in total(after slicing): 05:25.447
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/332800)
+
+// bad
+Slicing result for "com.tmestudiosclocks.christmastreelive-005E34BEF482DC6A407F020C684D9081A48E6D0D87FCE3C75A2AF5590BA0A879":
+Finding Slicing Criteria: 0.307
+SDG Slicing CSR: 0.422
+Adding Callbacks: 5.408
+Constructing Local Graph: 0.168
+SDG Slicing: 0.000
+SDG Slicing Extra: 0.000
+Building Dummymain: 3.732
+SDG construction: 4.944
+CFG Slicing: 0.017
+Locating Source and Sink: 1.059
+SDG Slicing Backward and Forward: 20:01.770
+PDG construction: 28.500
+Handling Exceptions: 0.101
+Reachability Query: 03:00.378
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:07.568
+FlowDroid in total(after slicing): 05:23.518
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/263736)
+
+// bad
+Slicing result for "com.app_massagersimin.layout-00A6AED5269A1A5980240D6BD07B82004680314056A0493A8CD35354496D8971":
+Finding Slicing Criteria: 0.873
+Adding Callbacks: 45.799
+Constructing Local Graph: 0.846
+SDG construction: 19.800
+SDG Slicing: 0.000
+CFG Slicing: 0.026
+Locating Source and Sink: 2.052
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:52.043
+Building Dummymain: 9.878
+Handling Exceptions: 0.167
+Reachability Query: 03:00.988
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.849
+FlowDroid in total(after slicing): 05:39.334
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/412856)
+
+// bad
+Slicing result for "com.app_fitjdm.layout-0017EB197F99C82C2AABFA61C40D460333C6B488EDA69B5C3D0FDD945C611C9E":
+Finding Slicing Criteria: 0.862
+Adding Callbacks: 44.055
+Constructing Local Graph: 1.186
+SDG construction: 20.047
+SDG Slicing: 0.000
+CFG Slicing: 0.019
+Locating Source and Sink: 2.155
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:45.979
+Building Dummymain: 8.986
+Handling Exceptions: 0.211
+Reachability Query: 03:00.100
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:07.962
+FlowDroid in total(after slicing): 05:39.042
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406309)
+
+// bad
+Slicing result for "com.app_mscharity.layout-0032E4CCF0B2A9CC1BAE9E6F6FB7542E784ED16DB358E411E887FDD019952013":
+Finding Slicing Criteria: 0.847
+Adding Callbacks: 47.509
+Constructing Local Graph: 0.592
+SDG construction: 19.305
+SDG Slicing: 0.000
+CFG Slicing: 0.021
+Locating Source and Sink: 2.392
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:46.152
+Building Dummymain: 8.679
+Handling Exceptions: 0.172
+Reachability Query: 03:00.275
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.950
+FlowDroid in total(after slicing): 05:24.191
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/413340)
+
+// bad
+Slicing result for "com.daamitt.walnut.app-00110058CF953DF379E8C4C93AB8ADDC45EA885C93543055D86E5CC27879B95A":
+Finding Slicing Criteria: 1.309
+Adding Callbacks: 01:44.041
+Constructing Local Graph: 0.680
+SDG construction: 26.679
+SDG Slicing: 0.000
+CFG Slicing: 0.028
+Locating Source and Sink: 1.577
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 52.787
+Building Dummymain: 5.553
+Handling Exceptions: 0.264
+Reachability Query: 03:00.422
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.270
+FlowDroid in total(after slicing): 05:16.434
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/421140)
+
+// bad
+Slicing result for "com.app_catclinic.layout-0016469528D9ECFB1B52DF0D564E2A007EAE55A0A7C94F70C7E83A1D5C07C23B":
+Finding Slicing Criteria: 0.810
+Adding Callbacks: 49.260
+Constructing Local Graph: 0.679
+SDG construction: 22.419
+SDG Slicing: 0.000
+CFG Slicing: 0.020
+Locating Source and Sink: 1.572
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 03:01.619
+Building Dummymain: 10.756
+Handling Exceptions: 0.185
+Reachability Query: 03:01.504
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.741
+FlowDroid in total(after slicing): 05:40.567
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/413361)
+
+// bad
+Slicing result for "com.app_lombardisyell.layout-009C93DABFEDD6F28BEDB451E7CF33AED1412CDCF512AA63272162F2348B9E55":
+Finding Slicing Criteria: 0.956
+Adding Callbacks: 43.905
+Constructing Local Graph: 0.765
+SDG construction: 19.105
+SDG Slicing: 0.000
+CFG Slicing: 0.021
+Locating Source and Sink: 2.104
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:50.122
+Building Dummymain: 9.837
+Handling Exceptions: 0.141
+Reachability Query: 03:00.847
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.443
+FlowDroid in total(after slicing): 05:42.273
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406309)
+
+// bad
+Slicing result for "com.app_emilierawlings.layout-005F4521784EF7F94DFB3AF571E67B3FD39BD024B2B7899F5D09EB4AF30640C9":
+Finding Slicing Criteria: 0.959
+Adding Callbacks: 49.567
+Constructing Local Graph: 0.795
+SDG construction: 19.728
+SDG Slicing: 0.000
+CFG Slicing: 0.022
+Locating Source and Sink: 2.417
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 03:06.717
+Building Dummymain: 9.931
+Handling Exceptions: 0.190
+Reachability Query: 03:00.408
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.304
+FlowDroid in total(after slicing): 04:57.964
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/442654)
+
+// bad
+Slicing result for "com.app_tranquiltouringparks932.layout-0069F15D82D0CAEB19342E1EE5CB9726E58A59AFE41B3C3110B890309B738E10":
+Finding Slicing Criteria: 0.920
+Adding Callbacks: 46.493
+Constructing Local Graph: 1.160
+SDG construction: 18.442
+SDG Slicing: 0.000
+CFG Slicing: 0.022
+Locating Source and Sink: 2.127
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:58.370
+Building Dummymain: 8.683
+Handling Exceptions: 0.160
+Reachability Query: 03:00.153
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.817
+FlowDroid in total(after slicing): 05:08.262
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/442654)
+
+// bad
+Slicing result for "com.kiding.perfecttools.zlmc-008C1B26A2F1A2CAF5C5FE1D596E47278447279DA3145FB67CD17CC3FDBDA7C4":
+Finding Slicing Criteria: 0.577
+Adding Callbacks: 14.351
+Constructing Local Graph: 0.588
+SDG construction: 7.107
+SDG Slicing: 0.000
+CFG Slicing: 0.015
+Locating Source and Sink: 1.876
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 41.425
+Building Dummymain: 4.314
+Handling Exceptions: 0.217
+Reachability Query: 03:00.725
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:06.659
+FlowDroid in total(after slicing): 05:25.025
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/342771)
+
+Slicing result for "com.admissiontable.admissiontable-0053C8A7DBF6FD77B206E29414A259612A375B8DBB560367116142EFF5E73BEB":
+Finding Slicing Criteria: 0.411
+SDG Slicing CSR: 0.398
+Adding Callbacks: 1.025
+Constructing Local Graph: 0.575
+SDG Slicing: 18:07.958
+SDG Slicing Extra: 06:03.270
+Building Dummymain: 3.203
+SDG construction: 4.222
+CFG Slicing: 1.291
+Locating Source and Sink: 0.939
+SDG Slicing Backward and Forward: 12:02.483
+PDG construction: 23.416
+Handling Exceptions: 0.121
+Reachability Query: 03:00.162
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 22:36.323
+FlowDroid in total(after slicing): 05:55.759
+After slicing, our tool slices 44006 nodes in the SDG.
+Slicing percentage: 21.4%(44006/205660)
+
+// bad
+Slicing result for "com.app_ncconnections.layout-00462946876AF7B7792934C12F83B49B7532BDF1FA19282435E0867A21F22472":
+Finding Slicing Criteria: 0.933
+Adding Callbacks: 47.837
+Constructing Local Graph: 0.785
+SDG construction: 19.237
+SDG Slicing: 0.000
+CFG Slicing: 0.025
+Locating Source and Sink: 1.915
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:55.653
+Building Dummymain: 10.293
+Handling Exceptions: 0.169
+Reachability Query: 03:00.220
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.350
+FlowDroid in total(after slicing): 05:43.128
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406296)
+
+// bad
+Slicing result for "com.app_healvet.layout-001C0940ADD4E54C93C2A78A71C0F883EA19484F0A0521EFAA9B22837D37A4DD":
+Finding Slicing Criteria: 0.852
+Adding Callbacks: 47.496
+Constructing Local Graph: 1.138
+SDG construction: 19.623
+SDG Slicing: 0.000
+CFG Slicing: 0.020
+Locating Source and Sink: 2.188
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:54.293
+Building Dummymain: 8.792
+Handling Exceptions: 0.161
+Reachability Query: 03:00.573
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.480
+FlowDroid in total(after slicing): 05:20.680
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/409642)
+
+// bad
+Slicing result for "com.app_fuscobrowne.layout-002CC7BCFEDEB8F8D6BC0FC017A91E5A542A8A1D4A118406095F68F12AAEC071":
+Finding Slicing Criteria: 0.910
+Adding Callbacks: 43.897
+Constructing Local Graph: 0.726
+SDG construction: 18.917
+SDG Slicing: 0.000
+CFG Slicing: 0.021
+Locating Source and Sink: 1.903
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:44.652
+Building Dummymain: 10.080
+Handling Exceptions: 0.161
+Reachability Query: 03:00.351
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.424
+FlowDroid in total(after slicing): 03:20.832
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/407143)
+
+// bad error
+Slicing result for "com.appthink.deeplifequotes-00967F2288C734D9F7BFAFB5BA676D2C3548C758A331F3E8FAB97B73E176A0DD":
+Finding Slicing Criteria: 0.095
+Constructing Local Graph: 0.068
+CFG Slicing: 0.000
+Locating Source and Sink: 0.952
+PDG construction: 14.987
+Building Dummymain: 0.000
+Handling Exceptions: 0.044
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 31.552
+FlowDroid in total(after slicing): 10:17.683
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: NaN%(0/0)
+
+Slicing result for "com.jb.gokeyboard.theme.twgearkeyboard-000B4FA10B813A6E77CE669A663BEA04EF1EA626B6AA40D142EBAAC13F7B6930":
+Finding Slicing Criteria: 0.203
+SDG Slicing CSR: 0.257
+Adding Callbacks: 1.750
+Constructing Local Graph: 0.324
+SDG Slicing: 09:09.693
+SDG Slicing Extra: 03:15.248
+Building Dummymain: 3.522
+SDG construction: 2.896
+CFG Slicing: 0.917
+Locating Source and Sink: 1.073
+SDG Slicing Backward and Forward: 05:53.099
+PDG construction: 15.592
+Handling Exceptions: 0.055
+Reachability Query: 01:37.312
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 11:42.876
+FlowDroid in total(after slicing): 05:05.311
+After slicing, our tool slices 39802 nodes in the SDG.
+Slicing percentage: 24.5%(39802/162438)
+
+Slicing result for "com.jb.gokeyboard.theme.tmeappskeyboardneonskin-0026F85EAD95A9D76005FD5A0B9C0C3A1A2183C5001C5CAE317C076A72F15DCF":
+Finding Slicing Criteria: 0.184
+SDG Slicing CSR: 0.246
+Adding Callbacks: 1.739
+Constructing Local Graph: 0.351
+SDG Slicing: 09:23.413
+SDG Slicing Extra: 02:46.349
+Building Dummymain: 3.287
+SDG construction: 3.002
+CFG Slicing: 1.079
+Locating Source and Sink: 1.192
+SDG Slicing Backward and Forward: 06:35.665
+PDG construction: 15.955
+Handling Exceptions: 0.064
+Reachability Query: 01:16.784
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 11:35.171
+FlowDroid in total(after slicing): 05:05.350
+After slicing, our tool slices 38781 nodes in the SDG.
+Slicing percentage: 24.32%(38781/159482)
+
+// bad
+Slicing result for "com.app_bedbreakfastimin.layout-00AA186AD8FDDD6AC2F62372CA99AF68961A0A1B0B653BCA8942929A04F929F5":
+Finding Slicing Criteria: 0.786
+Adding Callbacks: 45.544
+Constructing Local Graph: 0.683
+SDG construction: 19.489
+SDG Slicing: 0.000
+CFG Slicing: 0.023
+Locating Source and Sink: 2.369
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:48.795
+Building Dummymain: 8.870
+Handling Exceptions: 0.164
+Reachability Query: 03:00.422
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.533
+FlowDroid in total(after slicing): 05:42.188
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/412117)
+
+// bad
+Slicing result for "com.nineyi.shop.s001348-002008633D1B0EA9D1AF3D2F779C309CB894AA849A6F7B8B3E264F3054294373":
+Finding Slicing Criteria: 0.390
+Adding Callbacks: 01:24.552
+Constructing Local Graph: 0.938
+SDG construction: 22.133
+SDG Slicing: 0.000
+CFG Slicing: 0.038
+Locating Source and Sink: 1.931
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 39.333
+Building Dummymain: 8.395
+Handling Exceptions: 0.250
+Reachability Query: 03:00.942
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.155
+FlowDroid in total(after slicing): 05:18.662
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/375387)
+
+// bad
+Slicing result for "com.app_bridgew.layout-0028365AA823F0C0737ADF07A87D6429C48FC6AFA23FCB84E1E59BD0E9BA307F":
+Finding Slicing Criteria: 0.897
+Adding Callbacks: 42.729
+Constructing Local Graph: 0.777
+SDG construction: 18.815
+SDG Slicing: 0.000
+CFG Slicing: 0.021
+Locating Source and Sink: 2.261
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:44.699
+Building Dummymain: 9.057
+Handling Exceptions: 0.146
+Reachability Query: 03:01.031
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.613
+FlowDroid in total(after slicing): 05:42.562
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406309)
+
+// bad
+Slicing result for "org.tchat-008A8FC0DC49D63B6692A3ECE682AD1D461F470AB5627B9E5C2B538CC79C54EE":
+Finding Slicing Criteria: 0.977
+Adding Callbacks: 56.991
+Constructing Local Graph: 2.556
+SDG construction: 20.308
+SDG Slicing: 0.000
+CFG Slicing: 0.040
+Locating Source and Sink: 2.429
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 01:54.676
+Building Dummymain: 18.017
+Handling Exceptions: 0.417
+Reachability Query: 03:04.487
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:12.628
+FlowDroid in total(after slicing): 06:14.732
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/834645)
+
+Slicing result for "com.jb.gokeyboard.theme.keyboardplusred-004AE3F0F8178B300B3D1396BCE3AEA7905F8E57C4BDAE2E02FF24CB753EC293":
+Finding Slicing Criteria: 0.250
+SDG Slicing CSR: 0.277
+Adding Callbacks: 1.640
+Constructing Local Graph: 0.203
+SDG Slicing: 08:45.410
+SDG Slicing Extra: 02:56.728
+Building Dummymain: 4.086
+SDG construction: 3.102
+CFG Slicing: 0.943
+Locating Source and Sink: 0.819
+SDG Slicing Backward and Forward: 05:47.239
+PDG construction: 16.461
+Handling Exceptions: 0.052
+Reachability Query: 01:26.905
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 11:09.065
+FlowDroid in total(after slicing): 05:05.574
+After slicing, our tool slices 38782 nodes in the SDG.
+Slicing percentage: 24.32%(38782/159482)
+
+// bad
+Slicing result for "netroken.android.persistfree-004034D9C272222058017B3E8EB51DFD8F3B22E0647A6D9E5C291905BB9A9E28":
+Finding Slicing Criteria: 0.350
+Adding Callbacks: 10.989
+Constructing Local Graph: 0.437
+SDG construction: 6.171
+SDG Slicing: 0.000
+CFG Slicing: 0.023
+Locating Source and Sink: 1.725
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 37.146
+Building Dummymain: 5.945
+Handling Exceptions: 0.114
+Reachability Query: 03:00.233
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.626
+FlowDroid in total(after slicing): 05:28.564
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/311729)
+
+// bad
+Slicing result for "cloud.quest.map-002927AA89DE4A2CE58E8FACB880B6984ECFB45BE45E8FA04B4735D0C0CD7B06":
+Finding Slicing Criteria: 0.847
+Adding Callbacks: 01:02.694
+Constructing Local Graph: 3.359
+SDG construction: 21.423
+SDG Slicing: 0.000
+CFG Slicing: 0.035
+Locating Source and Sink: 3.404
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 01:41.768
+Building Dummymain: 22.469
+Handling Exceptions: 0.504
+Reachability Query: 03:01.892
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:12.806
+FlowDroid in total(after slicing): 06:06.575
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/870520)
+
+// bad
+Slicing result for "com.app_bailarkizomba.layout-004D32297F08D9BAA0635B553FE4B87E883413B47E5C61A204F3A9C47C454C65":
+Finding Slicing Criteria: 0.873
+Adding Callbacks: 45.816
+Constructing Local Graph: 0.804
+SDG construction: 17.973
+SDG Slicing: 0.000
+CFG Slicing: 0.036
+Locating Source and Sink: 1.676
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:50.036
+Building Dummymain: 12.889
+Handling Exceptions: 0.207
+Reachability Query: 03:00.185
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.643
+FlowDroid in total(after slicing): 05:38.666
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406303)
+
+Slicing result for "com.gau.go.launcherex.theme.doodlemonstersgolauncher-00109A4BCFEAA17C8A4A2A10834FDC53C480886C37BD39BCCF66B47F84FB5119":
+Finding Slicing Criteria: 0.164
+SDG Slicing CSR: 0.252
+Adding Callbacks: 1.701
+Constructing Local Graph: 0.315
+SDG Slicing: 08:50.062
+SDG Slicing Extra: 02:39.134
+Building Dummymain: 3.656
+SDG construction: 2.876
+CFG Slicing: 0.930
+Locating Source and Sink: 1.832
+SDG Slicing Backward and Forward: 06:09.543
+PDG construction: 15.861
+Handling Exceptions: 0.057
+Reachability Query: 01:20.815
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 11:06.428
+FlowDroid in total(after slicing): 05:04.335
+After slicing, our tool slices 40103 nodes in the SDG.
+Slicing percentage: 24.71%(40103/162286)
+
+// bad
+Slicing result for "com.nineyi.shop.s001164-00080643394A7A8535BF1DA1218B86ADF22B719EB4B567DCE3499B79BB541ADD":
+Finding Slicing Criteria: 0.437
+Adding Callbacks: 01:22.285
+Constructing Local Graph: 0.980
+SDG construction: 22.357
+SDG Slicing: 0.000
+CFG Slicing: 0.033
+Locating Source and Sink: 1.896
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 35.757
+Building Dummymain: 6.623
+Handling Exceptions: 0.245
+Reachability Query: 03:01.050
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.175
+FlowDroid in total(after slicing): 05:20.200
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/375437)
+
+// bad error
+Slicing result for "com.fonestock.android.q98k.cnlanguage-00289D6815AA4C56E63B0874FC0D427B16C7F7DB7EBE4815366EBC380C8E34EC":
+Finding Slicing Criteria: 1.515
+Constructing Local Graph: 0.566
+CFG Slicing: 0.000
+Locating Source and Sink: 3.212
+PDG construction: 10:52.776
+Building Dummymain: 0.000
+Handling Exceptions: 0.392
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 13:21.938
+FlowDroid in total(after slicing): 05:48.387
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: NaN%(0/0)
+
+// bad error
+Slicing result for "com.rayg.loudringtones-009FF3D6A2C06AFA0A0ACD0A6514BD5033947A861F849224F85BC8F09F445B85":
+Finding Slicing Criteria: 0.135
+Constructing Local Graph: 0.272
+CFG Slicing: 0.000
+Locating Source and Sink: 0.947
+PDG construction: 21.632
+Building Dummymain: 0.000
+Handling Exceptions: 0.077
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 44.604
+FlowDroid in total(after slicing): 05:23.636
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: NaN%(0/0)
+
+// bad
+Slicing result for "com.app_dceorocky.layout-009D1A3239BA9FAD54E898E820D860EE70FC4B9C98D50893AE726EB334F94318":
+Finding Slicing Criteria: 0.898
+Adding Callbacks: 43.390
+Constructing Local Graph: 1.189
+SDG construction: 18.043
+SDG Slicing: 0.000
+CFG Slicing: 0.024
+Locating Source and Sink: 2.262
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:55.533
+Building Dummymain: 10.129
+Handling Exceptions: 0.177
+Reachability Query: 03:00.183
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.156
+FlowDroid in total(after slicing): 05:42.740
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406278)
+
+Slicing result for "biz.mtoy.blockpuzzle.revolution-000F43281434C6C7FF401F7F82C00E4A34D7D8A0507C4562C200D7F9D13FE6C1":
+Finding Slicing Criteria: 0.205
+SDG Slicing CSR: 0.350
+Adding Callbacks: 0.981
+Constructing Local Graph: 0.153
+SDG Slicing: 13:53.187
+SDG Slicing Extra: 04:08.039
+Building Dummymain: 3.242
+SDG construction: 4.336
+CFG Slicing: 1.062
+Locating Source and Sink: 0.888
+SDG Slicing Backward and Forward: 09:42.969
+PDG construction: 26.556
+Handling Exceptions: 0.120
+Reachability Query: 01:49.696
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 16:50.193
+FlowDroid in total(after slicing): 3.296
+After slicing, our tool slices 36041 nodes in the SDG.
+Slicing percentage: 21.53%(36041/167426)
+
+// bad
+Slicing result for "com.circlemedia.circlehome-00402F970E94097D7E16535F396DF5CF94D3BD28824ADA0E559B8F1594025E23":
+Finding Slicing Criteria: 0.272
+SDG Slicing CSR: 0.792
+Adding Callbacks: 5.721
+Constructing Local Graph: 0.251
+SDG Slicing: 0.000
+SDG Slicing Extra: 0.000
+Building Dummymain: 5.780
+SDG construction: 5.026
+CFG Slicing: 0.016
+Locating Source and Sink: 1.373
+SDG Slicing Backward and Forward: 18:28.342
+PDG construction: 22.315
+Handling Exceptions: 0.074
+Reachability Query: 03:00.400
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:07.584
+FlowDroid in total(after slicing): 05:32.367
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/237003)
+
+// bad
+Slicing result for "com.app_louwinc.layout-007A22B51AF9E483548804112B92AC3AB004296504EB76BA57D0BABC1818E7FC":
+Finding Slicing Criteria: 0.890
+Adding Callbacks: 48.998
+Constructing Local Graph: 0.442
+SDG construction: 20.012
+SDG Slicing: 0.000
+CFG Slicing: 0.020
+Locating Source and Sink: 2.653
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 03:02.222
+Building Dummymain: 9.412
+Handling Exceptions: 0.165
+Reachability Query: 03:00.222
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.334
+FlowDroid in total(after slicing): 05:43.436
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/442654)
+
+Slicing result for "abbbilgiislem.abbakllkentuygulamas-00433AAF30E1403CF600537041A22F09C980ACCCA7D75924C54CB90634CD6CDB":
+Finding Slicing Criteria: 0.194
+SDG Slicing CSR: 0.493
+Adding Callbacks: 1.816
+Constructing Local Graph: 0.341
+SDG Slicing: 26:14.746
+SDG Slicing Extra: 09:41.992
+Building Dummymain: 4.808
+SDG construction: 5.373
+CFG Slicing: 2.504
+Locating Source and Sink: 1.321
+SDG Slicing Backward and Forward: 16:30.073
+PDG construction: 29.926
+Handling Exceptions: 0.117
+Reachability Query: 01:37.518
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 29:46.548
+FlowDroid in total(after slicing): 2.730
+After slicing, our tool slices 62508 nodes in the SDG.
+Slicing percentage: 24.46%(62508/255554)
+
+// bad
+Slicing result for "com.app_gooch.layout-0046E4CBE0C348C646167F62C587AB1558A26BDEE1EB56C8E434ECCFB627EBA2":
+Finding Slicing Criteria: 0.824
+Adding Callbacks: 42.169
+Constructing Local Graph: 1.133
+SDG construction: 18.168
+SDG Slicing: 0.000
+CFG Slicing: 0.024
+Locating Source and Sink: 2.380
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:35.877
+Building Dummymain: 9.637
+Handling Exceptions: 0.118
+Reachability Query: 03:01.238
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.362
+FlowDroid in total(after slicing): 05:38.778
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406309)
+
+// bad
+Slicing result for "com.centsol.csongs-00010D9EBE8E50322DC7576CBDE55059B7BE575240AD5E053834216218B85007":
+Finding Slicing Criteria: 0.506
+Adding Callbacks: 16.755
+Constructing Local Graph: 0.569
+SDG construction: 6.765
+SDG Slicing: 0.000
+CFG Slicing: 0.022
+Locating Source and Sink: 1.542
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 29.631
+Building Dummymain: 7.621
+Handling Exceptions: 0.125
+Reachability Query: 03:00.711
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.588
+FlowDroid in total(after slicing): 05:52.271
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/354009)
+
+// bad error
+Slicing result for "com.rinkyjain.GuideForTinder-0063C6C5B6542D9E5D4BD57F4B7AD2C533E42100F45AD4D142BED4375AC096DE":
+Finding Slicing Criteria: 0.777
+Constructing Local Graph: 2.742
+CFG Slicing: 0.000
+Locating Source and Sink: 2.189
+PDG construction: 01:34.731
+Building Dummymain: 0.000
+Handling Exceptions: 0.325
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 08:20.980
+FlowDroid in total(after slicing): 06:07.242
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: NaN%(0/0)
+
+// bad
+Slicing result for "com.app_neweff.layout-0015FF071C6F09377B44D06B0D878AE0191FC4DB06F949057FDB8019D6EE3EFA":
+Finding Slicing Criteria: 0.889
+Adding Callbacks: 45.311
+Constructing Local Graph: 0.405
+SDG construction: 17.888
+SDG Slicing: 0.000
+CFG Slicing: 0.020
+Locating Source and Sink: 2.097
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:54.236
+Building Dummymain: 8.880
+Handling Exceptions: 0.138
+Reachability Query: 03:01.439
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.739
+FlowDroid in total(after slicing): 05:42.131
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/409642)
+
+// bad
+Slicing result for "com.app_wildwomanw.layout-0083722DF5DC945378A677D3CD79A335A2168C5D01782947EEB6AE861E0CDFCE":
+Finding Slicing Criteria: 0.794
+Adding Callbacks: 44.081
+Constructing Local Graph: 0.436
+SDG construction: 19.228
+SDG Slicing: 0.000
+CFG Slicing: 0.024
+Locating Source and Sink: 2.360
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:55.222
+Building Dummymain: 8.804
+Handling Exceptions: 0.168
+Reachability Query: 03:01.303
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.921
+FlowDroid in total(after slicing): 05:18.570
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/442654)
+
+// bad
+Slicing result for "com.app_spaspa1.layout-001FF97A7A2EA3DE0AFC13F3DA5DA084677CD0BDC7AE1004FEA3A2D850F77B2C":
+Finding Slicing Criteria: 0.892
+Adding Callbacks: 44.815
+Constructing Local Graph: 0.722
+SDG construction: 19.375
+SDG Slicing: 0.000
+CFG Slicing: 0.026
+Locating Source and Sink: 2.146
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:39.590
+Building Dummymain: 8.759
+Handling Exceptions: 0.131
+Reachability Query: 03:00.212
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.371
+FlowDroid in total(after slicing): 05:41.500
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406278)
+
+// bad
+Slicing result for "be.rbfa-001D9589C94C2A01F60C48ADC086756CF7E0C03677A05D14AC80FE586521CB6D":
+Finding Slicing Criteria: 0.406
+Adding Callbacks: 5.725
+Constructing Local Graph: 1.508
+SDG construction: 10.463
+SDG Slicing: 0.000
+CFG Slicing: 0.031
+Locating Source and Sink: 1.358
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 01:05.112
+Building Dummymain: 7.777
+Handling Exceptions: 0.162
+Reachability Query: 03:00.631
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.448
+FlowDroid in total(after slicing): 10:04.664
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/464421)
+
+// bad
+Slicing result for "com.app_provence.layout-00AC5DEBBA02B3082B86621570384D4C1D662983E646CC1FF9828248F50E49F3":
+Finding Slicing Criteria: 0.991
+Adding Callbacks: 47.055
+Constructing Local Graph: 0.764
+SDG construction: 19.901
+SDG Slicing: 0.000
+CFG Slicing: 0.021
+Locating Source and Sink: 2.102
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:45.291
+Building Dummymain: 8.734
+Handling Exceptions: 0.162
+Reachability Query: 03:01.390
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.210
+FlowDroid in total(after slicing): 05:41.406
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/406309)
+
+// bad
+Slicing result for "com.pd.td-00508F80650BA3808CDCD439A8F72D5A9483C0AF62145BFF81D58EA58665FAD9":
+Finding Slicing Criteria: 0.512
+Adding Callbacks: 17.220
+Constructing Local Graph: 0.443
+SDG construction: 9.421
+SDG Slicing: 0.000
+CFG Slicing: 0.023
+Locating Source and Sink: 1.772
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 44.960
+Building Dummymain: 7.456
+Handling Exceptions: 0.172
+Reachability Query: 03:01.089
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:08.201
+FlowDroid in total(after slicing): 07:09.714
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/371208)
+
+// bad
+Slicing result for "com.nineyi.shop.s001593-00A460BC37712EA732517C39B0797A2C72DFD361B504D668743748BDB9B467C9":
+Finding Slicing Criteria: 0.360
+Adding Callbacks: 01:00.168
+Constructing Local Graph: 0.698
+SDG construction: 25.490
+SDG Slicing: 0.000
+CFG Slicing: 0.030
+Locating Source and Sink: 1.604
+SDG Slicing Backward and Forward: 0.000
+PDG construction: 02:12.737
+Building Dummymain: 5.089
+Handling Exceptions: 0.279
+Reachability Query: 03:00.216
+FlowDroid in total(before slicing): 0.000
+FlowSlicer in total: 30:09.301
+FlowDroid in total(after slicing): 05:42.264
+After slicing, our tool slices 0 nodes in the SDG.
+Slicing percentage: 0.0%(0/326596)

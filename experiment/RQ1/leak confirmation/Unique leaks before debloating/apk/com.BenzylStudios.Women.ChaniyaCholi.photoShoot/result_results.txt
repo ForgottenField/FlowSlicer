@@ -1,0 +1,239 @@
+Results from file: result.xml
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Source Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: if $r9 == null goto return
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>($r1, i0)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: int mBenzyl_ScrWidth> = $i1
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $i0 = r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: int mBenzyl_ScrWidth>
+  Step 6: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $r6 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0)
+  Step 7: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 8: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: if $r5 == null goto interfaceinvoke $r5.<android.database.Cursor: void close()>()
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: if $r5 == null goto interfaceinvoke $r5.<android.database.Cursor: void close()>()
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>($r1, i0)
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: android.graphics.Bitmap mBenzyl_Bmp1> = $r4
+  Step 6: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $r4 = r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: android.graphics.Bitmap mBenzyl_Bmp1>
+  Step 7: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: if $r4 == null goto return
+  Step 8: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Sink Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: if $r5 == null goto interfaceinvoke $r5.<android.database.Cursor: void close()>()
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Source Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: if $r9 == null goto return
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>($r1, i0)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: android.graphics.Bitmap mBenzyl_Bmp1> = $r4
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $r4 = r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: android.graphics.Bitmap mBenzyl_Bmp1>
+  Step 6: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: if $r4 == null goto return
+  Step 7: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Source Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: if $r9 == null goto return
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r4 = $r11
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>(i0)
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 6: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Source Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, $r8, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: if $r9 == null goto return
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r4 = $r11
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(long)>($l1)
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 6: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>($r6)
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r4 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: $r5 = virtualinvoke $r4.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r5)
+
+==================================================
+Source Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+Sink Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r5 = virtualinvoke $r4.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r3, r2, null, null, null)
+  Step 2: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: if $r5 == null goto interfaceinvoke $r5.<android.database.Cursor: void close()>()
+  Step 3: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void getOrientation(java.lang.String)>
+    Statement: specialinvoke r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>($r1, i0)
+  Step 5: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: int mBenzyl_ScrWidth> = $i1
+  Step 6: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $i0 = r0.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: int mBenzyl_ScrWidth>
+  Step 7: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $r6 = virtualinvoke $r10.<java.lang.StringBuilder: java.lang.StringBuilder append(int)>($i0)
+  Step 8: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 9: 
+    Method: <com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void processImage(java.lang.String,int)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("android", $r1)
+
+==================================================
+
+9 paths in total.
+
+==================================================

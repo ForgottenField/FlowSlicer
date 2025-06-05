@@ -1,0 +1,1731 @@
+Results from file: result.xml
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+Sink Statement: $r9 = virtualinvoke $r5.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, null, null, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mTitle> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r11 = virtualinvoke r2.<java.util.ArrayList: java.lang.Object get(int)>($i0)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r3 = virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>($r9)
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r8 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages")
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r8 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r8)
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r5.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, null, null, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void createTipInDB(java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean)>
+Sink Statement: virtualinvoke $r6.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r5, r4)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r25 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0>
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r26 = staticinvoke <com.citizenobserver.yatestips.ui.NewTipActivity: com.citizenobserver.yatestips.ui.NewTipActivity$FileType access$000(com.citizenobserver.yatestips.ui.NewTipActivity)>($r25)
+  Step 16: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: com.citizenobserver.yatestips.ui.NewTipActivity$FileType access$000(com.citizenobserver.yatestips.ui.NewTipActivity)>
+    Statement: return r1
+  Step 17: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r25 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0>
+  Step 18: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: return null
+  Step 19: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 20: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: specialinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>(r0, r0)
+  Step 21: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0> = $r1
+  Step 22: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>
+    Statement: return
+  Step 23: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 24: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 25: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[0]
+  Step 26: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 27: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 28: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 29: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.citizenobserver.yatestips.model.Tip: void createTipInDB(java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean)>(r5, r13, r10, $r42)
+  Step 30: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void createTipInDB(java.lang.String,java.lang.String,java.lang.String,java.lang.Boolean)>
+    Statement: virtualinvoke $r6.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r5, r4)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>
+Sink Statement: virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("mFilename", $r2)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>
+    Statement: $r2 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>
+    Statement: virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("mFilename", $r2)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("[GET REQUEST]", "Network exception", r1)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r13 = staticinvoke <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>($r9)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("[GET REQUEST]", "Network exception", r1)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+Sink Statement: virtualinvoke $r5.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r7, r1, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mLocation> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r11 = virtualinvoke r2.<java.util.ArrayList: java.lang.Object get(int)>($i0)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void updateDB()>()
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r2 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r2 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: virtualinvoke $r5.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r7, r1, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", "onActivityResult")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r25 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0>
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r26 = staticinvoke <com.citizenobserver.yatestips.ui.NewTipActivity: com.citizenobserver.yatestips.ui.NewTipActivity$FileType access$000(com.citizenobserver.yatestips.ui.NewTipActivity)>($r25)
+  Step 16: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: com.citizenobserver.yatestips.ui.NewTipActivity$FileType access$000(com.citizenobserver.yatestips.ui.NewTipActivity)>
+    Statement: return r1
+  Step 17: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r25 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0>
+  Step 18: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r0 := @this: com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 19: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 20: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: specialinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>(r0, r0)
+  Step 21: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0> = $r1
+  Step 22: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>
+    Statement: return
+  Step 23: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: return 1
+  Step 24: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 25: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", "onActivityResult")
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[0]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "")
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive")
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+Sink Statement: $r4 = interfaceinvoke $r9.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r13 = staticinvoke <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>($r9)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+    Statement: $r4 = interfaceinvoke $r9.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", r10)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", r10)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Source Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r21 = (java.net.HttpURLConnection) $r20
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive")
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+Sink Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("[GET REQUEST]", "Network exception", r1)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mTitle> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r13 = staticinvoke <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>($r9)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("[GET REQUEST]", "Network exception", r1)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+Sink Statement: $r9 = virtualinvoke $r5.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, null, null, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r11 = virtualinvoke r2.<java.util.ArrayList: java.lang.Object get(int)>($i0)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r3 = virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>($r9)
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r8 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages")
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r8 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r8)
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r5.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, null, null, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", r10)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", r10)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Source Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r21 = (java.net.HttpURLConnection) $r20
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "")
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke r3.<java.io.DataOutputStream: void write(byte[],int,int)>(r2, 0, $i3)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r3 = (java.lang.String[]) $r2
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r5 = $r1[3]
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: if r5 == null goto $r49 = new java.lang.StringBuilder
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = $r49
+  Step 16: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("filename=\"AndroidVideo\"")
+  Step 17: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\r\n")
+  Step 18: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Content-Type: video/mpeg")
+  Step 19: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\r\n")
+  Step 20: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r5 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 21: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke r3.<java.io.DataOutputStream: void writeBytes(java.lang.String)>(r5)
+  Step 22: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke r3.<java.io.DataOutputStream: void write(byte[],int,int)>(r2, 0, $i3)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>
+Sink Statement: virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("mFilename", $r2)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>
+    Statement: $r2 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onSaveInstanceState(android.os.Bundle)>
+    Statement: virtualinvoke $r1.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("mFilename", $r2)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("[GET REQUEST]", "Network exception", r1)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mLocation> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r13 = staticinvoke <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>($r9)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String,java.lang.Throwable)>("[GET REQUEST]", "Network exception", r1)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+Sink Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+Sink Statement: $r4 = interfaceinvoke $r9.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mTitle> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r13 = staticinvoke <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>($r9)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+    Statement: $r4 = interfaceinvoke $r9.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+Sink Statement: virtualinvoke $r5.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r7, r1, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mTitle> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r11 = virtualinvoke r2.<java.util.ArrayList: java.lang.Object get(int)>($i0)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void updateDB()>()
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r2 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r2 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: virtualinvoke $r5.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r7, r1, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+Sink Statement: virtualinvoke $r5.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r7, r1, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r11 = virtualinvoke r2.<java.util.ArrayList: java.lang.Object get(int)>($i0)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void updateDB()>()
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r2 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r2 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r2)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void updateDB()>
+    Statement: virtualinvoke $r5.<android.content.ContentResolver: int update(android.net.Uri,android.content.ContentValues,java.lang.String,java.lang.String[])>($r7, r1, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "")
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Source Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r19)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r20 = virtualinvoke r14.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r21 = (java.net.HttpURLConnection) $r20
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r19)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.model.Message: int createMessageInDB(com.citizenobserver.yatestips.model.Message)>
+Sink Statement: $r3 = virtualinvoke $r7.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r3, r1)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: staticinvoke <com.citizenobserver.yatestips.model.Message: int createMessageInDB(com.citizenobserver.yatestips.model.Message)>($r45)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Message: int createMessageInDB(com.citizenobserver.yatestips.model.Message)>
+    Statement: $r3 = virtualinvoke $r7.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>($r3, r1)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+Sink Statement: virtualinvoke $r1.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mLocation> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>()
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r4 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4)
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages/delete")
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r4 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r4)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: virtualinvoke $r1.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+Sink Statement: virtualinvoke $r1.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setId(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>()
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r4 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4)
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages/delete")
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r4 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r4)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: virtualinvoke $r1.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Source Statement: $r23 = virtualinvoke $r21.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke r3.<java.io.DataOutputStream: void write(byte[],int,int)>(r2, 0, $i3)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r23 = virtualinvoke $r21.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: specialinvoke $r50.<java.io.DataOutputStream: void <init>(java.io.OutputStream)>($r23)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r3 = $r50
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke r3.<java.io.DataOutputStream: void write(byte[],int,int)>(r2, 0, $i3)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r19)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: if $r7 == null goto return null
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return null
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r19)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r19)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", $r19)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Sink Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r25 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0>
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r26 = staticinvoke <com.citizenobserver.yatestips.ui.NewTipActivity: com.citizenobserver.yatestips.ui.NewTipActivity$FileType access$000(com.citizenobserver.yatestips.ui.NewTipActivity)>($r25)
+  Step 16: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: com.citizenobserver.yatestips.ui.NewTipActivity$FileType access$000(com.citizenobserver.yatestips.ui.NewTipActivity)>
+    Statement: return r1
+  Step 17: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r25 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0>
+  Step 18: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r0 := @this: com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 19: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: r0 := @this: com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 20: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: specialinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>(r0, r0)
+  Step 21: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: com.citizenobserver.yatestips.ui.NewTipActivity this$0> = $r1
+  Step 22: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: void <init>(com.citizenobserver.yatestips.ui.NewTipActivity,android.content.Context)>
+    Statement: return
+  Step 23: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: return 1
+  Step 24: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 25: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity: android.content.Intent getIntent()>()
+  Step 26: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: android.content.Intent getIntent()>
+    Statement: $r0 = this.<com.citizenobserver.yatestips.ui.NewTipActivity: android.content.Intent ipcIntent>
+  Step 27: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: android.content.Intent getIntent()>
+    Statement: return $r0
+  Step 28: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r7 = virtualinvoke $r1.<android.content.Intent: android.net.Uri getData()>()
+  Step 29: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r3 = staticinvoke <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>(r0, $r7)
+  Step 30: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: $r3 = staticinvoke <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>($r0, $r1, null, null)
+  Step 31: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r7 = virtualinvoke $r6.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, r4, $r2, $r3, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+Sink Statement: $r9 = virtualinvoke $r5.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, null, null, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mLocation> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r11 = virtualinvoke r2.<java.util.ArrayList: java.lang.Object get(int)>($i0)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r3 = virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>($r9)
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r8 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r8)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages")
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r8 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r7 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r8)
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.model.Tip: java.lang.Boolean CheckForNewMessages(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r5.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r7, null, null, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+Sink Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+Sink Statement: virtualinvoke $r1.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i1)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mTitle> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setTitle(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: r8 = (com.citizenobserver.yatestips.model.Tip) $r11
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>()
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r4 = r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mId>
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r4)
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r2 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("/messages/delete")
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r4 = virtualinvoke $r2.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: $r3 = staticinvoke <android.net.Uri: android.net.Uri parse(java.lang.String)>($r4)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void CleanMessagesFromDB()>
+    Statement: virtualinvoke $r1.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>($r3, null, null)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+Source Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+Sink Statement: $r4 = interfaceinvoke $r9.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r9 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r8.<com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>($r9)
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: r0.<com.citizenobserver.yatestips.model.Tip: java.lang.String mLocation> = $r1
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.model.Tip: void setLocation(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: virtualinvoke r2.<java.util.ArrayList: boolean add(java.lang.Object)>(r8)
+  Step 6: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: if r2 == null goto $r3 = r0.<com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean notify>
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.SplashActivity$ButtonUpdater: java.lang.Boolean doInBackground(java.lang.Void[])>
+    Statement: $r13 = staticinvoke <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>($r9)
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.WebUtil: java.io.InputStream getInputStreamFromUrl(java.lang.String)>
+    Statement: $r4 = interfaceinvoke $r9.<org.apache.http.client.HttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>($r10)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke r3.<java.io.DataOutputStream: void write(byte[],int,int)>(r2, 0, $i3)
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r3 = (java.lang.String[]) $r2
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r5 = $r1[3]
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: if r5 == null goto $r49 = new java.lang.StringBuilder
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = $r49
+  Step 15: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("filename=\"AndroidVideo\"")
+  Step 16: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\r\n")
+  Step 17: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("Content-Type: video/mpeg")
+  Step 18: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: $r22 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("\r\n")
+  Step 19: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: r5 = virtualinvoke $r22.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 20: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke r3.<java.io.DataOutputStream: void writeBytes(java.lang.String)>(r5)
+  Step 21: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke r3.<java.io.DataOutputStream: void write(byte[],int,int)>(r2, 0, $i3)
+
+==================================================
+Source Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+Source Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+Sink Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive")
+Taint Path:
+  Step 1: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: $r2 = interfaceinvoke $r7.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getDataColumn(android.content.Context,android.net.Uri,java.lang.String,java.lang.String[])>
+    Statement: return $r2
+  Step 3: 
+    Method: <com.citizenobserver.yatestips.FileUtil: java.lang.String getPath(android.content.Context,android.net.Uri)>
+    Statement: return $r3
+  Step 4: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename> = $r3
+  Step 5: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.citizenobserver.yatestips.ui.NewTipActivity dummyMainMethod_com_citizenobserver_yatestips_ui_NewTipActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r0.<com.citizenobserver.yatestips.ui.NewTipActivity: java.lang.String mFilename>
+  Step 8: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r2[3] = $r6
+  Step 9: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: $r6 = r2[2]
+  Step 10: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: if $r6 == null goto $r7 = new android.app.AlertDialog$Builder
+  Step 11: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: r3 = new com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter
+  Step 12: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r3.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: android.os.AsyncTask execute(java.lang.Object[])>(r2)
+  Step 13: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Object doInBackground(java.lang.Object[])>
+    Statement: $r1 = virtualinvoke r0.<com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>($r3)
+  Step 14: 
+    Method: <com.citizenobserver.yatestips.ui.NewTipActivity$TipSubmitter: java.lang.Void doInBackground(java.lang.String[])>
+    Statement: virtualinvoke $r21.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive")
+
+==================================================
+
+37 paths in total.
+
+==================================================

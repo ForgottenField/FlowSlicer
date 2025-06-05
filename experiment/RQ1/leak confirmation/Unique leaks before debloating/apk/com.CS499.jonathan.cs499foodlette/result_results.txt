@@ -1,0 +1,70 @@
+Results from file: result.xml
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(10, $b0, 0)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+Sink Statement: virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(10, $b0, 0)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+    Statement: virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchCancel(com.squareup.picasso.Action)>
+Source Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(2, $r1)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchCancel(com.squareup.picasso.Action)>
+Sink Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchCancel(com.squareup.picasso.Action)>
+    Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(2, $r1)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchCancel(com.squareup.picasso.Action)>
+    Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchSubmit(com.squareup.picasso.Action)>
+Source Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchSubmit(com.squareup.picasso.Action)>
+Sink Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchSubmit(com.squareup.picasso.Action)>
+    Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(1, $r1)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchSubmit(com.squareup.picasso.Action)>
+    Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+Source Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(9, $r1)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+Sink Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+    Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(9, $r1)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+    Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.squareup.picasso.Picasso$CleanupThread: void run()>
+Source Statement: $r5 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage()>()
+Sink Method: <com.squareup.picasso.Picasso$CleanupThread: void run()>
+Sink Statement: virtualinvoke $r4.<android.os.Handler: boolean sendMessage(android.os.Message)>($r5)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Picasso$CleanupThread: void run()>
+    Statement: $r5 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage()>()
+  Step 2: 
+    Method: <com.squareup.picasso.Picasso$CleanupThread: void run()>
+    Statement: virtualinvoke $r4.<android.os.Handler: boolean sendMessage(android.os.Message)>($r5)
+
+==================================================
+
+5 paths in total.
+
+==================================================

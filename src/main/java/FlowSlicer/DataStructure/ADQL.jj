@@ -1,0 +1,185 @@
+options {
+  STATIC = false;
+  LOOKAHEAD = 2;
+  JAVA_UNICODE_ESCAPE = true;
+  UNICODE_INPUT = true;
+  OUTPUT_DIRECTORY = "parser";
+}
+
+PARSER_BEGIN(ADQLParser)
+package FlowSlicer.DataStructure.parser;
+
+import java.util.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class ADQLParser {
+  public List<QueryInfo> queries = new ArrayList<>();
+
+  public static void main(String[] args) throws ParseException, FileNotFoundException {
+    FileInputStream fis = new FileInputStream("example.adql");
+    ADQLParser parser = new ADQLParser(fis);
+    parser.QueryList();
+    for (QueryInfo q : parser.queries) {
+      System.out.println(q);
+    }
+    System.out.println("ADQL query parsed successfully.");
+  }
+
+  public interface QueryInfo {}
+
+  public static class FlowQueryInfo implements QueryInfo {
+    public String fromType, fromValue;
+    public String toType, toValue;
+
+    public FlowQueryInfo(String fromType, String fromValue, String toType, String toValue) {
+      this.fromType = fromType;
+      this.fromValue = fromValue;
+      this.toType = toType;
+      this.toValue = toValue;
+    }
+
+    public String toString() {
+      return "FLOW FROM " + fromType + "(" + fromValue + ") TO " + toType + "(" + toValue + ")";
+    }
+  }
+
+  public static class OperationQueryInfo implements QueryInfo {
+    public String opType;
+    public List<String> items = new ArrayList<>();
+    public List<String> usesItems = new ArrayList<>();
+
+    public OperationQueryInfo(String opType) {
+      this.opType = opType;
+    }
+
+    public String toString() {
+      return opType + " " + items + (usesItems.isEmpty() ? "" : " USES " + usesItems);
+    }
+  }
+}
+PARSER_END(ADQLParser)
+
+SKIP : {
+  " " | "\t" | "\r" | "\n"
+}
+
+TOKEN : {
+  < LBRACK: "[" > |
+  < RBRACK: "]" > |
+  < COMMA: "," > |
+  < LPAREN: "(" > |
+  < RPAREN: ")" > |
+  < DOT: "." > |
+  < COLON: ":" > |
+  < QUOTE: "'" > |
+  < QUESTION: "?" > |
+  < FROM: "FROM" > |
+  < TO: "TO" > |
+  < FLOW: "FLOW" > |
+  < KEEP_ACTIVITIES: "KEEPACTIVITIES" > |
+  < REMOVE_ACTIVITIES: "REMOVEACTIVITIES" > |
+  < KEEP_PERMISSIONS: "KEEPPERMISSIONS" > |
+  < KEEP_LIBRARIES: "KEEPLIBRARIES" > |
+  < KEEP_SOURCE: "KEEPSOURCE" > |
+  < USES: "USES" > |
+  < CLASS: "Class" > |
+  < METHOD: "Method" > |
+  < STATEMENT: "Statement" > |
+  < STRING_LITERAL: "'" (~["'"])* "'" >  // e.g., 'com.example.MainActivity'
+}
+
+////////////////////////////////////////////////////
+// Grammar rules
+////////////////////////////////////////////////////
+
+void QueryList() :
+{}
+{
+  ( Query() )* <EOF>
+}
+
+void Query() :
+{}
+{
+  ( FlowQuery() | OperationQuery() ) <QUESTION>
+}
+
+void FlowQuery() :
+{
+  String fromType, fromValue, toType, toValue;
+}
+{
+  <FLOW> <FROM> fromType=ElementType() <LPAREN> fromValue=StringLiteral() <RPAREN>
+  <TO> toType=ElementType() <LPAREN> toValue=StringLiteral() <RPAREN>
+  {
+    queries.add(new FlowQueryInfo(fromType, fromValue, toType, toValue));
+  }
+}
+
+void OperationQuery() :
+{
+  Token op;
+  OperationQueryInfo queryInfo;
+  List<String> items;
+  List<String> uses = new ArrayList<>();
+}
+{
+  (
+    op = <KEEP_ACTIVITIES> { queryInfo = new OperationQueryInfo(op.image); items = StringListWrapper(); }
+  | op = <REMOVE_ACTIVITIES> { queryInfo = new OperationQueryInfo(op.image); items = StringListWrapper(); }
+  | op = <KEEP_PERMISSIONS> { queryInfo = new OperationQueryInfo(op.image); items = StringListWrapper(); }
+  | op = <KEEP_LIBRARIES> { queryInfo = new OperationQueryInfo(op.image); items = StringListWrapper(); }
+  | op = <KEEP_SOURCE> { queryInfo = new OperationQueryInfo(op.image);
+                         items = new ArrayList<>();
+                         items.add(SourceElementAsString()); }
+  )
+  ( <USES> uses = StringListWrapper() )?
+  {
+    queryInfo.items.addAll(items);
+    if (uses != null) queryInfo.usesItems.addAll(uses);
+    queries.add(queryInfo);
+  }
+}
+
+List<String> StringListWrapper() :
+{
+  List<String> list = new ArrayList<>();
+}
+{
+  StringLiteralList(list) { return list; }
+}
+
+void StringLiteralList(List<String> list) :
+{
+  String val;
+}
+{
+  val = StringLiteral() { list.add(val); }
+  ( <COMMA> val = StringLiteral() { list.add(val); } )*
+}
+
+String SourceElementAsString() :
+{
+  String type, value;
+}
+{
+  type = ElementType() <LPAREN> value = StringLiteral() <RPAREN>
+  { return type + "(" + value + ")"; }
+}
+
+String ElementType() :
+{
+  Token t;
+}
+{
+  ( t = <METHOD> | t = <CLASS> | t = <STATEMENT> ) { return t.image; }
+}
+
+String StringLiteral() :
+{
+  Token t;
+}
+{
+  t = <STRING_LITERAL> { return t.image.substring(1, t.image.length() - 1); }
+}

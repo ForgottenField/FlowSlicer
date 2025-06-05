@@ -23,7 +23,11 @@ public class Config {
     private boolean isPartialSDGConstruction = false;
     private boolean isGlobalSDGConstruction = false;
     private boolean isPermissionConsidered = true;
+
     private boolean isRandomCriteria = false;
+    private boolean isSourceSinkInSameMethod = false;
+    private boolean isAllSourceAndSinkConsidered = false;
+
     private String androidVersion;
     private String resultFolder;
     private String outputFormat;
@@ -116,6 +120,22 @@ public class Config {
 
     public void setIsRandomCriteria(boolean isRandomCriteria) {
         this.isRandomCriteria = isRandomCriteria;
+    }
+
+    public boolean isAllSourceAndSinkConsidered() {
+        return isAllSourceAndSinkConsidered;
+    }
+
+    public void setAllSourceAndSinkConsidered(boolean isAllSourceAndSinkConsidered) {
+        this.isAllSourceAndSinkConsidered = isAllSourceAndSinkConsidered;
+    }
+
+    public boolean isSourceSinkInSameMethod() {
+        return isSourceSinkInSameMethod;
+    }
+
+    public void setSourceSinkInSameMethod(boolean isSourceSinkInSameMethod) {
+        this.isSourceSinkInSameMethod = isSourceSinkInSameMethod;
     }
 
     public void setPartialSDGConstruction(boolean isPartialSDGConstruction){

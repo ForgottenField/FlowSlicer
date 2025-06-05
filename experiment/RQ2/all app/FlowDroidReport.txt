@@ -1,0 +1,21 @@
+FlowDroid result for "com.admissiontable.admissiontable-0053C8A7DBF6FD77B206E29414A259612A375B8DBB560367116142EFF5E73BEB":
+30.031
+whether to timeout: true
+FlowDroid result for "com.admissiontable.admissiontable-0053C8A7DBF6FD77B206E29414A259612A375B8DBB560367116142EFF5E73BEB":
+03:49.274
+whether to timeout: false
+FlowDroid result for "VirtualDispatch3":
+3.015
+whether to timeout: false
+FlowDroid result for "com.admissiontable.admissiontable-0053C8A7DBF6FD77B206E29414A259612A375B8DBB560367116142EFF5E73BEB":
+02:44.198
+whether to timeout: false
+FlowDroid result for "com.admissiontable.admissiontable-0053C8A7DBF6FD77B206E29414A259612A375B8DBB560367116142EFF5E73BEB":
+10.454
+whether to timeout: false
+FlowDroid result for "com.admissiontable.admissiontable-0053C8A7DBF6FD77B206E29414A259612A375B8DBB560367116142EFF5E73BEB":
+01:46.829
+whether to timeout: false
+FlowDroid result for "com.jb.gosms.pctheme.glorious.zt-00355F2D01EE6C08801A153407715F639163AE9D3892C4F5FE63686C4348EDD9":
+01:18.380
+whether to timeout: false

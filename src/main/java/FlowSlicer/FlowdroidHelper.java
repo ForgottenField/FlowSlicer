@@ -21,8 +21,9 @@ public class FlowdroidHelper {
         app.setTaintWrapper(new SummaryTaintWrapper(new LazySummaryProvider("summariesManual")));
         app.getConfig().getAnalysisFileConfig().setSourceSinkFile("SourcesAndSinks_COVA.txt");
         app.getConfig().getAnalysisFileConfig().setOutputFile(outputDir);
+        app.getConfig().getPathConfiguration().setPathReconstructionMode(InfoflowConfiguration.PathReconstructionMode.Fast);
         app.getConfig().setImplicitFlowMode(InfoflowConfiguration.ImplicitFlowMode.AllImplicitFlows);
-//        app.getConfig().getCallbackConfig().setCallbackAnalyzer(InfoflowAndroidConfiguration.CallbackAnalyzer.Fast);
+        app.getConfig().getCallbackConfig().setCallbackAnalyzer(InfoflowAndroidConfiguration.CallbackAnalyzer.Fast);
 //        app.getConfig().getCallbackConfig().setCallbackAnalysisTimeout(300);
 //        app.getConfig().setDataFlowTimeout(300);
 //        System.out.println(app.getConfig().getMemoryThreshold());

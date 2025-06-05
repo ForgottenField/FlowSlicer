@@ -4,9 +4,10 @@ from matplotlib.ticker import MaxNLocator
 
 # 设置字体为 Times New Roman
 plt.rcParams['font.family'] = 'Times New Roman'
+plt.rcParams.update({'font.size': 18})
 
 # 读取Excel文件，跳过第一行（A1和B1）
-file_path = 'box plot_3_1.xlsx'  # 请替换为你的文件路径
+file_path = 'boxplot_3_1.xlsx'  # 请替换为你的文件路径
 df = pd.read_excel(file_path, header=0)
 
 # 获取数据组名称
@@ -51,9 +52,9 @@ for median in bp['medians']:
 
 # 计算并添加均值点，显示在箱线图上方
 mean_marker='D'
-plt.scatter(data_group1.mean(), 2, color='black', marker='D', s=40, zorder=5)  # A组均值
-plt.scatter(data_group2.mean(), 1, color='black', marker='D', s=40, zorder=5)  # B组均值
-plt.scatter(data_group3.mean(), 0, color='black', marker='D', s=40, zorder=5)
+plt.scatter(data_group1.mean(), 3, color='black', marker='D', s=40, zorder=5)  # A组均值
+plt.scatter(data_group2.mean(), 2, color='black', marker='D', s=40, zorder=5)  # B组均值
+plt.scatter(data_group3.mean(), 1, color='black', marker='D', s=40, zorder=5)
 
 # 添加图例
 handles = [

@@ -1,0 +1,96 @@
+Results from file: result.xml
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+Source Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(10, $b0, 0)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+Sink Statement: virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+    Statement: $r3 = virtualinvoke $r2.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(10, $b0, 0)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchAirplaneModeChange(boolean)>
+    Statement: virtualinvoke $r1.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+Source Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+Source Statement: $r5 = virtualinvoke r4.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.bignerdranch.android.vleda.VLEdaFetchr: com.bignerdranch.android.vleda.VendorDetailsItemJSON fetchVendorDetails(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("FlickrFetchr", $r9)
+Taint Path:
+  Step 1: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: $r5 = virtualinvoke r4.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: r6 = (java.net.HttpURLConnection) $r5
+  Step 3: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: $r7 = virtualinvoke r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+  Step 4: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: $i0 = virtualinvoke $r7.<java.io.InputStream: int read(byte[])>(r2)
+  Step 5: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+  Step 6: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: r2 = virtualinvoke r3.<java.io.ByteArrayOutputStream: byte[] toByteArray()>()
+  Step 7: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: return r2
+  Step 8: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: java.lang.String getUrlString(java.lang.String)>
+    Statement: specialinvoke $r2.<java.lang.String: void <init>(byte[])>($r3)
+  Step 9: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: java.lang.String getUrlString(java.lang.String)>
+    Statement: return $r2
+  Step 10: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: com.bignerdranch.android.vleda.VendorDetailsItemJSON fetchVendorDetails(java.lang.String)>
+    Statement: $r8 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 11: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: com.bignerdranch.android.vleda.VendorDetailsItemJSON fetchVendorDetails(java.lang.String)>
+    Statement: $r9 = virtualinvoke $r8.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 12: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: com.bignerdranch.android.vleda.VendorDetailsItemJSON fetchVendorDetails(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("FlickrFetchr", $r9)
+
+==================================================
+Source Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+Source Statement: $r5 = virtualinvoke r4.<java.net.URL: java.net.URLConnection openConnection()>()
+Sink Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+Sink Statement: virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+Taint Path:
+  Step 1: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: $r5 = virtualinvoke r4.<java.net.URL: java.net.URLConnection openConnection()>()
+  Step 2: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: r6 = (java.net.HttpURLConnection) $r5
+  Step 3: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: $r7 = virtualinvoke r6.<java.net.HttpURLConnection: java.io.InputStream getInputStream()>()
+  Step 4: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: $i0 = virtualinvoke $r7.<java.io.InputStream: int read(byte[])>(r2)
+  Step 5: 
+    Method: <com.bignerdranch.android.vleda.VLEdaFetchr: byte[] getUrlBytes(java.lang.String)>
+    Statement: virtualinvoke r3.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r2, 0, $i0)
+
+==================================================
+Source Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+Source Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(9, $r1)
+Sink Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+Sink Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+Taint Path:
+  Step 1: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+    Statement: $r3 = virtualinvoke $r4.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(9, $r1)
+  Step 2: 
+    Method: <com.squareup.picasso.Dispatcher: void dispatchNetworkStateChange(android.net.NetworkInfo)>
+    Statement: virtualinvoke $r2.<android.os.Handler: boolean sendMessage(android.os.Message)>($r3)
+
+==================================================
+
+4 paths in total.
+
+==================================================

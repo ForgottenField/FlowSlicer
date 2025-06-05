@@ -54,7 +54,17 @@ def process_directory(root_dir, output_file):
                 f.write(f"Directory: {subdir}\n")
                 f.write(f"Common leaks: {len(common_leaks)}\n")
                 f.write(f"Unique leaks in result.xml: {len(result_only_leaks)}\n")
+
+                for leak in result_only_leaks:
+                    sink, source = leak
+                    f.write(f"  [Result Only Leak] Sink: {sink} | Source: {source}\n")
+
                 f.write(f"Unique leaks in product.xml: {len(product_only_leaks)}\n")
+
+                for leak in product_only_leaks:
+                    sink, source = leak
+                    f.write(f"  [Product Only Leak] Sink: {sink} | Source: {source}\n")
+
                 f.write("\n")
 
         f.write("Total across all directories:\n")
@@ -63,6 +73,6 @@ def process_directory(root_dir, output_file):
         f.write(f"Total unique leaks in product.xml: {total_product_only_leaks}\n")
 
 # Set the root directory to scan
-root_directory = r"D:\ISCAS\myTools\FlowSlicer\experiment\RQ1\flowdroid"
-output_file_path = r"D:\ISCAS\myTools\FlowSlicer\experiment\RQ1\output.txt"
+root_directory = r"D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1"
+output_file_path = r"D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\output.txt"
 process_directory(root_directory, output_file_path)

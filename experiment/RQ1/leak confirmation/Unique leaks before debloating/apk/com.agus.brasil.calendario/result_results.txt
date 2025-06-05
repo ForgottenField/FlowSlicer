@@ -1,0 +1,308 @@
+Results from file: result.xml
+Source Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Source Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.agus.brasil.calendario.MainActivity: void t()>
+Sink Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r6, 5)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: return $r5
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: java.lang.String o> = $r1
+  Step 5: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: specialinvoke r0.<com.agus.brasil.calendario.MainActivity: void t()>()
+  Step 9: 
+    Method: <com.agus.brasil.calendario.MainActivity: void t()>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r6, 5)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Source Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Sink Statement: $r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, null, null, null)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: if $r5 != null goto return $r5
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r1, null, null, null, null)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Source Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Sink Statement: $r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r6, null, "_id = ? ", $r2, null)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r2[0] = $r5
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r6, null, "_id = ? ", $r2, null)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Source Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+Sink Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r2, 7)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: return $r5
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: java.lang.String o> = $r1
+  Step 5: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>(null)
+  Step 8: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>
+    Statement: return 1
+  Step 9: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: void onCreate(android.os.Bundle)>(null)
+  Step 10: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onCreate(android.os.Bundle)>
+    Statement: specialinvoke r0.<com.agus.brasil.calendario.MainActivity: void r()>()
+  Step 11: 
+    Method: <com.agus.brasil.calendario.MainActivity: void r()>
+    Statement: specialinvoke $r1.<com.agus.brasil.calendario.b: void <init>(android.app.Activity,int,java.util.ArrayList,android.content.res.Resources)>(r0, 2130968610, $r2, $r3)
+  Step 12: 
+    Method: <com.agus.brasil.calendario.b: void <init>(android.app.Activity,int,java.util.ArrayList,android.content.res.Resources)>
+    Statement: $r1 = r0.<com.agus.brasil.calendario.b: android.app.Activity d>
+  Step 13: 
+    Method: <com.agus.brasil.calendario.b: void <init>(android.app.Activity,int,java.util.ArrayList,android.content.res.Resources)>
+    Statement: return
+  Step 14: 
+    Method: <com.agus.brasil.calendario.MainActivity: void r()>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: com.agus.brasil.calendario.b z> = $r1
+  Step 15: 
+    Method: <com.agus.brasil.calendario.MainActivity: void r()>
+    Statement: return
+  Step 16: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onCreate(android.os.Bundle)>
+    Statement: return
+  Step 17: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>(null)
+  Step 18: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onCreateOptionsMenu(android.view.Menu)>
+    Statement: return 1
+  Step 19: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 20: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r2, 7)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Source Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.agus.brasil.calendario.MainActivity: void m()>
+Sink Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r1, 0)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: return $r5
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>($r6)
+  Step 4: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: java.lang.String o> = $r1
+  Step 5: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: return
+  Step 6: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 7: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 8: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void m()>()
+  Step 9: 
+    Method: <com.agus.brasil.calendario.MainActivity: void m()>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r1, 0)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Source Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+Sink Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+Sink Statement: $r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r6, null, "_id = ? ", $r2, null)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r5 = interfaceinvoke $r4.<android.database.Cursor: java.lang.String getString(int)>($i0)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: if $r5 != null goto return $r5
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: java.lang.String a(android.net.Uri)>
+    Statement: $r4 = virtualinvoke $r3.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>($r6, null, "_id = ? ", $r2, null)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.agus.brasil.calendario.MainActivity: void m()>
+Sink Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r1, 0)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>($r6)
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: java.lang.String o> = $r1
+  Step 4: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void m()>()
+  Step 8: 
+    Method: <com.agus.brasil.calendario.MainActivity: void m()>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r1, 0)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.agus.brasil.calendario.MainActivity: void t()>
+Sink Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r6, 5)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>($r6)
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: java.lang.String o> = $r1
+  Step 4: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 6: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 7: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: specialinvoke r0.<com.agus.brasil.calendario.MainActivity: void t()>()
+  Step 8: 
+    Method: <com.agus.brasil.calendario.MainActivity: void t()>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r6, 5)
+
+==================================================
+Source Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+Source Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)
+Sink Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+Sink Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r2, 7)
+Taint Path:
+  Step 1: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: $r6 = interfaceinvoke $r5.<android.database.Cursor: java.lang.String getString(int)>($i2)
+  Step 2: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>($r6)
+  Step 3: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: java.lang.String o> = $r1
+  Step 4: 
+    Method: <com.agus.brasil.calendario.MainActivity: void a(java.lang.String)>
+    Statement: return
+  Step 5: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: r0 := @this: com.agus.brasil.calendario.MainActivity
+  Step 6: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: void onCreate(android.os.Bundle)>(null)
+  Step 7: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onCreate(android.os.Bundle)>
+    Statement: specialinvoke r0.<com.agus.brasil.calendario.MainActivity: void r()>()
+  Step 8: 
+    Method: <com.agus.brasil.calendario.MainActivity: void r()>
+    Statement: specialinvoke $r1.<com.agus.brasil.calendario.b: void <init>(android.app.Activity,int,java.util.ArrayList,android.content.res.Resources)>(r0, 2130968610, $r2, $r3)
+  Step 9: 
+    Method: <com.agus.brasil.calendario.b: void <init>(android.app.Activity,int,java.util.ArrayList,android.content.res.Resources)>
+    Statement: $r1 = r0.<com.agus.brasil.calendario.b: android.app.Activity d>
+  Step 10: 
+    Method: <com.agus.brasil.calendario.b: void <init>(android.app.Activity,int,java.util.ArrayList,android.content.res.Resources)>
+    Statement: return
+  Step 11: 
+    Method: <com.agus.brasil.calendario.MainActivity: void r()>
+    Statement: r0.<com.agus.brasil.calendario.MainActivity: com.agus.brasil.calendario.b z> = $r1
+  Step 12: 
+    Method: <com.agus.brasil.calendario.MainActivity: void r()>
+    Statement: return
+  Step 13: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onCreate(android.os.Bundle)>
+    Statement: return
+  Step 14: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>(0, 0, null)
+  Step 15: 
+    Method: <com.agus.brasil.calendario.MainActivity: void onActivityResult(int,int,android.content.Intent)>
+    Statement: return
+  Step 16: 
+    Method: <dummyMainClass: com.agus.brasil.calendario.MainActivity dummyMainMethod_com_agus_brasil_calendario_MainActivity(android.content.Intent)>
+    Statement: virtualinvoke $r0.<com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>(null)
+  Step 17: 
+    Method: <com.agus.brasil.calendario.MainActivity: boolean onOptionsItemSelected(android.view.MenuItem)>
+    Statement: virtualinvoke r0.<com.agus.brasil.calendario.MainActivity: void startActivityForResult(android.content.Intent,int)>($r2, 7)
+
+==================================================
+
+9 paths in total.
+
+==================================================

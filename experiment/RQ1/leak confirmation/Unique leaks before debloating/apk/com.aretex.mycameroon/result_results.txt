@@ -1,0 +1,291 @@
+Results from file: result.xml
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("aretex", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("aretex", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sarl", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParRegion(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sarl", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchearrondissement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getCherchedepartement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("kmer2", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("kmer2", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getChercheprefet(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(1)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("sakou", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("kmer1", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("kmer1", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(2)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("kmer3", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(2)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getDepartement(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("kmer3", $r1)
+
+==================================================
+Source Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+Source Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+Sink Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+Sink Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+Taint Path:
+  Step 1: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r1 = interfaceinvoke $r8.<android.database.Cursor: java.lang.String getString(int)>(0)
+  Step 2: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>($r1)
+  Step 3: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r6 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.StringBuilder append(java.lang.String)>("****************")
+  Step 4: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: $r1 = virtualinvoke $r6.<java.lang.StringBuilder: java.lang.String toString()>()
+  Step 5: 
+    Method: <com.aretex.mycameroon.ManipulationBD: java.util.ArrayList getArrParDepart(java.lang.String)>
+    Statement: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("nago", $r1)
+
+==================================================
+
+13 paths in total.
+
+==================================================

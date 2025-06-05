@@ -952,17 +952,15 @@ public abstract class SplitAPK {
         // ignore <init> methods
 //        if (sourceOrSink.contains("<init>"))
 //            return false;
-//        // ignore "findViewById(int)" methods
-//        if (sourceOrSink.contains("findViewById(int)"))
-//            return false;
         if (stmt.getInvokeExpr().getMethod().getSignature().equals(sourceOrSink)) {
             // specialinvoke r0.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>;
-            return true;
-        } else if (stmt.getInvokeExpr().getMethod().getSubSignature().equals(getMethodNameFromSignature(sourceOrSink))) {
             return true;
         } else {
             return false;
         }
+//        else if (stmt.getInvokeExpr().getMethod().getSubSignature().equals(getMethodNameFromSignature(sourceOrSink))) {
+//            return true;
+//        }
     }
 
     public String getMethodNameFromSignature(String sig) {

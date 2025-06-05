@@ -1,0 +1,337 @@
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\aimoxiu.theme.mxd28482118f99505bc70c130d95d68b37-00814E6C873FBC51CF829B5E088E6BB268AD3351223FAA262D9639932AA078D8
+Common leaks: 0
+Unique leaks in result.xml: 5
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putInt(java.lang.String,int)>("iscoming", ) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("MobclickAgent", r) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+  [Result Only Leak] Sink: virtualinvoke r.<android.content.Context: android.content.Intent registerReceiver(android.content.BroadcastReceiver,android.content.IntentFilter)>(r, r) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("moxiu", r) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putInt(java.lang.String,int)>("positon", ) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+Unique leaks in product.xml: 3
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.FileOutputStream: void write(byte[])>(r) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+  [Product Only Leak] Sink: virtualinvoke r.<aimoxiu.theme.mxdfbccddb.mxdfbccddb: void startActivityForResult(android.content.Intent,int)>(r, ) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("MobclickAgent", r) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryIntentActivities(android.content.Intent,int)>(r, )
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\br.com.canaltech-003311BF56D0ADC0D661A83DFFCBDC320E2CB0C8411C83974E1E8AF949CBE316
+Common leaks: 32
+Unique leaks in result.xml: 13
+  [Result Only Leak] Sink: virtualinvoke r.<android.content.Context: void sendBroadcast(android.content.Intent)>(r) | Source: r = virtualinvoke r.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[],int,int)>(r, , i) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("Pushwoosh", r, r) | Source: d = virtualinvoke r.<android.location.Location: double getLatitude()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("Pushwoosh", r, r) | Source: d = virtualinvoke r.<android.location.Location: double getLongitude()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[])>(r) | Source: d = virtualinvoke r.<android.location.Location: double getLatitude()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[])>(r) | Source: d = virtualinvoke r.<android.location.Location: double getLongitude()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", "application/json; charset=utf-") | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("pushHistoryArray", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("Pushwoosh", r) | Source: d = virtualinvoke r.<android.location.Location: double getLatitude()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("Pushwoosh", r) | Source: d = virtualinvoke r.<android.location.Location: double getLongitude()>()
+  [Result Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putInt(java.lang.String,int)>("app_version", i) | Source: r = virtualinvoke r.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Length", r) | Source: d = virtualinvoke r.<android.location.Location: double getLatitude()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Length", r) | Source: d = virtualinvoke r.<android.location.Location: double getLongitude()>()
+Unique leaks in product.xml: 10
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("Pushwoosh", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("pw_notification_factory", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Pushwoosh", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.content.Intent: android.content.Intent setAction(java.lang.String)>(r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("Pushwoosh", r) | Source: r = virtualinvoke r.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.BufferedWriter: void write(java.lang.String)>(r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>(r, r, r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.BufferedOutputStream: void write(byte[])>(r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("pw_base_url", r) | Source: r = virtualinvoke r.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("Pushwoosh", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\br.com.frizeiro.bibliaylt-004C88B42B8D5992172A6BC4518F6D497F14D6723EDA15CB575F173A9FD0326D
+Common leaks: 3
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\by.nsource.prj_bible_asv-001DCD33076AA62BA89C65DE6DB1598358BC7CA506E622242C4DC7F691D7F4CC
+Common leaks: 1
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\by.nsource.prj_bible_rhe-008CE21C909EBD79961C1C21FBA5B3246E40EA4D494BF1332F4993D9D8520483
+Common leaks: 1
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\cmsecurity.applock.theme.kutekitty-00AE418A8DFF4D138EA73B9C70200089400210BCB852E57FF9B6EDE5807166EB
+Common leaks: 6
+Unique leaks in result.xml: 1
+  [Result Only Leak] Sink: r = interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putBoolean(java.lang.String,boolean)>(r, z) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryBroadcastReceivers(android.content.Intent,int)>(r, )
+Unique leaks in product.xml: 1
+  [Product Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putBoolean(java.lang.String,boolean)>(r, z) | Source: r = virtualinvoke r.<android.content.pm.PackageManager: java.util.List queryBroadcastReceivers(android.content.Intent,int)>(r, )
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\co.zanacode.krumpir-00874F970B4230DC8B8D1970CE37BCB24BA9A55C64858354F966A2890E73D925
+Common leaks: 1
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.ab.shoore_zendegi-001217040C5DD2C98C9DE35A825624355DD1E2E43B9B2FD7B67B62A3B274686E
+Common leaks: 6
+Unique leaks in result.xml: 4
+  [Result Only Leak] Sink: r = virtualinvoke r.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r) | Source: r = virtualinvoke r.<android.telephony.TelephonyManager: java.lang.String getDeviceId()>()
+  [Result Only Leak] Sink: r = virtualinvoke r.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r) | Source: r = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>(r)
+  [Result Only Leak] Sink: r = virtualinvoke r.<org.apache.http.impl.client.DefaultHttpClient: org.apache.http.HttpResponse execute(org.apache.http.client.methods.HttpUriRequest)>(r) | Source: r = virtualinvoke r.<android.net.wifi.WifiInfo: java.lang.String getMacAddress()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.ByteArrayOutputStream: void write(byte[])>(r) | Source: r = virtualinvoke r.<java.util.Locale: java.lang.String getCountry()>()
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.acelsoft.antidupes-000D3ABF11F32FB5AA8AE105F9D8BBD56EC49D178CF6714A607854D88FF34B14
+Common leaks: 3
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.acerolamob.android.algerianews-005ACC3AD78E9494D7E3633E62301979559F39FEE0BC9ED8012A98516B898BC2
+Common leaks: 5
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.admitone.eclipse-00495CBEF4326F527C81F8F7A3CEF2432C73AA5EDAAA9151F1B9060415D9A3BE
+Common leaks: 2
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.affinion.idmobileprotect-009BCC5F4E97A7084FCD2384C948D2634D2CEA8FE10FB6CC292F7A8D63D2F621
+Common leaks: 11
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.agus.brasil.calendario-009827CC6FCF7AC34854124D1B12463A45B639291A5E765CC1674FE012A88C7A
+Common leaks: 4
+Unique leaks in result.xml: 1
+  [Result Only Leak] Sink: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, null, null, null, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.androcore.WhitneyHouston-003C14B5DC88B976D4C2198F18D9C2271027A8D22547A09745B85979C56247B1
+Common leaks: 8
+Unique leaks in result.xml: 15
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("shouldSetBg", z) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putInt(java.lang.String,int)>("latestPosition", i) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("shouldSetBg", z) | Source: r = virtualinvoke r.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("activityShouldLockOrientation", z) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("postrollHtml", r) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putLong(java.lang.String,long)>("adCacheTtl", l) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("activityShouldLockOrientation", z) | Source: r = virtualinvoke r.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("postrollHtml", r) | Source: r = virtualinvoke r.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putInt(java.lang.String,int)>("latestPosition", i) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getCid()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putLong(java.lang.String,long)>("adCacheTtl", l) | Source: r = virtualinvoke r.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("shouldSetBg", z) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putBoolean(java.lang.String,boolean)>("activityShouldLockOrientation", z) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putInt(java.lang.String,int)>("latestPosition", i) | Source: r = virtualinvoke r.<android.net.wifi.WifiInfo: java.lang.String getSSID()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putLong(java.lang.String,long)>("adCacheTtl", l) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("postrollHtml", r) | Source: i = virtualinvoke r.<android.telephony.gsm.GsmCellLocation: int getLac()>()
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.app.bbd-006697AB78F803D34E8F98E68EBFA5DC3586E597C43AE1F320703104FD9F1432
+Common leaks: 10
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.apprendre.francais.en.dialogues-001189DDCB9AB673BDDFBCF64E8CABBDD2A62DB2D03E34EEB85895B5A3C92486
+Common leaks: 4
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.apps.games.everyone.organisation-008F60ACC43DE632964EC7DADE21F02C0DF3489C63969EA6A7C0D019B99C8AFE
+Common leaks: 10
+Unique leaks in result.xml: 2
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("message", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Result Only Leak] Sink: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>() | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+Unique leaks in product.xml: 2
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[])>(r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("method", "POST") | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.aretex.mycameroon-006FBE3B9576FA0FCBDA1466182D24AC3B7F8AF33222E2232C4B3ECBC5A40D91
+Common leaks: 5
+Unique leaks in result.xml: 3
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>("com.newrelic.agent.android", r, r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("com.newrelic.agent.android", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("com.newrelic.agent.android", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.arges.sepan.helbest-008E0610B5DCACAAF935E7CE08322AE04373ACE189AA7A61C87007D030206E13
+Common leaks: 8
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 1
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("aaaGETRESPONSE:", r) | Source: r = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>(r)
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.asapsystems.barcloudpro-00A0227715B127F77D73FDB49C630102DF4CBAC1C2A54976E91EC9157CB3335D
+Common leaks: 12
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.backbonecompany.combinoord-00ADDF0F9BA635A3E6517717CE0EFDA4EA3CC64ACBFD970C72424111667B9FD7
+Common leaks: 6
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.bagtuahaga.armennsbb-0090110FF907D05FBA448A4769CBB4BDC8F9DE881F786DB69CE3EE324C267D9D
+Common leaks: 7
+Unique leaks in result.xml: 5
+  [Result Only Leak] Sink: r = interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>(r, r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Result Only Leak] Sink: r = interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("deviceIdHash", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Result Only Leak] Sink: r = interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("deviceIdHash", r) | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r, , i) | Source: r = virtualinvoke r.<java.net.HttpURLConnection: java.io.OutputStream getOutputStream()>()
+Unique leaks in product.xml: 8
+  [Product Only Leak] Sink: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>() | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[])>(r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("deviceIdHash", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Product Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>(r, r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("deviceIdHash", r) | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>(r, r, r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r, , i) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>(r, r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.bell.wedding.newweddinapp-001222603D0BAF8AAA5A3CCD62F37C06F4339C6EF32C2E28F582B02E43DD29A6
+Common leaks: 3
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.BenzylStudios.Women.ChaniyaCholi.photoShoot-005CCA5B49EEBF5F28708C14D6C53C3F330EAE863FA8A531799DDC565050F64C
+Common leaks: 3
+Unique leaks in result.xml: 4
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int w(java.lang.String,java.lang.String)>("android", "RESULT_CANCELED") | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+  [Result Only Leak] Sink: virtualinvoke r.<com.BenzylStudios.Women.ChaniyaCholi.photoShoot.HomeAcitivity: void startActivityForResult(android.content.Intent,int)>(r, i) | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("back ", r) | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android", "surfaceCreated") | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+Unique leaks in product.xml: 2
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android", "surfacedistroy") | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("android", "surfaceChanged") | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, null, null, null)
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.bet.mahumapko1.homemedicine-0032E195AFC8DD1611F04A78ABAF7DE34623AE10F122FDEBFE88F16390E47B28
+Common leaks: 11
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.bignerdranch.android.vleda-0058F0EB11CE5EB815B944B254BA471EBF9F2DFD2DC2B81B525D7BC89730DE29
+Common leaks: 2
+Unique leaks in result.xml: 3
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Handler: boolean sendMessage(android.os.Message)>(r) | Source: r = virtualinvoke r.<android.os.Handler: android.os.Message obtainMessage()>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Handler: boolean sendMessage(android.os.Message)>(r) | Source: r = virtualinvoke r.<android.os.Handler: android.os.Message obtainMessage(int,int,int)>(, b, )
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Handler: boolean sendMessage(android.os.Message)>(r) | Source: r = virtualinvoke r.<android.os.Handler: android.os.Message obtainMessage(int,java.lang.Object)>(, r)
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.binu.tamilsms-00756DF5098D2D353F78AD206F69A0F3C0614754278B503DC39244613CE2EFF6
+Common leaks: 9
+Unique leaks in result.xml: 1
+  [Result Only Leak] Sink: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>() | Source: r = virtualinvoke r.<android.view.View: android.view.View findViewById(int)>()
+Unique leaks in product.xml: 2
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("LocalService", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int v(java.lang.String,java.lang.String)>("RSS Service", "started") | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.c5oc0p50oco-009DD1298752EF93C9147E4F4975287DF41F5A64375BAC1A387384D428D5D080
+Common leaks: 14
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.caginltd.tips.tricks.cheat.pokemon.go-00A0001DA55A0F8170C467883FDC8494C2D8576C46BECE925834807677C51AA9
+Common leaks: 3
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.cakenamepix-0097245106472F84CE2FE055612D10A534AF6EF3DD5C0300FA9A8BA4A35EF209
+Common leaks: 3
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.calbee.batterylife.batteryrepair-00322E1AC696FE368913A3B6D20137573EB56FA123A7770679382C97CC400FAC
+Common leaks: 2
+Unique leaks in result.xml: 4
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>(r, "attempt unexpected adapter type") | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String,java.lang.Throwable)>(r, r, r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Charset", "UTF-") | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>(r, r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+Unique leaks in product.xml: 3
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>(r, r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r, , i) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[])>(r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.casteroapps.waecresults-003F0076E59AB2C9C193099949C270E633BAFE9A0DF6900DEC09B61332C3F5DF
+Common leaks: 5
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.catokusanagi.apps.android.cosplanner-0042A04F7E16D8F36D337E1BD7760685174E0549CD89E5FA3FA24B2F25E8D664
+Common leaks: 1
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.cdg.manformalshirt-0057447B86435F3D0D22D1F5A23D6EAD15360BE23BDD0C5717AF3834B9D80104
+Common leaks: 23
+Unique leaks in result.xml: 2
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("data", r) | Source: r = interfaceinvoke r.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int e(java.lang.String,java.lang.String)>("Buffer Error", r) | Source: r = interfaceinvoke r.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.citizenobserver.yatestips-007ED54F29A6DE3D048C07AC3A52D23AAE887F5A69CEC69F4DADD70F592B7BD8
+Common leaks: 10
+Unique leaks in result.xml: 6
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Connection", "Keep-Alive") | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", r) | Source: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, r, r, r, null)
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Type", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Accept-Encoding", "") | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("NewTipActivity", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Result Only Leak] Sink: r = virtualinvoke r.<android.content.ContentResolver: android.net.Uri insert(android.net.Uri,android.content.ContentValues)>(r, r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+Unique leaks in product.xml: 2
+  [Product Only Leak] Sink: virtualinvoke r.<android.content.ContentResolver: int delete(android.net.Uri,java.lang.String,java.lang.String[])>(r, null, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+  [Product Only Leak] Sink: r = virtualinvoke r.<android.content.ContentResolver: android.database.Cursor query(android.net.Uri,java.lang.String[],java.lang.String,java.lang.String[],java.lang.String)>(r, null, null, null, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>(i)
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.clari-0065C8132D3AFF4D9068566BC68A8715C90A01AA241A0BECB1FF1757306A39B1
+Common leaks: 3
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 4
+  [Product Only Leak] Sink: virtualinvoke r.<com.clari.login.registration.ClariSetPasswordActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = virtualinvoke r.<com.clari.login.registration.ClariSetPasswordActivity: android.view.View findViewById(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.clari.login.ClariRegistrationActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = virtualinvoke r.<com.clari.login.ClariRegistrationActivity: android.view.View findViewById(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.clari.auth.ClariExchangeActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = virtualinvoke r.<com.clari.auth.ClariExchangeActivity: android.view.View findViewById(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.clari.login.ClariEnterPasswordActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = virtualinvoke r.<com.clari.login.ClariEnterPasswordActivity: android.view.View findViewById(int)>()
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.coadentertainment.bruteforce-004E08CE671F25B45F600CF15C0398F521F9885914FCD3DEE083EC23C82C4D1D
+Common leaks: 1
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.cpuid.cpu_z-00ACDC7D8551780868BD6B4F21C3E322785A4161BC1EF84AE44369FB59B48497
+Common leaks: 1
+Unique leaks in result.xml: 0
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.CS499.jonathan.cs499foodlette-008DB51D100711579D465632E88A071010DD753AFE4F63EE60DC715B8214F148
+Common leaks: 15
+Unique leaks in result.xml: 4
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("info", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: interfaceinvoke r.<android.content.SharedPreferencesEditor: android.content.SharedPreferencesEditor putString(java.lang.String,java.lang.String)>("jsonFavorites", r) | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("Entered", "Entered") | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+  [Result Only Leak] Sink: staticinvoke <android.util.Log: int i(java.lang.String,java.lang.String)>("info:", "Loaded") | Source: r = virtualinvoke r.<java.net.URL: java.net.URLConnection openConnection()>()
+Unique leaks in product.xml: 0
+
+Directory: D:\ISCAS\myTools\FlowSlicer_with_experiments\FlowSlicer\experiment\RQ1\COVABench_1\com.davidhodges.publicfoldersync-007320AD0DCB3DDBF749A0CFBE852B9C6B0B783C761D046FA38DDFFF94E4727F
+Common leaks: 2
+Unique leaks in result.xml: 4
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.OutputStream: void write(byte[])>(r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Result Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putIntegerArrayList(java.lang.String,java.util.ArrayList)>("selectedIds", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.io.ByteArrayOutputStream: void write(byte[],int,int)>(r, , i) | Source: r = interfaceinvoke r.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+  [Result Only Leak] Sink: virtualinvoke r.<java.net.HttpURLConnection: void setRequestProperty(java.lang.String,java.lang.String)>("Content-Length", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+Unique leaks in product.xml: 18
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.authenticator.LoginActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.settings.ChooseMailboxActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("com.davidhodges.publicfoldersync.extra.USERNAME", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("UV", r) | Source: r = interfaceinvoke r.<org.apache.http.HttpResponse: org.apache.http.HttpEntity getEntity()>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("com.davidhodges.publicfoldersync.extra.", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putParcelable(java.lang.String,android.os.Parcelable)>("extra_message", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("UV", r) | Source: r = staticinvoke <org.apache.http.util.EntityUtils: java.lang.String toString(org.apache.http.HttpEntity)>(r)
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.tasks.TaskDetails: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: staticinvoke <android.util.Log: int d(java.lang.String,java.lang.String)>("UV", r) | Source: r = interfaceinvoke r.<org.apache.http.HttpResponse: org.apache.http.StatusLine getStatusLine()>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.authenticator.LoginActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = virtualinvoke r.<com.davidhodges.publicfoldersync.authenticator.LoginActivity: android.view.View findViewById(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.email.MessageActivity: void startActivityForResult(android.content.Intent,int)>(r, ) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<java.io.FileOutputStream: void write(byte[])>(r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.settings.ChooseFoldersActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.email.EmailSearch: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.email.MessageActivity: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<com.davidhodges.publicfoldersync.tasks.TaskEdit: void setResult(int,android.content.Intent)>(, null) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putString(java.lang.String,java.lang.String)>("com.davidhodges.publicfoldersync.extra.WEBURL", r) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+  [Product Only Leak] Sink: virtualinvoke r.<android.os.Bundle: void putInt(java.lang.String,int)>("extra_action", i) | Source: r = interfaceinvoke r.<android.database.Cursor: java.lang.String getString(int)>()
+
+Total across all directories:
+Total common leaks: 256
+Total unique leaks in result.xml: 77
+Total unique leaks in product.xml: 56
