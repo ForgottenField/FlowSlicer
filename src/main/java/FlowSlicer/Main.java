@@ -135,6 +135,7 @@ public class Main {
         }
         config.setAppName(appName);
         String appPath = cmd.getOptionValue("p", "apk" + File.separator + appName + ".apk");
+
         if (!appPath.startsWith("apk")) {
             appPath = "apk" + File.separator + appPath;
         }
