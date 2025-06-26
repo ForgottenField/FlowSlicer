@@ -438,11 +438,11 @@ public class PDGConnector {
     }
 
     private Unit buildActualReturnNode(Value value) {
-        // 创建新的局部变量，如 $actual_return_parameter_6
+        // Construct new locals, $actual_return_parameter_6
         final Local newLocal = Jimple.v().newLocal("$actual_return_parameter_" + this.counter++, value.getType());
-        // 创建返回值的赋值语句，如 $r3 = $actual_return_parameter_6
+        // Construct assignment statement for return values, $r3 = $actual_return_parameter_6
         final AssignStmt returnParameterNode = Jimple.v().newAssignStmt(value, newLocal);
-        // 创建方法调用部分的赋值语句，如 $actual_return_parameter_6 = staticinvoke <de.foellix.aql.slicer.slicertestapp.MainActivity: java.lang.String access$100(de.foellix.aql.slicer.slicertestapp.MainActivity)>($r2)
+        // Construct assignment statement for calling, $actual_return_parameter_6 = staticinvoke <de.foellix.aql.slicer.slicertestapp.MainActivity: java.lang.String access$100(de.foellix.aql.slicer.slicertestapp.MainActivity)>($r2)
         final AssignStmt replacement = Jimple.v().newAssignStmt(newLocal, ((AssignStmt) this.currentUnit).getRightOp());
 
         addAll(returnParameterNode.getBoxesPointingToThis(), replacement);

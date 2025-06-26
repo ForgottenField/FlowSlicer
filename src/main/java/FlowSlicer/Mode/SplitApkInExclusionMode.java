@@ -1,8 +1,6 @@
 package FlowSlicer.Mode;
 
 import FlowSlicer.*;
-import FlowSlicer.DataStructure.parser.ADQLParser;
-import FlowSlicer.DataStructure.parser.ParseException;
 import FlowSlicer.GraphStructure.*;
 import FlowSlicer.GraphStructure.Edge;
 import FlowSlicer.RefactorTool.SplitAPK;
@@ -34,23 +32,20 @@ public class SplitApkInExclusionMode extends SplitAPK {
     @Override
     public void splitApk() throws IOException {
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        // 执行splitApk方法中耗时的操作
         Future<?> future = executor.submit(this::splitApkInternal);
 
         try {
-            future.get(Config.getInstance().getSlicer_timeout_sec(), TimeUnit.SECONDS);  // 等待执行完成或超时
+            future.get(Config.getInstance().getSlicer_timeout_sec(), TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            future.cancel(true);  // 超时后尝试取消任务
+            future.cancel(true);
             Config.getInstance().setIsSlicerTimeOut(true);
             log.error("Task timed out");
         } catch (ExecutionException e) {
-            // 处理任务执行中的异常
             log.error("Task failed with exception: " + e.getMessage());
         } catch (InterruptedException e) {
-            // 处理任务被中断的情况
-            Thread.currentThread().interrupt();  // 恢复中断状态
+            Thread.currentThread().interrupt();
         } finally {
-            executor.shutdownNow();  // 确保任务最终被终止
+            executor.shutdownNow();
         }
 
         // Slice CFG according to SDG
@@ -103,7 +98,6 @@ public class SplitApkInExclusionMode extends SplitAPK {
                     while (units.hasNext()) {
                         Unit unit = units.next();
                         Stmt stmt = (Stmt) unit;
-                        // 对于包含invoke表达式的unit，匹配其是否调用了Sources和Sinks列表中的API
                         if (stmt != null && stmt.containsInvokeExpr()) {
                             locateSourceAndSinkUnit(sm, stmt);
                         }
@@ -162,7 +156,6 @@ public class SplitApkInExclusionMode extends SplitAPK {
                 String randomSourceMethod = sourceMethods.get(random.nextInt(sourceMethods.size()));
                 String randomSinkMethod = sinkMethods.get(random.nextInt(sinkMethods.size()));
 
-                // 查找对应的SootMethod
                 SootMethod sourceSootMethod = Scene.v().getMethod(randomSourceMethod);
                 if (sourceSootMethod != null) {
                     appModel.getInputClassSet().add(sourceSootMethod.getDeclaringClass().getName());
@@ -173,20 +166,16 @@ public class SplitApkInExclusionMode extends SplitAPK {
                     appModel.getInputClassSet().add(sinkSootMethod.getDeclaringClass().getName());
                 }
 
-                // 获取source和sink statements列表
                 List<Unit> sourceUnits = appModel.getMethodToSourceAPIsMap().get(randomSourceMethod);
                 List<Unit> sinkUnits = appModel.getMethodToSinkAPIsMap().get(randomSinkMethod);
 
                 if (sourceUnits != null && !sourceUnits.isEmpty() && sinkUnits != null && !sinkUnits.isEmpty()) {
-                    // 随机选择一个source和一个sink statement
                     Unit randomSourceUnit = sourceUnits.get(random.nextInt(sourceUnits.size()));
                     Unit randomSinkUnit = sinkUnits.get(random.nextInt(sinkUnits.size()));
 
-                    // 将随机选择的source和sink添加到目标列表
                     targetListFrom.add(randomSourceUnit);
                     targetListTo.add(randomSinkUnit);
 
-                    // 将source和sink添加到多重映射中
                     appModel.getSinkToSourceUnitMultimap().put(randomSinkUnit, randomSourceUnit);
                     appModel.getSourceToSinkUnitMultimap().put(randomSourceUnit, randomSinkUnit);
                 }
@@ -245,35 +234,6 @@ public class SplitApkInExclusionMode extends SplitAPK {
 //                            appModel.getSourceToSinkUnitMultimap().put(source, sink);
 //                        }
 //                    }
-                }
-            }
-        } else {
-            // set slicing criteria according to DSL scripts
-            try {
-                ADQLParser.parse();
-            } catch (FileNotFoundException | ParseException e) {
-                throw new RuntimeException(e);
-            }
-
-            if (appModel.getFlowQuerySinkStmt() != null && appModel.getFlowQuerySourceStmt() != null) {
-                // to be added
-                ;
-            } else if (appModel.getFlowQuerySinkMethod() != null && appModel.getFlowQuerySourceMethod() != null){
-                for (SootMethod sm : SootHelper.findMethods(appModel.getFlowQuerySinkMethod())) {
-                    if (sm.isConcrete()) {
-                        Unit sourceUnit = SootHelper.getFirstUnitOfMethod(sm);
-                        if (sourceUnit != null) {
-                            targetListFrom.add(sourceUnit);
-                        }
-                    }
-                }
-                for (SootMethod sm : SootHelper.findMethods(appModel.getFlowQuerySourceMethod())) {
-                    if (sm.isConcrete()) {
-                        Unit sinkUnit = SootHelper.getFirstUnitOfMethod(sm);
-                        if (sinkUnit != null) {
-                            targetListTo.add(sinkUnit);
-                        }
-                    }
                 }
             }
         }

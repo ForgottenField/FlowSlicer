@@ -166,7 +166,6 @@ public abstract class SplitAPK {
         Collection<Local> localList = new ArrayList<>();
         Map<String, String> localValueMap = new HashMap<>();
 
-        //由于每个<statement, method, class>三元组可以唯一确定一个Unit，因此用数组大小相等的关系控制findSlicingTargets的结束逻辑。
         for (final SootClass sc : Scene.v().getApplicationClasses()) {
             if (!SootHelper.isOrdinaryLibraryClass(sc)) {
                 for (final SootMethod sm : sc.getMethods()) {
@@ -174,7 +173,6 @@ public abstract class SplitAPK {
                     if (body == null) {
                         continue;
                     }
-                    // 增加匹配逻辑，解决JIMPLE字节码不匹配的问题
                     localList.addAll(body.getLocals());
                     for (final Unit unit : body.getUnits()) {
                         if (unit instanceof SwitchStmt || unit instanceof GotoStmt || unit instanceof IfStmt) {
@@ -230,7 +228,6 @@ public abstract class SplitAPK {
         appModel.setToCriteriaSet(toCriteriaSet);
         appModel.setFromCriteriaSet(fromCriteriaSet);
 
-        // 记录额外信息，将Sink与Sources进行配对
         for (Reference sinkReference : sinkToSourcesMap.keySet()){
             Unit sinkUnit = referenceUnitMap.get(sinkReference);
             if (sinkUnit != null) {
@@ -375,25 +372,22 @@ public abstract class SplitAPK {
 
     public void sliceBackwardAndForward(DependenceGraph sdgSliced) {
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        // 执行splitApk方法中耗时的操作
 //        Future<?> future = executor.submit(this::sliceBackwardAndForwardInternal);
         Future<?> future = executor.submit(() -> {
             sliceBackwardAndForwardInternal(sdgSliced);
         });
 
         try {
-            future.get(Config.getInstance().getBackward_forward_timeout_sec(), TimeUnit.SECONDS);  // 等待执行完成或超时
+            future.get(Config.getInstance().getBackward_forward_timeout_sec(), TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            future.cancel(true);  // 超时后尝试取消任务
+            future.cancel(true);
             log.error("Task timed out");
         } catch (ExecutionException e) {
-            // 处理任务执行中的异常
             log.error("Task failed with exception: " + e.getMessage());
         } catch (InterruptedException e) {
-            // 处理任务被中断的情况
-            Thread.currentThread().interrupt();  // 恢复中断状态
+            Thread.currentThread().interrupt();
         } finally {
-            executor.shutdownNow();  // 确保任务最终被终止
+            executor.shutdownNow();
         }
     }
 
@@ -789,11 +783,10 @@ public abstract class SplitAPK {
 
                 Body body = method.retrieveActiveBody();
                 if (body.getUnits().isEmpty()) {
-                    methodsToRemove.add(method); // 标记要删除的方法
+                    methodsToRemove.add(method);
                 }
             }
 
-            // 从类中移除所有已标记的方法
             for (SootMethod methodToRemove : methodsToRemove) {
                 sootClass.removeMethod(methodToRemove);
             }
@@ -964,12 +957,10 @@ public abstract class SplitAPK {
     }
 
     public String getMethodNameFromSignature(String sig) {
-        // 定义正则表达式，用于匹配类名、返回值和方法名
         String regex = "(\\S+)\\s*:\\s*(\\S+)\\s*(\\S+\\([^)]*\\))";
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(sig);
 
-        // 判断是否找到匹配
         if (matcher.find()) {
             String className = matcher.group(1);  // 类名
             String returnType = matcher.group(2); // 返回值

@@ -449,9 +449,7 @@ public class Main {
         log.info("Using Mode " + Config.MATCH_SLICE_MODE);
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        // 执行splitApk方法中耗时的操作
         Future<?> future = executor.submit(() -> {
-            // 执行splitApk方法中耗时的操作
             try {
                 Statistics.getInstance().getFlowSlicerTimer().start();
                 SootAnalyzer sootAnalyzer = new SootAnalyzer();
@@ -470,19 +468,17 @@ public class Main {
         });
 
         try {
-            future.get(Config.getInstance().getTotal_timeout_sec(), TimeUnit.SECONDS);  // 等待执行完成或超时
+            future.get(Config.getInstance().getTotal_timeout_sec(), TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            future.cancel(true);  // 超时后尝试取消任务
+            future.cancel(true);
             Config.getInstance().setIsTotalTimeOut(true);
             log.error("Total Task timed out");
         } catch (ExecutionException e) {
-            // 处理任务执行中的异常
             log.error("Task failed with exception: " + e.getMessage());
         } catch (InterruptedException e) {
-            // 处理任务被中断的情况
-            Thread.currentThread().interrupt();  // 恢复中断状态
+            Thread.currentThread().interrupt();
         } finally {
-            executor.shutdownNow();  // 确保任务最终被终止
+            executor.shutdownNow();
         }
 
         Statistics.getInstance().getFlowDroidTimer2().stop();
@@ -507,9 +503,7 @@ public class Main {
         Statistics.getInstance().getFlowDroidTimer1().start();
 
         ExecutorService executor = Executors.newSingleThreadExecutor();
-        // 执行splitApk方法中耗时的操作
         Future<?> future = executor.submit(() -> {
-            // 执行splitApk方法中耗时的操作
             try {
                 FlowdroidHelper.runInfoflow(Config.getInstance().getAppPath(), Config.getInstance().getFlowDroidResultPath());
             } catch (URISyntaxException | XmlPullParserException | IOException e) {
@@ -518,19 +512,17 @@ public class Main {
         });
 
         try {
-            future.get(Config.getInstance().getOriginal_flowdroid_timeout_sec(), TimeUnit.SECONDS);  // 等待执行完成或超时
+            future.get(Config.getInstance().getOriginal_flowdroid_timeout_sec(), TimeUnit.SECONDS);
         } catch (TimeoutException e) {
-            future.cancel(true);  // 超时后尝试取消任务
+            future.cancel(true);
             Config.getInstance().setIsOriginalFlowDroidTimeOut(true);
             log.error("Original_flowdroid Task timed out");
         } catch (ExecutionException e) {
-            // 处理任务执行中的异常
             log.error("Task failed with exception: " + e.getMessage());
         } catch (InterruptedException e) {
-            // 处理任务被中断的情况
-            Thread.currentThread().interrupt();  // 恢复中断状态
+            Thread.currentThread().interrupt();
         } finally {
-            executor.shutdownNow();  // 确保任务最终被终止
+            executor.shutdownNow();
         }
 
         Statistics.getInstance().getFlowDroidTimer1().stop();
@@ -542,36 +534,7 @@ public class Main {
 
         // run FlowSlicer
         Statistics.getInstance().getFlowDroidTimer2().start();
-
-//        ExecutorService executor = Executors.newSingleThreadExecutor();
-//        // 执行splitApk方法中耗时的操作
-//        Future<?> future = executor.submit(() -> {
-//            // 执行splitApk方法中耗时的操作
-//            try {
-//
-//            } catch (URISyntaxException | XmlPullParserException | IOException e) {
-//                throw new RuntimeException(e);
-//            }
-//        });
-//
-//        try {
-//            future.get(Config.getInstance().getFinal_flowdroid_timeout_sec(), TimeUnit.SECONDS);  // 等待执行完成或超时
-//        } catch (TimeoutException e) {
-//            future.cancel(true);  // 超时后尝试取消任务
-//            Config.getInstance().setIsFinalFlowDroidTimeOut(true);
-//            log.error("Final_flowdroid_Task timed out");
-//        } catch (ExecutionException e) {
-//            // 处理任务执行中的异常
-//            log.error("Task failed with exception: " + e.getMessage());
-//        } catch (InterruptedException e) {
-//            // 处理任务被中断的情况
-//            Thread.currentThread().interrupt();  // 恢复中断状态
-//        } finally {
-//            executor.shutdownNow();  // 确保任务最终被终止
-//        }
-
         FlowdroidHelper.runInfoflow(Config.getInstance().getResultFolder() + Config.getInstance().getAppName() + File.separator + "apk" + File.separator + Config.getInstance().getAppName() + ".apk", Config.getInstance().getFlowDroidProductPath());
-
         Statistics.getInstance().getFlowDroidTimer2().stop();
     }
 
@@ -606,7 +569,6 @@ public class Main {
 //            appData.add(String.valueOf(0));
 //        }
 
-        //读取output.xml文件中的结果
         if (Config.getInstance().getMode().equals(Config.FLOW_SLICE_MODE)) {
             XMLHelper.parseFlowDroidXmlFile(Config.getInstance().getFlowDroidOutputPath(), Global.v().getFlowDroidResult2());
         } else {
@@ -627,7 +589,6 @@ public class Main {
         File txtFile = new File(txtFilePath);
 
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(txtFile, true))) {
-            // 如果文件不存在，则写入表头信息（可选）
             if (!txtFile.exists()) {
                 writer.write("AppName, Statements Before Slicing, Statements After Slicing," +
                         "Slice Time(s), FlowDroid Time After Slicing(s), leaks after slicing, " +
@@ -635,12 +596,10 @@ public class Main {
                         "whether is Slicer timeout, whether is final flowdroid timeout\n");
             }
 
-            // 将 appData 中的内容逐行写入 txt 文件
             StringBuilder dataLine = new StringBuilder();
             for (String data : appData) {
                 dataLine.append(data).append(", ");
             }
-            // 去掉最后一个逗号并添加换行符
             dataLine.setLength(dataLine.length() - 2);
             dataLine.append("\n");
 

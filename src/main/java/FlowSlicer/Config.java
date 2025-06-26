@@ -26,7 +26,7 @@ public class Config {
 
     private boolean isRandomCriteria = false;
     private boolean isSourceSinkInSameMethod = false;
-    private boolean isAllSourceAndSinkConsidered = false;
+    private boolean isAllSourceAndSinkConsidered = true;
 
     private String androidVersion;
     private String resultFolder;
